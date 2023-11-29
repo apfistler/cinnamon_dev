@@ -14,11 +14,12 @@ def main():
 
     site_manager = SiteManager(sites_dir)
     all_sites = site_manager.get_all_sites()
-    
-    # Print all sites
+
+    # Print all sites and their properties
     print("All Sites:")
     for site in all_sites:
         print(site)
+        site.display_all()  # Corrected this line
 
     # Extract all site IDs
     all_site_ids = [site.site_id for site in all_sites]
