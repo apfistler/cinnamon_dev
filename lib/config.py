@@ -4,7 +4,7 @@ import re
 from .yaml_parser import YamlParser
 
 class Config:
-    REQUIRED_FIELDS = ['cinnamon_dir', 'config_dir', 'sites_dir', 'user_dir', 'user_config_dir', 'user_sites_dir', 'input_dir', 'output_dir']
+    REQUIRED_FIELDS = ['cinnamon_dir', 'config_dir', 'site_config_dir', 'site_dir', 'user_dir', 'user_config_dir', 'user_site_dir', 'user_site_config_dir', 'input_dir', 'output_dir']
 
     def __init__(self):
         self.data = {}

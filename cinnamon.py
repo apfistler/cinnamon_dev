@@ -8,9 +8,9 @@ def main():
     config = Config()
     config.initialize()
 
-    sites_dir = config.get('sites_dir')
+    site_dir = config.get('site_dir')
 
-    site_manager = SiteManager(sites_dir)
+    site_manager = SiteManager(site_dir)
     all_sites = site_manager.get_all_sites()
 
     # Print all sites and their properties
