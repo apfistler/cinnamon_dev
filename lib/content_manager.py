@@ -7,7 +7,6 @@ class ContentManager:
     def __init__(self, base_dir):
         self.base_dir = base_dir
         self.sites = self.load_sites()
-        self.pages = self.load_pages()
 
     def load_sites(self):
         site_dir = self.base_dir
@@ -17,11 +16,12 @@ class ContentManager:
             site_metadata_path = os.path.join(site_path, 'site.yaml')
             site_metadata = YamlParser.parse_yaml(site_metadata_path)
             site = Site(site_id, site_path, site_metadata)
+            site.pages = self.load_pages(site)
             sites.append(site)
         return sites
 
-    def load_pages(self):
-        page_dir = os.path.join(self.base_dir, 'pages')
+    def load_pages(self, site):
+        page_dir = os.path.join(site.path, 'pages')
         pages = []
         for root, dirs, files in os.walk(page_dir):
             for file in files:
@@ -38,5 +38,6 @@ class ContentManager:
         return self.sites
 
     def get_all_pages(self):
-        return self.pages
+        all_pages = [page for site in self.sites for page in site.pages]
+        return all_pages
 
