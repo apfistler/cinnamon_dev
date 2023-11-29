@@ -18,11 +18,11 @@ def main():
         print(f"\nSite ID: {site.id}")
 #        site.display_all()
 
-        # Display all obj_metadata_items for the site
+        # Display all page_metadata_items for the site
         print("\nAll Metadatas:")
-        for obj_metadata in site.obj_metadata_items:
-            print(f"\nMetadata ID: {obj_metadata.id}")
-            obj_metadata.display_all()
+        for page_metadata in site.page_metadata_items:
+            print(f"\nMetadata ID: {page_metadata.id}")
+            page_metadata.display_all()
 
     # Extract all site IDs
     all_site_ids = [site.id for site in all_sites]

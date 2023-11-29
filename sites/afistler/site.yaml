@@ -2,6 +2,31 @@ id: afistler
 name: "Adam Fistler Services"
 url: "https://www.afistler.us.to"
 
+head:
+  meta:
+    -
+      http-equiv: "Content-Type"
+      content: "text/html;"
+    -
+      http-equiv: Language
+      content: en
+    -
+      name: Authors
+      content: "Adam Fistler"
+    -
+      name: "revist-after"
+      content: "7 days"
+    -
+      robots: "index, follow"
+
+fonts:
+  - "https://fonts.googleapis.com/css2?family=Brush+Script"
+  - "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
+
+js:
+  - "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+  - "https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+
 menus:
   main_menu:
     "Home": "main.home"
