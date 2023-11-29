@@ -16,10 +16,12 @@ class ContentManager:
             site_metadata_path = os.path.join(site_path, 'site.yaml')
             site_metadata = YamlParser.parse_yaml(site_metadata_path)
             site = Site(site_id, site_path, site_metadata)
+            
+            # Updated to snake_case
             site.page_metadata_items = self.load_page_metadata_items(site)
+            
             sites.append(site)
         return sites
-
     def load_page_metadata_items(self, site):
         page_metadata_dir = os.path.join(site.path, 'metadata')
         page_metadata_items = []
