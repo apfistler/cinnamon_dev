@@ -1,0 +1,6 @@
+sites_dir: "#{config_dir}/sites"
+user_dir: "${HOME}/cinnamon_dev"
+user_config_dir: "#{user_dir}/config"
+user_sites_dir: "#{user_config_dir}/sites"
+input_dir: "#{user_dir}/input"
+output_dir: "#{user_dir}/output"

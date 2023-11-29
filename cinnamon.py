@@ -3,22 +3,31 @@
 import os
 import argparse
 from lib.config import Config
+from lib.site_manager import SiteManager
+from lib.site import Site
 
 def main():
     config = Config()
     config.initialize()
 
-    # Example of using get and set
-    property_to_get = 'admin'
-    value = config.get(property_to_get)
-    print(f"Value of '{property_to_get}': {value}")
+    sites_dir = config.get('sites_dir')
 
-    property_to_set = 'new_property'
-    new_value = 'New Value'
-    config.set(property_to_set, new_value)
-    print(f"Value of '{property_to_set}' after setting: {config.get(property_to_set)}")
+    site_manager = SiteManager(sites_dir)
+    all_sites = site_manager.get_all_sites()
+    
+    # Print all sites
+    print("All Sites:")
+    for site in all_sites:
+        print(site)
 
-    config.display_all()
+    # Extract all site IDs
+    all_site_ids = [site.site_id for site in all_sites]
+
+    # Print all site IDs
+    print("\nAll Site IDs:")
+    for site_id in all_site_ids:
+        print(site_id)
 
 if __name__ == '__main__':
     main()
+

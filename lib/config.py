@@ -3,9 +3,12 @@ import yaml
 import re
 
 class Config:
+    REQUIRED_FIELDS = ['cinnamon_dir', 'config_dir', 'sites_dir', 'user_dir', 'user_config_dir', 'user_sites_dir', 'input_dir', 'output_dir']
+
     def __init__(self):
         self.data = {}
         self.protected_keys = ['admin']  # Add more keys if needed
+        self.initialize()
 
     def read_file(self, filepath, error_message):
         if os.path.isfile(filepath):
@@ -21,6 +24,10 @@ class Config:
         system_config_path = '/etc/cinnamon.yaml'
         error_message = "Cinnamon has not been configured on this system."
         self.read_file(system_config_path, error_message)
+
+    def read_defaults(self):
+        defaults_path = os.path.join(self.data.get('config_dir', ''), 'defaults.yaml')
+        self.read_file(defaults_path, "Error: Defaults file not found.")
 
     def read_user_config(self):
         home_dir = os.path.expanduser("~")
@@ -58,13 +65,15 @@ class Config:
 
     def initialize(self):
         self.read_system_config()
+
+        # Parse the configuration after reading the system config
+        self.parse()
+
+        # Read the defaults file and update the configuration
+        self.read_defaults()
+
+        # Read the user config after reading the defaults
         self.read_user_config()
-
-        # Ensure protected keys are not overridden
-        for key in self.protected_keys:
-            if key in self.data:
-                self.data[key] = {**self.data[key], **getattr(self, f'_{key}_config', {})}  # Update with protected values
-
         self.parse()
 
     def parse(self):
@@ -85,3 +94,8 @@ class Config:
         else:
             return prop
 
+    def check_required_fields(self):
+        for field in self.REQUIRED_FIELDS:
+            if field not in self.data:
+                print(f"Error: Required field '{field}' is missing. Please check your configuration.")
+                exit(1)

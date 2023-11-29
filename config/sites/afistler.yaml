@@ -1,0 +1,40 @@
+id: afistler
+name: "Adam Fistler Services"
+
+menus:
+  main_menu:
+    "Home": "main.home"
+    "GoFundMe": "main.go_fund_me"
+    "Hypnosis":
+      "Professional Experience": "articles.hypnosis.bhc"
+      "About Hypnosis": "hypnosis.about_hypnosis"
+      "Hypnosis Services": "hypnosis.hypnosis_services"
+      "Testimonals": "hypnosis.testimonals"
+      "Anger": "hypnosis.anger"
+      "Weight Loss": "hypnosis.weight_loss"
+      "Smoking Cessation": "hypnosis.smoking_cessation"
+    "Addiction Services": "addiction.addiction_services"
+    "Astrology": "astrology.astrology"
+    "Handwriting Analysis": "graphology.graphology"
+    "Technology":
+      "Projects": "technology.projects"
+      "Artwork": "technology.artwork"
+      "Resume": "technology.resume"
+    "Upcoming Events": "main.upcoming_events"
+    "Articles": "articles.articles"
+    "Contact Us": "main.contact_us"
+
+data:
+  address:
+    street: "Coming Soon"
+    city: "South Jersey"
+    state: "NJ"
+    zipcode: "08104"
+  phone: "(856) 209-3350"
+  email: "afistler.services@gmail.com"
+  footer:
+    - "Copyright © 2023 - Adam Fistler Services"
+    - "Adam Fistler Services - New Office Coming Soon #{data.phone}"
+    - "Serving South Jersey with the latest in hypnosis, addiction alternatives, mindfullness and technology."
+    - "South Jersey's Choice for Holisitc Healing"
+
