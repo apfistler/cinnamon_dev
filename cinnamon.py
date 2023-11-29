@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
 import os
-import argparse
 from lib.config import Config
 from lib.site_manager import SiteManager
-from lib.site import Site
 
 def main():
     config = Config()
@@ -18,8 +16,8 @@ def main():
     # Print all sites and their properties
     print("All Sites:")
     for site in all_sites:
-        print(site)
-        site.display_all()  # Corrected this line
+        print(f"\nSite ID: {site.site_id}")
+        site.display_all()
 
     # Extract all site IDs
     all_site_ids = [site.site_id for site in all_sites]

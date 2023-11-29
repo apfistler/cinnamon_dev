@@ -1,6 +1,7 @@
 import os
 import yaml
 import re
+from .yaml_parser import YamlParser
 
 class Config:
     REQUIRED_FIELDS = ['cinnamon_dir', 'config_dir', 'sites_dir', 'user_dir', 'user_config_dir', 'user_sites_dir', 'input_dir', 'output_dir']
@@ -12,10 +13,9 @@ class Config:
 
     def read_file(self, filepath, error_message):
         if os.path.isfile(filepath):
-            with open(filepath, 'r') as file:
-                config_data = yaml.safe_load(file)
-                if config_data:
-                    self.data.update(config_data)
+            config_data = YamlParser.parse_yaml(filepath)
+            if config_data:
+                self.data.update(config_data)
         else:
             print(f"Error: {error_message}")
             exit(1)
@@ -43,25 +43,31 @@ class Config:
     def display_all(self):
         for key, value in self.data.items():
             print(f"{key}:")
-            self._display_property(value, indent=2)
-
-    def _display_property(self, prop, indent):
-        if isinstance(prop, dict):
-            for sub_key, sub_value in prop.items():
-                print(f"{' ' * indent}{sub_key}:")
-                self._display_property(sub_value, indent + 2)
-        elif isinstance(prop, list):
-            for item in prop:
-                print(f"{' ' * indent}-")
-                self._display_property(item, indent + 2)
-        else:
-            print(f"{' ' * indent}{prop}")
+            YamlParser.display_property(value, indent=2)
 
     def get(self, property_name):
-        return self.data.get(property_name)
+        return YamlParser.get_nested_value(property_name, self.data)
 
     def set(self, property_name, value):
-        self.data[property_name] = value
+        keys = property_name.split('.')
+        current_data = self.data
+        for key in keys[:-1]:
+            if isinstance(current_data, dict) and key in current_data:
+                current_data = current_data[key]
+            elif isinstance(current_data, list) and key.isdigit() and 0 <= int(key) < len(current_data):
+                current_data = current_data[int(key)]
+            else:
+                print(f"Error: Invalid property path '{property_name}'")
+                exit(1)
+        
+        last_key = keys[-1]
+        if isinstance(current_data, dict):
+            current_data[last_key] = value
+        elif isinstance(current_data, list) and last_key.isdigit() and 0 <= int(last_key) < len(current_data):
+            current_data[int(last_key)] = value
+        else:
+            print(f"Error: Invalid property path '{property_name}'")
+            exit(1)
 
     def initialize(self):
         self.read_system_config()
@@ -77,25 +83,35 @@ class Config:
         self.parse()
 
     def parse(self):
-        for key, value in self.data.items():
-            self.data[key] = self._parse_property(value)
-
-    def _parse_property(self, prop):
-        if isinstance(prop, dict):
-            return {k: self._parse_property(v) for k, v in prop.items()}
-        elif isinstance(prop, list):
-            return [self._parse_property(item) for item in prop]
-        elif isinstance(prop, str):
-            # Replace #{property_name} with the value of the property
-            prop = re.sub(r'#\{(\w+)\}', lambda match: str(self.data.get(match.group(1), match.group(0))), prop)
-            # Replace ${environmental_variable} with the value of the environmental variable
-            prop = re.sub(r'\$\{(\w+)\}', lambda match: str(os.environ.get(match.group(1), match.group(0))), prop)
-            return prop
-        else:
-            return prop
+        YamlParser.parse_properties(self.data, self.data)
 
     def check_required_fields(self):
         for field in self.REQUIRED_FIELDS:
             if field not in self.data:
                 print(f"Error: Required field '{field}' is missing. Please check your configuration.")
                 exit(1)
+
+# Usage Example for Reference:
+# Create an instance of the Config class
+#config = Config()
+
+# Check and initialize the configuration
+#config.check_required_fields()
+
+# Display information about administrators from the configuration
+#config.display_admins()
+
+# Display all properties in the configuration
+#print("\nAll Configuration Properties:")
+#config.display_all()
+
+# Get the value of a specific property
+#cinnamon_dir_value = config.get('cinnamon_dir')
+#print(f"\nValue of 'cinnamon_dir': {cinnamon_dir_value}")
+
+# Set the value of a specific property
+#config.set('new_property', 'new_value')
+
+# Display all properties after setting a new one
+#print("\nAll Configuration Properties after setting 'new_property':")
+#config.display_all()
