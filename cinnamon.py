@@ -1,26 +1,26 @@
 #!/usr/bin/python3
 
-import os
 from lib.config import Config
-from lib.site_manager import SiteManager
+from lib.content_manager import ContentManager
 
 def main():
     config = Config()
     config.initialize()
 
-    site_dir = config.get('site_dir')
+    base_dir = config.get('site_dir')
+    print(base_dir)
 
-    site_manager = SiteManager(site_dir)
-    all_sites = site_manager.get_all_sites()
+    content_manager = ContentManager(base_dir)
+    all_sites = content_manager.get_all_sites()
 
     # Print all sites and their properties
     print("All Sites:")
     for site in all_sites:
-        print(f"\nSite ID: {site.site_id}")
+        print(f"\nSite ID: {site.id}")
         site.display_all()
 
     # Extract all site IDs
-    all_site_ids = [site.site_id for site in all_sites]
+    all_site_ids = [site.id for site in all_sites]
 
     # Print all site IDs
     print("\nAll Site IDs:")

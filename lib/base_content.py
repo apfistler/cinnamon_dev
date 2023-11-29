@@ -1,11 +1,14 @@
 from .yaml_parser import YamlParser
 
 class BaseContent:
+    REQUIRED_FIELDS = []
+
     def __init__(self, content_id, content_path, metadata):
         self.id = content_id
         self.path = content_path
         self.metadata = metadata
         self._merge_metadata()
+        self.check_required_fields()
 
     def _merge_metadata(self):
         # Merge metadata values into the instance properties
@@ -37,11 +40,9 @@ class BaseContent:
         # Set the value of a specific property
         setattr(self, property_name, value)
 
-class Site(BaseContent):
-    # Additional site-specific functionality can be added here
-    pass
-
-class Page(BaseContent):
-    # Additional page-specific functionality can be added here
-    pass
+    def check_required_fields(self):
+        for field in self.REQUIRED_FIELDS:
+            if field not in self.metadata:
+                print(f"Error: Required field '{field}' is missing in {self.__class__.__name__} '{self.id}'.")
+                exit(1)
 
