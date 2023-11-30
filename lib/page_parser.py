@@ -12,6 +12,9 @@ class PageParser:
             placeholder = match.group(1)
             try:
                 value = PageParser.evaluate_nested_value(placeholder, page_metadata_dict)
+                # Join the array elements with <br/> if the value is a list
+                if isinstance(value, list):
+                    return '<br/>'.join(map(str, value))
                 return str(value)
             except (NameError, KeyError, IndexError):
                 print(f"Error: Placeholder '{placeholder}' not found in page_metadata_dict.")
@@ -37,4 +40,5 @@ class PageParser:
                 value = value[level]
 
         return value
+
 

@@ -1,6 +1,7 @@
 id: afistler
 name: "Adam Fistler Services"
 url: "https://www.afistler.us.to"
+template: "templates/afistler.html"
 
 head:
   meta:
@@ -70,7 +71,7 @@ data:
   email: "afistler.services@gmail.com"
   footer:
     - "Copyright © 2023 - Adam Fistler Services"
-    - "Adam Fistler Services - New Office Coming Soon #{data.phone}"
+    - "Adam Fistler Services - New Office Coming Soon (856) 209-3350"
     - "Serving South Jersey with the latest in hypnosis, addiction alternatives, mindfullness and technology."
     - "South Jersey's Choice for Holisitc Healing"
 

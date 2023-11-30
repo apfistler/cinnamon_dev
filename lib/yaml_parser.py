@@ -1,5 +1,3 @@
-# yaml_parser.py
-
 import yaml
 import re
 
@@ -14,11 +12,19 @@ class YamlParser:
         if isinstance(value, dict):
             return {k: YamlParser.handle_placeholders(v, data) for k, v in value.items()}
         elif isinstance(value, list):
-            return [YamlParser.handle_placeholders(item, data) for item in value]
+            return [YamlParser.handle_placeholders_in_array(item, data) for item in value]
         elif isinstance(value, str):
-            return re.sub(r'#\{(\w+(\.\w+)*)\}', lambda match: YamlParser.get_nested_value(match.group(1), data), value)
+            return YamlParser.handle_placeholders_in_string(value, data)
         else:
             return value
+
+    @staticmethod
+    def handle_placeholders_in_array(array, data):
+        return [YamlParser.handle_placeholders_in_string(item, data) if isinstance(item, str) else YamlParser.handle_placeholders(item, data) for item in array]
+
+    @staticmethod
+    def handle_placeholders_in_string(value, data):
+        return re.sub(r'#\{(\w+(\.\w+)*)\}', lambda match: YamlParser.get_nested_value(match.group(1), data), value)
 
     @staticmethod
     def get_nested_value(nested_key, data):

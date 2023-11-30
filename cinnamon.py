@@ -33,7 +33,7 @@ def main():
                 # Open and parse the page
                 parsed_content = page.open_and_parse()
                 print(f"The page '{page_id}' exists. Parsed Content:")
-                print(parsed_content)
+#                print(parsed_content)
             else:
                 print(f"The page '{page_id}' does not exist.")
 

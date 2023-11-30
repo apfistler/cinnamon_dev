@@ -1,4 +1,5 @@
 from .base_content import BaseContent
+from .page_metadata_parser import PageMetadataParser
 import os
 
 class Page_Metadata(BaseContent):
@@ -8,14 +9,17 @@ class Page_Metadata(BaseContent):
         # Merge attributes with merging logic
         self.merge_attributes(site.__dict__)
 
-        super().__init__(page_metadata_id, page_metadata_path, data)
+        # Create an instance of PageMetadataParser and parse placeholders in data
+        page_metadata_parser = PageMetadataParser(data)
+        self.metadata = page_metadata_parser.data
+
+        super().__init__(page_metadata_id, page_metadata_path, self.metadata)
 
         # Look for CSS and JS files based on the 'id'
         self.load_assets()
 
         self.check_required_fields()
         self.remove_duplicate_arrays()
-
         # Add any additional page_metadata-specific functionality here
 
     def merge_attributes(self, new_attributes):
@@ -49,9 +53,6 @@ class Page_Metadata(BaseContent):
         site_dir = self.site_dir
         css_path = os.path.join(site_dir, 'css', f"{id_path}.css")
         js_path = os.path.join(site_dir, 'js', f"{id_path}.js")
-
-        print(f"Retrieved JS is {self.js}")
-        print(f"Retrieved CSS is {self.css}")
 
         # Check if CSS file exists and append to the 'css' array
         if os.path.isfile(css_path):
