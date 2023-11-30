@@ -10,12 +10,14 @@ class Image(BaseContent):
         self.path = image_path
         self.name = os.path.basename(image_path)
         self.category = self._get_category(image_path)
+        self.id = f'{self.category}.{self.name}'
 
-        self.metadata = {}  # Initialize metadata attribute
-        self.metadata['name'] = self.name
-        self.metadata['path'] = self.path
-        self.metadata['category'] = self.category
-
+        self.metadata = {
+            'name': self.name,
+            'path': self.path,
+            'category': self.category,
+            'id': self.id
+        }
 
         # Load metadata if available
         self.load_metadata()

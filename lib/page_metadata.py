@@ -59,3 +59,12 @@ class Page_Metadata(BaseContent):
         # Check if JS file exists and append to the 'js' array
         if os.path.isfile(js_path):
             self.js.append(f"/js/{id_path}.js")
+
+    def to_dict(self):
+        """
+        Convert Page_Metadata instance to a dictionary.
+        """
+        metadata_dict = {}
+        for key, value in self.metadata.items():
+            metadata_dict[key] = value
+        return metadata_dict

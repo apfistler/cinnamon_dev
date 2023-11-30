@@ -2,6 +2,7 @@
 
 from lib.config import Config
 from lib.content_manager import ContentManager
+from lib.page import Page
 
 def main():
     config = Config()
@@ -12,35 +13,35 @@ def main():
     content_manager = ContentManager(base_dir)
     all_sites = content_manager.get_all_sites()
 
-    # Print all sites and their properties
-    print("All Sites:")
+    # Iterate through all sites
     for site in all_sites:
-        print(f"\nSite ID: {site.id}")
-        site.display_all()
+#        print(f"\nSite ID: {site.id}")
 
-        # Display all page_metadata_items for the site
-        print("\nAll Metadatas:")
+        # Iterate through all page_metadata_items for the site
+#        print("\nAll Metadatas:")
         for page_metadata in site.page_metadata_items:
             name = page_metadata.get('name')
             page_id = page_metadata.get('id')
-            print(f"Page Name is #{name}")
-            print(f"Page ID is #{page_id}")
-            page_metadata.display_all()
+#            print(f"Page Name is #{name}")
+#            print(f"Page ID is #{page_id}")
+
+            # Create a Page object
+            page = Page(site, page_metadata)
+
+            # Check if the page exists
+            if page.exists():
+                # Open and parse the page
+                parsed_content = page.open_and_parse()
+                print(f"The page '{page_id}' exists. Parsed Content:")
+                print(parsed_content)
+            else:
+                print(f"The page '{page_id}' does not exist.")
 
         # Display all images for the site
-        print("\nAll Images:")
-        all_images = content_manager.get_all_images(site)
-        for image in all_images:
-            print(f"\nImage ID: {image.id}")
-            image.display_all()
-
-    # Extract all site IDs
-    all_site_ids = [site.id for site in all_sites]
-
-    # Print all site IDs
-    print("\nAll Site IDs:")
-    for site_id in all_site_ids:
-        print(site_id)
+#        print("\nAll Images:")
+#        all_images = content_manager.get_all_images(site)
+#        for image in all_images:
+#            print(f"\nImage ID: {image.id}")
 
 if __name__ == '__main__':
     main()
