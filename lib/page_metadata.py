@@ -37,6 +37,7 @@ class Page_Metadata(BaseContent):
             else:
                 setattr(self, key, value)
 
+
     def load_assets(self):
         """
         Look for CSS and JS files based on the 'id' and add them to the 'css' and 'js' arrays.
@@ -60,11 +61,17 @@ class Page_Metadata(BaseContent):
         if os.path.isfile(js_path):
             self.js.append(f"/js/{id_path}.js")
 
+#    def to_dict(self):
+#        """
+#        Convert Page_Metadata instance to a dictionary.
+#        """
+#        metadata_dict = {}
+#        for key, value in self.metadata.items():
+#            metadata_dict[key] = value
+#        return metadata_dict
+
     def to_dict(self):
         """
         Convert Page_Metadata instance to a dictionary.
         """
-        metadata_dict = {}
-        for key, value in self.metadata.items():
-            metadata_dict[key] = value
-        return metadata_dict
+        return vars(self)

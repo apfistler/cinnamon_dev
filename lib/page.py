@@ -29,6 +29,8 @@ class Page(BaseContent):
         with open(self.path, 'r', encoding='utf-8') as file:
             page_content = file.read()
 
+        print("OPEN AND PARSE!!!!!!!!!!!!!!!!!!!")
+        self.page_metadata.display_all()
         # Convert page_metadata to dictionary
         page_metadata_dict = self.page_metadata.to_dict()
 
