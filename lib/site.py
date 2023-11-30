@@ -6,6 +6,7 @@ class Site(BaseContent):
     def __init__(self, site_id, site_path, data):
         super().__init__(site_id, site_path, data)
         # Add any additional site-specific functionality here
+        self.site_dir = site_path
 
         self.check_required_fields()
 

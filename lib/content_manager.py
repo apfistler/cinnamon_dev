@@ -22,8 +22,9 @@ class ContentManager:
             
             sites.append(site)
         return sites
+
     def load_page_metadata_items(self, site):
-        page_metadata_dir = os.path.join(site.path, 'metadata')
+        page_metadata_dir = os.path.join(site.path, 'metadata/pages')
         page_metadata_items = []
         for root, dirs, files in os.walk(page_metadata_dir):
             for file in files:
@@ -32,7 +33,7 @@ class ContentManager:
                     page_metadata_id = page_metadata_id.replace(os.path.sep, '.')[:-5]  # Remove '.yaml' extension
                     page_metadata_path = os.path.join(root, file)
                     data = YamlParser.parse_yaml(page_metadata_path)
-                    page_metadata = Page_Metadata(page_metadata_id, page_metadata_path, data)
+                    page_metadata = Page_Metadata(page_metadata_id, page_metadata_path, data, site)
                     page_metadata_items.append(page_metadata)
         return page_metadata_items
 
