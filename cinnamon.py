@@ -16,7 +16,7 @@ def main():
     print("All Sites:")
     for site in all_sites:
         print(f"\nSite ID: {site.id}")
-#        site.display_all()
+        site.display_all()
 
         # Display all page_metadata_items for the site
         print("\nAll Metadatas:")
@@ -25,12 +25,14 @@ def main():
             page_id = page_metadata.get('id')
             print(f"Page Name is #{name}")
             print(f"Page ID is #{page_id}")
-            print(f"\nMetadata ID: {page_metadata.id}")
-            js = page_metadata.get('js')
-            css = page_metadata.get('css')
-            print(f"MY JS is {js}")
-            print(f"My CSS is {css}")
-#            page_metadata.display_all()
+            page_metadata.display_all()
+
+        # Display all images for the site
+        print("\nAll Images:")
+        all_images = content_manager.get_all_images(site)
+        for image in all_images:
+            print(f"\nImage ID: {image.id}")
+            image.display_all()
 
     # Extract all site IDs
     all_site_ids = [site.id for site in all_sites]

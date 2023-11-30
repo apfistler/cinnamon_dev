@@ -2,11 +2,13 @@ import os
 from .yaml_parser import YamlParser
 from .site import Site
 from .page_metadata import Page_Metadata
+from .image import Image
 
 class ContentManager:
     def __init__(self, base_dir):
         self.base_dir = base_dir
         self.sites = self.load_sites()
+        self.images = self.load_images()
 
     def load_sites(self):
         site_dir = self.base_dir
@@ -37,11 +39,35 @@ class ContentManager:
                     page_metadata_items.append(page_metadata)
         return page_metadata_items
 
+    def load_images(self):
+        image_dir = os.path.join(self.base_dir, 'img')
+        images = []
+        for root, dirs, files in os.walk(image_dir):
+            for file in files:
+                image_path = os.path.join(root, file)
+                image = Image(self.site, image_path)
+                images.append(image)
+        return images
+
     def get_all_sites(self):
         return self.sites
 
     def get_all_page_metadata_items(self):
         all_page_metadata_items = [page_metadata for site in self.sites for page_metadata in site.page_metadata_items]
         return all_page_metadata_items
+
+    def get_all_images(self, site):
+        all_images = []
+        for root, dirs, files in os.walk(os.path.join(site.path, 'img')):
+            for file in files:
+                if not file.endswith('.yaml'):
+                    image_path = os.path.join(root, file)
+                    image_id = os.path.relpath(image_path, site.path)
+                    data_path = os.path.join(site.path, 'metadata', 'img', f"{os.path.splitext(file)[0]}.yaml")
+                    data = YamlParser.parse_yaml(data_path) if os.path.isfile(data_path) else {}
+                    # Pass the correct parameters to the Image constructor
+                    image = Image(site, image_path)
+                    all_images.append(image)
+        return all_images
 
 
