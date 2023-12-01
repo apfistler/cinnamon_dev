@@ -38,8 +38,6 @@ class PageTemplate(BaseContent):
         page_template_content = self.insert_custom_headers(page_template_content)
 
         parsed_content = PageParser.parse(page_template_content, self.site.site_dir, page_template_metadata_dict)
-        print(parsed_content)
-        exit(1)
         return parsed_content
 
     def insert_custom_headers(self, content):
@@ -47,6 +45,9 @@ class PageTemplate(BaseContent):
 
         header = HeaderManager(self.site, self.page_metadata)
         custom_headers = header.get_custom_headers()
+
+        print(custom_headers)
+        exit(1)
 
         if head_tag_index != -1:
             return content[:head_tag_index + len('<head>')] + '\n'.join(custom_headers) + content[head_tag_index + len('<head>'):]
