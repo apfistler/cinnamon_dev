@@ -21,7 +21,7 @@ class Page(BaseContent):
         super().__init__(content_id=self.id, content_path=self.path, metadata={})
         self.content = self.open_and_parse()
 
-        self.page_template = PageTemplate(self.site, self.page_metadata, self.page_template_filename, self.content)
+        self.page_template = PageTemplate(self.site, self.page_metadata, self.page_template_filename)
 
         # Apply the page_template
         self.apply_page_template()
