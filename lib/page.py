@@ -2,27 +2,27 @@
 
 import os
 from .base_content import BaseContent
-from .template import Template
+from .page_template import PageTemplate
 from .page_parser import PageParser  # Assuming you have a separate module for PageParser
 
 class Page(BaseContent):
     def __init__(self, site, page_metadata):
-        from .template import Template  # Import inside the class to avoid circular import
+        from .page_template import PageTemplate  # Import inside the class to avoid circular import
 
         self.type = 'page'
         self.site = site
         self.page_metadata = page_metadata
         self.id = page_metadata.get('id')
         self.path = self._generate_path()
-        self.template_filename = self.page_metadata.template
+        self.page_template_filename = self.page_metadata.template
 
         super().__init__(content_id=self.id, content_path=self.path, metadata={})
         self.content = self.open_and_parse()
 
-        self.template = Template(self.site, self.page_metadata, self.template_filename, self.content)
+        self.page_template = PageTemplate(self.site, self.page_metadata, self.page_template_filename, self.content)
 
-        # Apply the template
-        self.apply_template()
+        # Apply the page_template
+        self.apply_page_template()
     
     def get_content(self):
         return self.get('content')
@@ -52,9 +52,9 @@ class Page(BaseContent):
 
         return parsed_content
 
-    def apply_template(self):
-        template_content = self.template.get_content()
-        if '&{{page}}' in template_content:
+    def apply_page_template(self):
+        page_template_content = self.page_template.get_content()
+        if '&{{page}}' in page_template_content:
             # Replace &{{page}} with the page content
-            self.content = template_content.replace('&{{page}}', self.content)
+            self.content = page_template_content.replace('&{{page}}', self.content)
 
