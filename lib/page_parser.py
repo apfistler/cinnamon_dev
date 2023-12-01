@@ -1,26 +1,47 @@
+# page_parser.py
+
 import re
-from pprint import pprint
+from .base_content import BaseContent
+from .widget import Widget
 
 class PageParser:
-    def __init__(self, data):
+    def __init__(self, site_dir, data):
         self.data = data
 
     @staticmethod
-    def parse(content, page_metadata_dict):
+    def parse(content, site_dir, page_metadata_dict):
+        widget_dir = f'{site_dir}/widgets'
 
         def replace(match):
             placeholder = match.group(1)
             try:
                 value = PageParser.evaluate_nested_value(placeholder, page_metadata_dict)
-                # Join the array elements with <br/> if the value is a list
+
+                # Check if the value is a list (array)
                 if isinstance(value, list):
+                    # Join array elements with <br/>
                     return '<br/>'.join(map(str, value))
+
                 return str(value)
             except (NameError, KeyError, IndexError):
                 print(f"Error: Placeholder '{placeholder}' not found in page_metadata_dict.")
                 return match.group(0)
 
-        parsed_content = re.sub(r'#\{\{([^}]*)\}\}', replace, content)
+        def process_widget(match):
+            widget_input = match.group(1)
+            widget = Widget(widget_input, widget_dir)
+            return widget.generate_output()
+
+        # Initialize content_with_widgets
+        content_with_widgets = content
+
+        # Replace other placeholders
+        content_with_placeholder_sub = re.sub(r'#\{\{([^}]*)\}\}', replace, content)
+
+        print(content_with_placeholder_sub)
+
+        # Process widgets first
+        parsed_content = re.sub(r'@\{\{([^}].*)\}\}', process_widget, content_with_placeholder_sub)
         return parsed_content
 
     @staticmethod
@@ -40,5 +61,4 @@ class PageParser:
                 value = value[level]
 
         return value
-
 

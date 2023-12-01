@@ -14,8 +14,6 @@ class Page(BaseContent):
         self.path = self._generate_path()
         self.template_filename = self.page_metadata.template
 
-        print(f"Template filename is {self.template_filename}")
-
         super().__init__(content_id=self.id, content_path=self.path, metadata={})
         self.content = self.open_and_parse()
 
@@ -42,6 +40,8 @@ class Page(BaseContent):
         page_metadata_dict = self.page_metadata.to_dict()
 
         # Parse the content
-        parsed_content = PageParser.parse(page_content, page_metadata_dict)
+        parsed_content = PageParser.parse(page_content, self.site.site_dir, page_metadata_dict)
 
         return parsed_content
+
+

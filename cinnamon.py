@@ -32,10 +32,10 @@ def main():
             if page.exists():
                 # Open and parse the page
                 parsed_content = page.open_and_parse()
-                print(f"The page '{page_id}' exists. Parsed Content:")
+#                print(f"The page '{page_id}' exists. Parsed Content:")
 #                print(parsed_content)
-            else:
-                print(f"The page '{page_id}' does not exist.")
+#            else:
+#                print(f"The page '{page_id}' does not exist.")
 
         # Display all images for the site
 #        print("\nAll Images:")

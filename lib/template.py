@@ -11,7 +11,6 @@ class Template(BaseContent):
         self.type = 'template'
         self.content = self.open_and_parse()
 
-        print(self.content)
         exit
 
     def _generate_path(self, filename):
@@ -30,7 +29,7 @@ class Template(BaseContent):
             template_content = file.read()
 
         template_metadata_dict = self.page_metadata.to_dict()
-        parsed_content = PageParser.parse(template_content, template_metadata_dict)
+        parsed_content = PageParser.parse(template_content, self.site.site_dir, template_metadata_dict)
 
         return parsed_content
 
