@@ -10,6 +10,8 @@ class HeaderManager:
         # You can use self.site and self.page_metadata to access the necessary information
         custom_headers = "!!!!HELLO WORLD THIS IS MY CUSTOM HEADER!!."  # Replace with your actual logic
         header = self.get_elements(['css', 'fonts', 'js'])
+        header += self.build_header()
+
 
         print(header)
         exit(1)
@@ -28,3 +30,62 @@ class HeaderManager:
                 result_str += f'@{{{{{element} data="{data}"}}}}\n'
 
         return result_str
+
+    def build_header(self):
+        header_str = ''
+
+        if hasattr(self.page_metadata, 'head') and self.page_metadata.head:
+            for element_data in self.page_metadata.head:
+                # Check if the element_data is a dictionary
+                if not isinstance(element_data, dict):
+                    continue
+
+                element_name = element_data.get('name', '')  # Adjust this based on your data structure
+                if not element_name:
+                    continue
+
+                header_str += f'<{element_name} '
+
+                attributes = element_data.get('attributes', {})
+                for attribute, value in attributes.items():
+                    header_str += f'{attribute}="{value}" '
+
+                header_str = header_str.rstrip() + '>\n'
+
+        return header_str
+
+    def build_header(self):
+        header_str = ''
+
+        if hasattr(self.page_metadata, 'head') and self.page_metadata.head:
+            for element_identifier in self.page_metadata.head:
+                # Assuming you have a mapping of identifiers to dictionaries
+                element_data = self.get_element_data(element_identifier)
+
+                if not element_data:
+                    continue
+
+                element_name = element_data.get('name', '')  # Adjust this based on your data structure
+                if not element_name:
+                    continue
+
+                header_str += f'<{element_name} '
+
+                attributes = element_data.get('attributes', {})
+                for attribute, value in attributes.items():
+                    header_str += f'{attribute}="{value}" '
+
+                header_str = header_str.rstrip() + '>\n'
+
+        return header_str
+
+    def get_element_data(self, element_identifier):
+        # Define a mapping of identifiers to dictionaries
+        element_mapping = {
+            'meta': {'name': 'meta', 'attributes': {'http-equiv': 'Content-Type', 'content': 'text/html;'}},
+            # Add more mappings as needed
+        }
+
+        return element_mapping.get(element_identifier, {})
+
+
