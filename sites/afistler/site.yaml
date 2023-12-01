@@ -40,26 +40,26 @@ js:
 
 menus:
   main_menu:
-    "Home": "main.home"
-    "GoFundMe": "main.go_fund_me"
+    "Home": "/html/main/home.html"
+    "GoFundMe": "/html/main/go_fund_me.html"
     "Hypnosis":
-      "Professional Experience": "articles.hypnosis.bhc"
-      "About Hypnosis": "hypnosis.about_hypnosis"
-      "Hypnosis Services": "hypnosis.hypnosis_services"
-      "Testimonals": "hypnosis.testimonals"
-      "Anger": "hypnosis.anger"
-      "Weight Loss": "hypnosis.weight_loss"
-      "Smoking Cessation": "hypnosis.smoking_cessation"
-    "Addiction Services": "addiction.addiction_services"
-    "Astrology": "astrology.astrology"
-    "Handwriting Analysis": "graphology.graphology"
+      "Professional Experience": "/html/articles/hypnosis/bhc.html"
+      "About Hypnosis": "/html/hypnosis/about_hypnosis.html"
+      "Hypnosis Services": "/html/hypnosis/hypnosis_services.html"
+      "Testimonals": "/html/hypnosis/testimonals.html"
+      "Anger": "/html/hypnosis/anger.html"
+      "Weight Loss": "/html/hypnosis/weight_loss.html"
+      "Smoking Cessation": "/html/hypnosis/smoking_cessation.html"
+    "Addiction Services": "/html/addiction/addiction_services.html"
+    "Astrology": "/html/astrology/astrology.html"
+    "Handwriting Analysis": "/html/graphology/graphology.html"
     "Technology":
-      "Projects": "technology.projects"
-      "Artwork": "technology.artwork"
-      "Resume": "technology.resume"
-    "Upcoming Events": "main.upcoming_events"
-    "Articles": "articles.articles"
-    "Contact Us": "main.contact_us"
+      "Projects": "/html/technology/projects.html"
+      "Artwork": "/html/technology/artwork.html"
+      "Resume": "/html/technology/resume.html"
+    "Upcoming Events": "/html/main/upcoming_events.html"
+    "Articles": "/html/articles/articles.html"
+    "Contact Us": "/html/main/contact_us.html"
 
 data:
   address:

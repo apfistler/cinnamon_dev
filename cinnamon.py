@@ -31,9 +31,10 @@ def main():
             # Check if the page exists
             if page.exists():
                 # Open and parse the page
-                parsed_content = page.open_and_parse()
+                parsed_content = page.get_content()
 #                print(f"The page '{page_id}' exists. Parsed Content:")
-#                print(parsed_content)
+                print(parsed_content)
+                exit(1)
 #            else:
 #                print(f"The page '{page_id}' does not exist.")
 

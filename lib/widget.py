@@ -13,7 +13,6 @@ class Widget(BaseContent):
         (self.template_name, self.args) = self.extract_args()
         self.path = f'{widget_dir}/{self.template_name}/{self.template_name}.html'
         # Do not return anything from __init__, just call the method
-        self.generate_output()
 
     def extract_args(self):
         # Use a regex pattern to capture the first word as the template name and the remaining string as arguments
@@ -32,9 +31,22 @@ class Widget(BaseContent):
             raise ValueError(f"Invalid input string: {self.input_str}")
 
     def generate_output(self):
-        data = yaml.safe_load(self.args['data'])
+        if 'data' in self.args and self.args['data'] != '':
+            data = self.args['data']
+        else:
+            data = ''
+        data = yaml.safe_load(data)
+
+        if 'text' in self.args and self.args['text'] != '':
+            text = self.args['text']
+        else:
+            text = ''
 
         template = WidgetTemplateLoader.load_template(self.widget_dir, self.template_name)
         # Optionally, you can return the result of render if needed
-        return template.render(data=data)
+        return self.trim_empty_lines(template.render(data=data, text=text))
 
+    def trim_empty_lines(self,output):
+        lines = output.splitlines()
+        non_empty_lines = filter(lambda line: line.strip(), lines)
+        return '\n'.join(non_empty_lines)

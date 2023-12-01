@@ -38,10 +38,9 @@ class PageParser:
         # Replace other placeholders
         content_with_placeholder_sub = re.sub(r'#\{\{([^}]*)\}\}', replace, content)
 
-        print(content_with_placeholder_sub)
-
         # Process widgets first
         parsed_content = re.sub(r'@\{\{([^}].*)\}\}', process_widget, content_with_placeholder_sub)
+
         return parsed_content
 
     @staticmethod

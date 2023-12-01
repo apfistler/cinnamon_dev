@@ -1,9 +1,11 @@
-from .base_content import BaseContent
+# page.py
+
 import os
+from .base_content import BaseContent
+from .template import Template
 from .page_parser import PageParser  # Assuming you have a separate module for PageParser
 
 class Page(BaseContent):
-
     def __init__(self, site, page_metadata):
         from .template import Template  # Import inside the class to avoid circular import
 
@@ -17,7 +19,13 @@ class Page(BaseContent):
         super().__init__(content_id=self.id, content_path=self.path, metadata={})
         self.content = self.open_and_parse()
 
-        self.template = Template(self.site, self.page_metadata, self.template_filename)
+        self.template = Template(self.site, self.page_metadata, self.template_filename, self.content)
+
+        # Apply the template
+        self.apply_template()
+    
+    def get_content(self):
+        return self.get('content')
 
     def _generate_path(self):
         # Replace '.' with '/' in the page ID
@@ -44,4 +52,9 @@ class Page(BaseContent):
 
         return parsed_content
 
+    def apply_template(self):
+        template_content = self.template.get_content()
+        if '&{{page}}' in template_content:
+            # Replace &{{page}} with the page content
+            self.content = template_content.replace('&{{page}}', self.content)
 

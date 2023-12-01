@@ -1,23 +1,28 @@
-from .base_content import BaseContent
+# template.py
+
 import os
-from .page_parser import PageParser  # Assuming you have a separate module for PageParser
+import shlex
+import re
+from .page_parser import PageParser  # Import inside the class to avoid circular import
+from .base_content import BaseContent
 
 class Template(BaseContent):
-    def __init__(self, site, page_metadata, template_filename):
-        super().__init__(content_id='', content_path='', metadata={})
+    def __init__(self, site, page_metadata, template_filename, page_content):
         self.site = site
         self.page_metadata = page_metadata
         self.path = self._generate_path(template_filename)
         self.type = 'template'
+        self.page_content = shlex.quote(page_content.replace('\n', '\\n'))
         self.content = self.open_and_parse()
 
-        exit
+    def get_content(self):
+        return self.get('content')
 
     def _generate_path(self, filename):
         # Check if the template filename is a partial path
         if not filename.startswith('/'):
             # If it's a partial path, assume it's relative to the site's directory
-          template_path = os.path.join(self.site.site_dir, filename)
+            template_path = os.path.join(self.site.site_dir, filename)
         else:
             # If it's already a full path, use it as is
             template_path = filename
