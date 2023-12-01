@@ -2,7 +2,7 @@
 
 from lib.config import Config
 from lib.content_manager import ContentManager
-from lib.page import Page
+from lib.page.page import Page
 
 def main():
     config = Config()

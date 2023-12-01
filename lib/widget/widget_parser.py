@@ -1,4 +1,4 @@
-# widgets/widget_parser.py
+# lib/widget/widget_parser.py
 
 import re
 import yaml

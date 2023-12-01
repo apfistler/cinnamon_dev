@@ -1,8 +1,8 @@
-# page_parser.py
+# lib/page/page_parser.py
 
 import re
-from .base_content import BaseContent
-from .widget import Widget
+from lib.base_content import BaseContent
+from lib.widget.widget import Widget  # Adjust the import path accordingly
 
 class PageParser:
     def __init__(self, site_dir, data):

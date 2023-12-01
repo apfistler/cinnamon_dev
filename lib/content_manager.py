@@ -1,7 +1,10 @@
+#lib/content_manager.py
+
 import os
-from .yaml_parser import YamlParser
-from .site import Site
-from .page_metadata import Page_Metadata
+
+from lib.yaml_parser import YamlParser
+from lib.site import Site
+from lib.page.page_metadata import Page_Metadata
 from .image import Image
 
 class ContentManager:

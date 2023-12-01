@@ -1,9 +1,11 @@
 # page.py
 
 import os
-from .base_content import BaseContent
-from .page_template import PageTemplate
-from .page_parser import PageParser  # Assuming you have a separate module for PageParser
+import sys
+
+from lib.base_content import BaseContent
+from lib.page.page_template import PageTemplate
+from lib.page.page_parser import PageParser
 
 class Page(BaseContent):
     def __init__(self, site, page_metadata):

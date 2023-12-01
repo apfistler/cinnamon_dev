@@ -1,4 +1,4 @@
-# widgets/widget_template_loader.py
+# lib/widget/widget_template_loader.py
 
 from jinja2 import Environment, FileSystemLoader
 

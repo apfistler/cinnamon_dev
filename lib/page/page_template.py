@@ -1,10 +1,11 @@
-# page_template.py
+# lib/page/page_template.py
 
 import os
 import shlex
 import re
-from .page_parser import PageParser  # Import inside the class to avoid circular import
-from .base_content import BaseContent
+
+from lib.page.page_parser import PageParser  # Import inside the class to avoid circular import
+from lib.base_content import BaseContent
 
 class PageTemplate(BaseContent):
     def __init__(self, site, page_metadata, page_template_filename, page_content):

@@ -1,4 +1,6 @@
-from .base_content import BaseContent
+#lib/site.py
+
+from lib.base_content import BaseContent
 
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']

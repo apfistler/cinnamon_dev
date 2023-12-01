@@ -1,4 +1,6 @@
-from .yaml_parser import YamlParser
+#;on/base_content.py
+
+from lib.yaml_parser import YamlParser
 
 class BaseContent:
     REQUIRED_FIELDS = []

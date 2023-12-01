@@ -1,6 +1,10 @@
-from .base_content import BaseContent
-from .page_metadata_parser import PageMetadataParser
+#/lib/page/page_metadta
+
 import os
+import sys
+
+from lib.base_content import BaseContent
+from lib.page.page_metadata_parser import PageMetadataParser
 
 class Page_Metadata(BaseContent):
     REQUIRED_FIELDS = ['name']

@@ -1,6 +1,9 @@
-from .base_content import BaseContent
+#lib/image.py
+
 import os
-from .yaml_parser import YamlParser
+
+from lib.base_content import BaseContent
+from lib.yaml_parser import YamlParser
 
 class Image(BaseContent):
     REQUIRED_FIELDS = ['name', 'category']

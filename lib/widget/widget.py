@@ -1,10 +1,11 @@
-# widget.py
+# lib/widget/widget.py
 
 import re
 import yaml
-from .widget_template_loader import WidgetTemplateLoader
-from .base_content import BaseContent
-from .yaml_parser import YamlParser
+
+from lib.widget.widget_template_loader import WidgetTemplateLoader
+from lib.base_content import BaseContent
+from lib.yaml_parser import YamlParser
 
 class Widget(BaseContent):
     def __init__(self, input_str, widget_dir):
