@@ -1,0 +1,19 @@
+{# tag.jinja #}
+
+{%- macro render_tag(type, tag_data) -%}
+    <{{ type }}{{' '}}
+    {%- for key, value in tag_data.items() -%}
+        {{ key }}="{{ value }}"{%- if not loop.last -%}{{' '}}{% endif -%}
+    {%- endfor -%}></{{ type }}>{{"\n"}}
+{%- endmacro -%}
+
+
+{%- macro render_tags(type, values) -%}
+    {# Generate multiple tags based on type and tags array #}
+    {%- for tag_data in values -%}
+        {{ render_tag(type, tag_data) }}
+    {%- endfor -%}
+{%- endmacro -%}
+
+{{ render_tags(type, values) }}
+

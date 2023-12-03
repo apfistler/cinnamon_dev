@@ -1,5 +1,3 @@
-# lib/page/header/header_manager.py
-from pprint import pprint
 import yaml
 
 class HeaderManager:
@@ -10,64 +8,74 @@ class HeaderManager:
     def get_custom_headers(self):
         # Add your logic to retrieve custom headers based on site and page_metadata
         # You can use self.site and self.page_metadata to access the necessary information
-        headers = self.get_simple_elements(['css', 'fonts', 'js'])
+        headers = self.get_title()
+        headers += self.get_from_shortcuts(['css', 'fonts', 'js'])
         headers += self.get_from_metadata_header()
-
-
-        print(headers)
-        exit(1)
-        
-         
 
         return headers
 
-    def get_simple_elements(self, types):
-        result_str = ''
+    def get_from_shortcuts(self, types):
+        cmd_str = ''
 
-        for type in types:
+        for element in types:
             # Check if the element is an attribute of self.page_metadata and is not None
             if hasattr(self.page_metadata, element) and getattr(self.page_metadata, element) is not None:
                 data = getattr(self.page_metadata, element)
 
-                for value in data:
-                    dict = {}
+                dictionary = {}  # Initialize the 'dictionary' variable outside the loop
 
-                    if type in ['css', 'font']:
-                       ary = [ 
-                            'rel': 'stylesheet'
+                for value in data:
+                    values = {}  # Initialize the 'ary' variable inside the loop for each 'value'
+
+                    if element in ['css', 'fonts']:
+                        values = {
+                            'rel': 'stylesheet',
                             'type': 'text/css',
                             'href': value
-                            } ]
+                        }
 
-                       dict = append_to_dict(d, 'link'
-                    else if type == 'js'
-                      
+                    elif element == 'js':
+                        values = {
+                            'src': value
+                        }
 
-                            
-                result_str += f'@{{{{tag type="{element}" data="{data}"}}}}\n'
+                    dictionary = self.append_to_dict(dictionary, 'link' if element in ['css', 'fonts'] else 'script', values)
+                cmd_str += self.generate_tag_cmd(dictionary)
 
-        return result_str
+        return cmd_str
 
     def get_from_metadata_header(self):
         cmd_str = ''
 
         if hasattr(self.page_metadata, 'head') and self.page_metadata.head:
-            header_str = ''
-
             yaml_str = yaml.dump(self.page_metadata.head)
-            dict = yaml.safe_load(yaml_str)
- 
-            for tag, values in dict.items():
-                cmd_str += f'@{{{{tag type="{tag}" values="{values}"}}}}'
+            dictionary = yaml.safe_load(yaml_str)
+
+            cmd_str += self.generate_tag_cmd(dictionary)
 
         return cmd_str
 
-    def append_to_dict(dictionary, key, value):
+    def generate_tag_cmd(self, dictionary):
+        # Creates widget commands to generate header tags based on the type and values provided
+        cmd_str = ''
+
+        for tag, values in dictionary.items():
+            cmd_str += f'@{{{{tag type="{tag}" values="{values}"}}}}\n'
+
+        return cmd_str
+
+    def get_title(self, title=None):
+        if title is None:
+            title = getattr(self.page_metadata, 'title', '') 
+
+        title_tag = f'<title>{title}</title>\n'
+        return title_tag
+
+    def append_to_dict(self, dictionary, key, value):
         if key not in dictionary:
             dictionary[key] = []
 
         dictionary[key].append(value)
 
-        return(dictionary)
-
+        return dictionary
 

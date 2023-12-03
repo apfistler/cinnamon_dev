@@ -32,20 +32,10 @@ class Widget(BaseContent):
             raise ValueError(f"Invalid input string: {self.input_str}")
 
     def generate_output(self):
-        if 'data' in self.args and self.args['data'] != '':
-            data = self.args['data']
-        else:
-            data = ''
-        data = yaml.safe_load(data)
-
-        if 'text' in self.args and self.args['text'] != '':
-            text = self.args['text']
-        else:
-            text = ''
-
         template = WidgetTemplateLoader.load_template(self.widget_dir, self.template_name)
-        # Optionally, you can return the result of render if needed
-        return self.trim_empty_lines(template.render(data=data, text=text))
+        render_args = {key: yaml.safe_load(value) for key, value in self.args.items()}
+
+        return self.trim_empty_lines(template.render(**render_args))
 
     def trim_empty_lines(self,output):
         lines = output.splitlines()

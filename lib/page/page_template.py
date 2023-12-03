@@ -46,11 +46,8 @@ class PageTemplate(BaseContent):
         header = HeaderManager(self.site, self.page_metadata)
         custom_headers = header.get_custom_headers()
 
-        print(custom_headers)
-        exit(1)
-
         if head_tag_index != -1:
-            return content[:head_tag_index + len('<head>')] + '\n'.join(custom_headers) + content[head_tag_index + len('<head>'):]
+            return content[:head_tag_index + len('<head>')] + '\n' + custom_headers + content[head_tag_index + len('<head>'):]
         else:
             return content
 
