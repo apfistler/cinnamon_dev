@@ -9,8 +9,10 @@ class HeaderManager:
         # Add your logic to retrieve custom headers based on site and page_metadata
         # You can use self.site and self.page_metadata to access the necessary information
         headers = self.get_title()
+        headers += self.get_base()
         headers += self.get_from_shortcuts(['css', 'fonts', 'js'])
         headers += self.get_from_metadata_header()
+        headers += self.get_keywords()
 
         return headers
 
@@ -44,6 +46,19 @@ class HeaderManager:
 
         return cmd_str
 
+    def get_keywords(self):
+        if hasattr(self.page_metadata, 'keywords') and self.page_metadata.keywords:
+            keywords = ','.join(self.page_metadata.keywords)  # Fix the typo here (elf -> self)
+            dictionary = {
+                'meta': [{
+                    'name': 'keywords',
+                    'content': keywords
+                }]
+            }
+
+        return self.generate_tag_cmd(dictionary)
+
+
     def get_from_metadata_header(self):
         cmd_str = ''
 
@@ -64,12 +79,27 @@ class HeaderManager:
 
         return cmd_str
 
-    def get_title(self, title=None):
-        if title is None:
-            title = getattr(self.page_metadata, 'title', '') 
+    def get_tag(self, tag_name, attribute=None, default_value=''):
+        if attribute is None:
+            attribute = tag_name
 
-        title_tag = f'<title>{title}</title>\n'
-        return title_tag
+        value = getattr(self.page_metadata, attribute, default_value)
+        tag = f'<{tag_name}>{value}</{tag_name}>\n'
+        return tag
+
+    def get_title(self, title=None):
+        return self.get_tag('title', 'title', title)
+
+    def get_base(self, href=None):
+        if href is None:
+            if self.page_metadata.has_param('base'):
+                href = self.page_metadata.base
+            else:
+                return
+
+        tag = f'<base href="{href}" />\n'
+        return tag
+
 
     def append_to_dict(self, dictionary, key, value):
         if key not in dictionary:

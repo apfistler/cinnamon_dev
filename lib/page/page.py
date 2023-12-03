@@ -2,6 +2,7 @@
 
 import os
 import sys
+from bs4 import BeautifulSoup
 
 from lib.base_content import BaseContent
 from lib.page.page_template import PageTemplate
@@ -27,7 +28,22 @@ class Page(BaseContent):
         self.apply_page_template()
     
     def get_content(self):
-        return self.get('content')
+        page_indent = 2
+
+        if self.page_metadata.has_param('indent'):
+            page_indent = self.page_metadata.indent
+
+        soup = BeautifulSoup(self.content, 'html.parser')
+        formatted_html = self._prettify_with_indentation(soup, indent=page_indent)
+        return str(formatted_html)
+
+    def _prettify_with_indentation(self, soup, indent):
+        pretty_html = soup.prettify()
+        lines = pretty_html.split("\n")
+        indented_html = ""
+        for line in lines:
+            indented_html += " " * indent + line + "\n"
+        return indented_html
 
     def _generate_path(self):
         # Replace '.' with '/' in the page ID

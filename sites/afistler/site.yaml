@@ -2,6 +2,7 @@ id: afistler
 name: "Adam Fistler Services"
 url: "https://www.afistler.us.to"
 template: "templates/afistler.html"
+indent: 2
 
 head:
   meta:
@@ -20,6 +21,8 @@ head:
     -
       robots: "index, follow"
 
+base: 'http://www.afistler.us.to'
+
 fonts:
     - "https://fonts.googleapis.com/css2?family=Brush+Script"
     - "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
@@ -37,6 +40,19 @@ js:
   - "/js/site/main.js"
   - "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
   - "https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+
+keywords:
+  - hypnosis
+  - astrology
+  - technology
+  - ruby
+  - python
+  - perl
+  - bash
+  - linux
+  - html
+  - css
+  - javascript
 
 menus:
   main_menu:
