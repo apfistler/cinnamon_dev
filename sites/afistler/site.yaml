@@ -21,23 +21,24 @@ head:
     -
       robots: "index, follow"
 
-base: 'http://www.afistler.us.to'
+base: '.'
 
 fonts:
     - "https://fonts.googleapis.com/css2?family=Brush+Script"
     - "https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap"
 
 css:
-  - "/css/site/main.css"
-  - "/css/site/article.css"
-  - "/css/site/content.css"
-  - "/css/site/display_table.css"
-  - "/css/site/header.css"
-  - "/css/site/message_box.css"
+  - "/css/main.css"
+  - "/css/article.css"
+  - "/css/content.css"
+  - "/css/display_table.css"
+  - "/css/header.css"
+  - "/css/message_box.css"
+  - "/css/menu.css"
 
 
 js:
-  - "/js/site/main.js"
+  - "/js/main.js"
   - "https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
   - "https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
 

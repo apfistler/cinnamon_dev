@@ -1,20 +1,43 @@
-{% macro generate_menu(data, indent='') %}
+<div id="menu_control">
+  <nav>
+    <ul>
+      <li>
+        <a class="menu-control-item" href="javascript:void(0)" id="menu_visibility">
+          <span class="hamburger-icon">
+            ☰
+          </span>
+          <span class="close-icon">
+            X
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+{% macro generate_menu(data, indent='', subclasses='') %}
   {% set menu_html = [] %}
   {% for label, link in data.items() %}
     {% if link is mapping %}  {# Check if the item is a dictionary #}
       {{ indent }}<li><a class="menu-item parent active" href="javascript:void(0)">{{ label }}</a>
       {{ indent }}  <ul class="child-menu hidden">
-      {{ generate_menu(link, indent ~ '    ') }}  {# Recursive call for child items #}
+      {{ generate_menu(link, indent ~ '    ', 'child active') }}  {# Recursive call for child items #}
       {{ indent }}  </ul>
       {{ indent }}</li>
     {% else %}
-      {{ indent }}<li><a class="menu-item" href="{{ link }}">{{ label }}</a></li>
+      {{ indent }}<li><a class="menu-item {{subclasses}}" href="{{ link }}">{{ label }}</a></li>
     {% endif %}
     {% if not loop.last %}  {# Add line break if not the last item in the loop #}
-      {{ '' if menu_html else indent }}<br/>
+      {{ '' if menu_html else indent }}
     {% endif %}
   {% endfor %}
 {% endmacro %}
 
-{{ generate_menu(data) }}
+<div class="menu" id="menu">
+  <nav>
+    <ul>
+      {{ generate_menu(data) }}
+    </ul>
+  </nav>
+</div>
 
