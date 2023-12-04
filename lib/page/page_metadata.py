@@ -66,7 +66,7 @@ class Page_Metadata(BaseContent):
         if os.path.isfile(js_path):
             self.js.append(f"/js/{id_path}.js")
 
-    def has_param(self, param):
+    def has_attr(self, param):
          return hasattr(self, param) and getattr(self, param) is not None
 
 

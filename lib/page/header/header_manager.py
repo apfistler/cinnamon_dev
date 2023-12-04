@@ -21,7 +21,7 @@ class HeaderManager:
 
         for element in types:
             # Check if the element is an attribute of self.page_metadata and is not None
-            if hasattr(self.page_metadata, element) and getattr(self.page_metadata, element) is not None:
+            if self.page_metadata.has_attr(element):
                 data = getattr(self.page_metadata, element)
 
                 dictionary = {}  # Initialize the 'dictionary' variable outside the loop
@@ -47,7 +47,7 @@ class HeaderManager:
         return cmd_str
 
     def get_keywords(self):
-        if hasattr(self.page_metadata, 'keywords') and self.page_metadata.keywords:
+        if self.page_metadata.has_attr('keywords'):
             keywords = ','.join(self.page_metadata.keywords)  # Fix the typo here (elf -> self)
             dictionary = {
                 'meta': [{
@@ -62,7 +62,7 @@ class HeaderManager:
     def get_from_metadata_header(self):
         cmd_str = ''
 
-        if hasattr(self.page_metadata, 'head') and self.page_metadata.head:
+        if self.page_metadata.has_attr('head'):
             yaml_str = yaml.dump(self.page_metadata.head)
             dictionary = yaml.safe_load(yaml_str)
 
@@ -92,7 +92,7 @@ class HeaderManager:
 
     def get_base(self, href=None):
         if href is None:
-            if self.page_metadata.has_param('base'):
+            if self.page_metadata.has_attr('base'):
                 href = self.page_metadata.base
             else:
                 return

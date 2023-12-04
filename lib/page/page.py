@@ -30,7 +30,7 @@ class Page(BaseContent):
     def get_content(self):
         page_indent = 2
 
-        if self.page_metadata.has_param('indent'):
+        if self.page_metadata.has_attr('indent'):
             page_indent = self.page_metadata.indent
 
         soup = BeautifulSoup(self.content, 'html.parser')
