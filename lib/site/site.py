@@ -1,6 +1,7 @@
 #lib/site/site.py
 
 import os
+
 from lib.base_content import BaseContent
 from lib.site.site_catalog import SiteCatalog
 
@@ -10,8 +11,10 @@ class Site(BaseContent):
     def __init__(self, config, key):
         self.key = key 
         self.config = config
-        self.system_site_directory = os.path.join(config.get('system_site_directory'), key)
-        #self.user_site_directory = os.path.join(config.get('user_site_directory'), key)
+        self.base_system_site_directory = config.get('system_site_directory')
+        self.base_user_site_directory = config.get('user_site_directory')
+        self.system_site_directory = os.path.join(self.base_system_site_directory, key)
+        self.user_site_directory = os.path.join(self.base_user_site_directory, key)
 
         system_site_catalog = SiteCatalog(self)
 

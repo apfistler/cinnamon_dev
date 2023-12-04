@@ -2,6 +2,7 @@
 
 import yaml
 import re
+import os
 
 class YamlParser:
     @staticmethod
@@ -26,7 +27,25 @@ class YamlParser:
 
     @staticmethod
     def handle_placeholders_in_string(value, data):
-        return re.sub(r'#\{(\w+(\.\w+)*)\}', lambda match: YamlParser.get_nested_value(match.group(1), data), value)
+        def replace_placeholder(match):
+            placeholder = match.group(1) or match.group(3)
+
+            # Try to get the value from environment variables
+            env_value = os.environ.get(placeholder)
+            if env_value is not None:
+                return env_value
+
+            # Try to get the value from YAML data
+            try:
+                return str(YamlParser.get_nested_value(placeholder, data))
+            except Exception:
+                return match.group(0)
+
+        # Replace both #{} and ${} placeholders iteratively until no more replacements are possible
+        while re.search(r'#\{(\w+(\.\w+)*)\}|\${(\w+(\.\w+)*)}', value):
+            value = re.sub(r'#\{(\w+(\.\w+)*)\}|\${(\w+(\.\w+)*)}', replace_placeholder, value)
+
+        return value
 
     @staticmethod
     def get_nested_value(nested_key, data):
@@ -52,3 +71,14 @@ class YamlParser:
             if field not in config:
                 return f"Required field '{field}' not found in config"
 
+    @staticmethod
+    def display_property(value, indent=0):
+        if isinstance(value, dict):
+            for key, subvalue in value.items():
+                print(" " * indent + f"{key}:")
+                YamlParser.display_property(subvalue, indent + 2)
+        elif isinstance(value, list):
+            for item in value:
+                YamlParser.display_property(item, indent)
+        else:
+            print(" " * indent + f"{value}")

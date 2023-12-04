@@ -7,7 +7,7 @@ import re
 from lib.yaml_parser import YamlParser
 
 class Config:
-    REQUIRED_FIELDS = ['cinnamon_dir', 'config_dir', 'site_config_dir', 'site_dir', 'user_dir', 'user_config_dir', 'user_site_dir', 'user_site_config_dir', 'input_dir', 'output_dir']
+    REQUIRED_FIELDS = ['system_cinnamon_directory', 'system_config_directory', 'system_site_directory', 'user_directory', 'user_config_directory', 'user_site_directory', 'input_directory', 'output_directory']
 
     def __init__(self):
         self.data = {}
@@ -29,12 +29,12 @@ class Config:
         self.read_file(system_config_path, error_message)
 
     def read_defaults(self):
-        defaults_path = os.path.join(self.data.get('config_dir', ''), 'defaults.yaml')
+        defaults_path = os.path.join(self.data.get('system_config_directory', ''), 'defaults.yaml')
         self.read_file(defaults_path, "Error: Defaults file not found.")
 
     def read_user_config(self):
-        home_dir = os.path.expanduser("~")
-        user_config_path = os.path.join(home_dir, '.cinnamon.yaml')
+        home_directory = os.path.expanduser("~")
+        user_config_path = os.path.join(home_directory, '.cinnamon.yaml')
         error_message = "Your user account has not been configured for use with Cinnamon. Please contact an administrator for access."
         self.read_file(user_config_path, error_message)
 
@@ -109,8 +109,8 @@ class Config:
 #config.display_all()
 
 # Get the value of a specific property
-#cinnamon_dir_value = config.get('cinnamon_dir')
-#print(f"\nValue of 'cinnamon_dir': {cinnamon_dir_value}")
+#cinnamon_directory_value = config.get('cinnamon_directory')
+#print(f"\nValue of 'cinnamon_directory': {cinnamon_directory_value}")
 
 # Set the value of a specific property
 #config.set('new_property', 'new_value')

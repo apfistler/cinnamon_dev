@@ -1,0 +1,133 @@
+extensions:
+  images:
+    - jpeg
+    - jpg
+    - jfif
+    - png
+    - gif
+    - webp
+    - svg
+    - bmp
+    - tiff
+    - tif
+    - ico
+    - heif
+    - heic
+  html:
+    - html
+    - htm
+    - css
+    - js
+    - scss
+    - sass
+    - less
+  video:
+    - mp4
+    - webm
+    - ogv
+    - avi
+    - mov
+    - mkv
+    - flv
+    - mpeg
+    - wmv
+    - 3gp
+  audio:
+    - mp3
+    - ogg
+    - wav
+    - flac
+    - aac
+    - wma
+    - m4a
+    - opus
+    - mid
+    - afif
+    - mod
+    - s3m
+  document:
+    - doc
+    - docx
+    - pdf
+    - xls
+    - xlsx
+    - ppt
+    - pptx
+  fonts:
+    - ttf
+    - woff
+    - woff2
+  data:
+    - csv
+    - yaml
+    - json
+    - xml
+  scripting:
+    - py
+    - rb
+    - pl
+    - php
+    - asp
+    - aspx
+    - sh
+    - ps1
+    - bat
+  configuration:
+    - ini
+    - cfg
+    - conf
+    - env
+  markup:
+    - md
+    - markdown
+  version_control:
+    - gitignore
+    - gitattributes
+  database:
+    - sql
+  metadata:
+    - json
+    - yml
+    - yaml
+  template_engines:
+    - ejs
+    - handlebars
+    - mustache
+  build_tools:
+    - gulpfile.js
+    - Gruntfile.js
+  log:
+    - log
+    - txt
+  backup:
+    - bak
+    - backup
+  package_management:
+    - package.json
+    - yarn.lock
+    - npm-shrinkwrap.json
+  server_configuration:
+    - htaccess
+  windows_batch_script:
+    - bat
+  linux_shell_script:
+    - sh
+    - bash
+  executable:
+    - exe
+    - msi
+  virtualization:
+    - vagrantfile
+    - dockerfile
+  certificates:
+    - crt
+    - pem
+  vector_graphics:
+    - ai
+  3d_modeling:
+    - obj
+    - stl
+    - fbx
+  raster_graphics:
+    - psd
+

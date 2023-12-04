@@ -22,7 +22,7 @@ class HeaderManager:
         for element in types:
             # Check if the element is an attribute of self.page_metadata and is not None
             if self.page_metadata.has_attr(element):
-                data = getattr(self.page_metadata, element)
+                data = self.page_metadata.get(element)
 
                 dictionary = {}  # Initialize the 'dictionary' variable outside the loop
 
@@ -83,7 +83,7 @@ class HeaderManager:
         if attribute is None:
             attribute = tag_name
 
-        value = getattr(self.page_metadata, attribute, default_value)
+        value = self.page_metadata.get( attribute)
         tag = f'<{tag_name}>{value}</{tag_name}>\n'
         return tag
 

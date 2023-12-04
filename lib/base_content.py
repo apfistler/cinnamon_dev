@@ -12,6 +12,9 @@ class BaseContent:
         self._merge_metadata()
         self.check_required_fields()
 
+    def load(self, filename):
+        self.data = YamlParser.parse_yaml(filename)
+
     def _merge_metadata(self):
         # Merge metadata values into the instance properties
         for key, value in self.metadata.items():
@@ -51,6 +54,9 @@ class BaseContent:
     def set(self, property_name, value):
         # Set the value of a specific property
         setattr(self, property_name, value)
+
+    def has_attr(self, param):
+         return hasattr(self, param) and getattr(self, param) is not None
 
     def check_required_fields(self):
         for field in self.REQUIRED_FIELDS:
