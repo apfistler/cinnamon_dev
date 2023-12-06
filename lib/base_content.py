@@ -47,9 +47,14 @@ class BaseContent:
         else:
             print(f"{' ' * indent}{prop}")
 
-    def get(self, property_name):
+    def get(self, property_name, default=None):
         # Get the value of a specific property
-        return getattr(self, property_name, None)
+        attr =  getattr(self, property_name, None)
+        
+        if attr is None:
+            return default
+        else:
+            return attr
 
     def set(self, property_name, value):
         # Set the value of a specific property

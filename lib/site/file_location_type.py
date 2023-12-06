@@ -1,5 +1,5 @@
 from enum import Enum
 
-class SiteLocationType(Enum):
+class FileLocationType(Enum):
     SYSTEM = 'system'
     USER = 'user'

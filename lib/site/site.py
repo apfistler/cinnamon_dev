@@ -11,21 +11,17 @@ class Site(BaseContent):
     def __init__(self, config, key):
         self.key = key 
         self.config = config
-        self.base_system_site_directory = config.get('system_site_directory')
-        self.base_user_site_directory = config.get('user_site_directory')
-        self.system_site_directory = os.path.join(self.base_system_site_directory, key)
-        self.user_site_directory = os.path.join(self.base_user_site_directory, key)
+        self.set_file_location_types()
+        self.site_catalog = SiteCatalog(self)
 
-        system_site_catalog = SiteCatalog(self)
+    def set_file_location_types(self):
+        self.base_site_directory = {}
+        self.site_directory = {} 
+        file_location_types = self.config.get('file_location_types')
 
-
-        #super().__init__(site_id, site_path, data)
-        # Add any additional site-specific functionality here
-        #self.site_dir = site_path
-
-        #self.check_required_fields()
-
-        # Add any additional obj_metadata-specific functionality here
+        for flt in file_location_types:
+            self.base_site_directory[flt] = self.config.get(f'{flt}_site_directory')
+            self.site_directory[flt] = os.path.join(self.base_site_directory[flt], self.key)
 
     def check_required_fields(self):
         super().check_required_fields()  # Call the base class method

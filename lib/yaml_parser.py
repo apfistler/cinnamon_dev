@@ -21,9 +21,14 @@ class YamlParser:
         else:
             return value
 
-    @staticmethod
     def handle_placeholders_in_array(array, data):
-        return [YamlParser.handle_placeholders_in_string(item, data) if isinstance(item, str) else YamlParser.handle_placeholders(item, data) for item in array]
+        if isinstance(array, (dict, list)):
+            return [
+                YamlParser.handle_placeholders(item, data) if isinstance(item, (dict, list)) else item
+                for item in array
+            ]
+        else:
+            return array
 
     @staticmethod
     def handle_placeholders_in_string(value, data):

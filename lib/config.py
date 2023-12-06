@@ -12,6 +12,7 @@ class Config:
     def __init__(self):
         self.data = {}
         self.protected_keys = ['admin']  # Add more keys if needed
+        self.extensions = {}
         self.initialize()
 
     def read_file(self, filepath, error_message):
@@ -22,6 +23,13 @@ class Config:
         else:
             print(f"Error: {error_message}")
             exit(1)
+
+    def read_extensions_config(self):
+        extensions_config_path = os.path.join(self.get('system_config_directory'), 'extensions.yaml')
+        error_message = "Error: Extensions file not found."
+        self.read_file(extensions_config_path, error_message)
+        extensions_data = self.get('extensions')
+        self.extensions.update(extensions_data)
 
     def read_system_config(self):
         system_config_path = '/etc/cinnamon.yaml'
@@ -84,6 +92,7 @@ class Config:
         # Read the user config after reading the defaults
         self.read_user_config()
         self.parse()
+        self.read_extensions_config()
 
     def parse(self):
         YamlParser.parse_properties(self.data, self.data)

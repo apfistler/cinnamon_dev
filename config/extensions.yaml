@@ -1,5 +1,7 @@
 extensions:
-  images:
+  metadata:
+    - yaml
+  image:
     - jpeg
     - jpg
     - jfif
@@ -13,14 +15,22 @@ extensions:
     - ico
     - heif
     - heic
-  html:
+  page:
     - html
     - htm
+    - md
+    - markdown
+  css:
     - css
-    - js
     - scss
     - sass
     - less
+  js:
+    - js
+  widget:
+    - wdg
+  template:
+    - tem
   video:
     - mp4
     - webm
@@ -45,7 +55,11 @@ extensions:
     - afif
     - mod
     - s3m
-  document:
+  font:
+    - ttf
+    - woff
+    - woff2
+  file:
     - doc
     - docx
     - pdf
@@ -53,16 +67,10 @@ extensions:
     - xlsx
     - ppt
     - pptx
-  fonts:
-    - ttf
-    - woff
-    - woff2
-  data:
     - csv
     - yaml
     - json
     - xml
-  scripting:
     - py
     - rb
     - pl
@@ -72,62 +80,33 @@ extensions:
     - sh
     - ps1
     - bat
-  configuration:
     - ini
     - cfg
     - conf
     - env
-  markup:
-    - md
-    - markdown
-  version_control:
     - gitignore
     - gitattributes
-  database:
     - sql
-  metadata:
     - json
     - yml
-    - yaml
-  template_engines:
     - ejs
     - handlebars
     - mustache
-  build_tools:
-    - gulpfile.js
-    - Gruntfile.js
-  log:
     - log
     - txt
-  backup:
     - bak
     - backup
-  package_management:
-    - package.json
-    - yarn.lock
-    - npm-shrinkwrap.json
-  server_configuration:
-    - htaccess
-  windows_batch_script:
     - bat
-  linux_shell_script:
     - sh
     - bash
-  executable:
     - exe
     - msi
-  virtualization:
     - vagrantfile
     - dockerfile
-  certificates:
     - crt
     - pem
-  vector_graphics:
     - ai
-  3d_modeling:
     - obj
     - stl
     - fbx
-  raster_graphics:
     - psd
-
