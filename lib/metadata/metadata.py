@@ -5,22 +5,28 @@ from lib.base_content import BaseContent
 from lib.metadata.metadata_parser import MetadataParser
 
 class Metadata(BaseContent):
-    REQUIRED_FIELDS = ['name']
 
-    def __init__(self, metadata_id, metadata_path, data, site):
-        # Merge attributes with merging logic
-        self.merge_attributes(site.__dict__)
+    def __init__(self, element, key=None, path=None):
+        self.site_location_type = element.get('site_location_type')
+        self.base_system_site_directory = element.get('base_system_site_directory')
+        self.base_user_site_directory = element.get('base_user_site_directory')
+        self.base_site_directory = element.get(f'base_{self.site_location_type.value}_site_directory')
+        self.site_directory = element.get(f'site_directory')
 
-        # Create an instance of MetadataParser and parse placeholders in data
-        metadata_parser = MetadataParser(data)
-        self.metadata = metadata_parser.data
+        if not (key or path):
+            raise ValueError("Either key or path must be supplied to the metadata class.")
 
-        super().__init__(metadata_id, metadata_path, self.metadata)
+        print(f'MD Site Location Type: {self.site_location_type.value}')
+        print(f'MD Base System Site Directory: {self.base_system_site_directory}')
+        print(f'MD Base User Site Directory: {self.base_system_site_directory}')
+        print(f'MD Site Directory: {self.site_directory}')
 
-        # Look for CSS and JS files based on the 'id'
-        self.check_required_fields()
-        self.remove_duplicate_arrays()
-        # Add any additional metadata-specific functionality here
+        if key:
+            self.key = key
+            self.path = os.path.join(self.site_directory, self.key)
+
+        print(f'MD   PATH IS {self.path}')
+
 
     def merge_attributes(self, new_attributes):
         """
