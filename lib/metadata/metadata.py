@@ -4,6 +4,7 @@ import sys
 from lib.base_content import BaseContent
 from lib.metadata.metadata_parser import MetadataParser
 from lib.common import Common
+from lib.yaml_parser import YamlParser
 
 class Metadata(BaseContent):
 
@@ -30,6 +31,13 @@ class Metadata(BaseContent):
         if key:
             self.key = key
             self.path = os.path.join(self.site_directory, self.key)
+        elif path:
+            self.key = os.relpath(path, self.site_directory)
+            self.path = path
+
+        if not Common.file_exists(self.path):
+            raise ValueError("Metadata file: {path} does not exist when instantiating Metadata class.")
+
 
         if not Common.file_exists(self.path):
             raise ValueError("Metadata file #{self.path} cannot be located.")
@@ -39,42 +47,26 @@ class Metadata(BaseContent):
     def apply_cascading(self):
         site_structure = self.config.get('site_structure')
         metadata_subdir = site_structure['metadata']
-
-        metadata_filename = 'metadata.yaml'
+        metadata_filename = self.config.get('metadata_filename')
 
         directory = os.path.join(self.site_directory, metadata_subdir, self.element_type_path)
-
-        print(f"MD ETP {directory}")
         files = Common.find_files_by_name(directory, metadata_filename)
-        print(f'MD FILES {files}')
+        files.append(self.path)
 
-    def merge_attributes(self, new_attributes):
-        """
-        Merge attributes with existing attributes.
-        If an attribute is an array or a dictionary, merge them.
-        If it's any other type, overwrite the existing value.
-        """
-        for key, value in new_attributes.items():
-            if hasattr(self, key):
-                current_value = getattr(self, key)
+        dicts = []
+        for file in files:
+            dicts.append(YamlParser.parse_yaml(file))
 
-                # If the attribute is a dictionary, merge them
-                if isinstance(current_value, dict) and isinstance(value, dict):
-                    current_value.update(value)
-                # If the attribute is a list, merge them
-                elif isinstance(current_value, list) and isinstance(value, list):
-                    current_value.extend(value)
-                # For other types, overwrite the existing value
-                else:
+        self.param = self.Param(dicts)
+
+        print(self.param.to_dict())
+
+    class Param:
+        def __init__(self, dicts):
+            for d in dicts:
+                for key, value in d.items():
                     setattr(self, key, value)
-            else:
-                setattr(self, key, value)
 
-    def to_dict(self):
-        """
-        Convert Metadata instance to a dictionary.
-        """
-        metadata_dict = super().to_dict()
-        metadata_dict.update(vars(self))
-        return metadata_dict
+        def to_dict(self):
+            return {key: getattr(self, key) for key in dir(self) if not key.startswith('__') and not callable(getattr(self, key))}
 

@@ -1,7 +1,8 @@
-name: upcoming_events 
+key: pages/main/upcoming_events.yaml
 type: page
 title: Upcoming Events 
 keywords:
   - hypnosis
   - astrology
   - handwriting analysis
+  - "upcoming events"

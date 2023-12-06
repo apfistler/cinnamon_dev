@@ -1,4 +1,4 @@
-name: articles 
+name: pages/articles/articles.yaml
 category: articles
 title: "Articles"
 abstract: "This page is the container for articles."
