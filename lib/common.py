@@ -1,5 +1,6 @@
 import os
 import re
+import hashlib
 
 class Common:
     @staticmethod
@@ -51,51 +52,44 @@ class Common:
         return os.path.exists(file_path)
 
     @staticmethod
-    def merge_dicts(target, *new_dicts):
+    def calculate_checksum(file_path, algorithm="sha256"):
+        """Calculate the checksum of a file."""
+        hash_algorithm = hashlib.new(algorithm)
+
+        with open(file_path, "rb") as file:
+            # Read the file in chunks to avoid loading the entire file into memory
+            chunk_size = 8192
+            for chunk in iter(lambda: file.read(chunk_size), b""):
+                hash_algorithm.update(chunk)
+
+        return hash_algorithm.hexdigest()
+
+    @staticmethod
+    def merge_dicts(*dicts):
         """
         Merge dictionaries with existing attributes recursively.
         If an attribute is an array or a dictionary, merge them.
         If it's any other type, overwrite the existing value.
 
         Args:
-            target (object): The target object to merge dictionaries into.
-            *new_dicts (dict): Variable number of dictionaries to merge.
+            *dicts (dict): Variable number of dictionaries to merge.
 
         Returns:
-            None
+            dict: The merged dictionary.
         """
-        for new_dict in new_dicts:
-            for key, value in new_dict.items():
-                if hasattr(target, key):
-                    current_value = getattr(target, key)
+        merged_dict = {}
 
+        for d in dicts:
+            for key, value in d.items():
+                if key in merged_dict and isinstance(merged_dict[key], dict) and isinstance(value, dict):
                     # If the attribute is a dictionary, merge them recursively
-                    if isinstance(current_value, dict) and isinstance(value, dict):
-                        Common._merge_dicts_recursive(current_value, value)
+                    merged_dict[key] = Common.merge_dicts(merged_dict[key], value)
+                elif key in merged_dict and isinstance(merged_dict[key], list) and isinstance(value, list):
                     # If the attribute is a list, merge them
-                    elif isinstance(current_value, list) and isinstance(value, list):
-                        current_value.extend(value)
-                    # For other types, overwrite the existing value
-                    else:
-                        setattr(target, key, value)
+                    merged_dict[key].extend(value)
                 else:
-                    setattr(target, key, value)
+                    # For other types or new keys, overwrite the existing value
+                    merged_dict[key] = value
 
-    @staticmethod
-    def _merge_dicts_recursive(dict1, dict2):
-        """
-        Recursively merge two dictionaries.
-
-        Args:
-            dict1 (dict): The first dictionary.
-            dict2 (dict): The second dictionary.
-
-        Returns:
-            None
-        """
-        for key, value in dict2.items():
-            if key in dict1 and isinstance(dict1[key], dict) and isinstance(value, dict):
-                Common._merge_dicts_recursive(dict1[key], value)
-            else:
-                dict1[key] = value
+        return merged_dict
 

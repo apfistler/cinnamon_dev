@@ -42,16 +42,8 @@ class Element(BaseContent):
         self.path = full_path
         self.key = os.path.relpath(self.path, start=self.site_directory)
 
-        print(f"Element type: {self.element_type}")
-        print(f"Site Location: {self.site_location_type}")
-        print(f"Key: {self.key}")
-        print(f"Path: {self.path}")
-
         self.metadata_path = self.get_metadata_path()
         self.metadata_key = os.path.relpath(self.metadata_path, self.site_directory)
-
-
-        print(f'Metadata path: {self.metadata_path}')
 
         metadata = Metadata(self, key=self.metadata_key)
         

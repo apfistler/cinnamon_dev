@@ -13,6 +13,8 @@ class SiteCatalog:
         self.catalog(SiteLocationType.SYSTEM)
 
     def catalog(self, site_location_type):
+        NON_SITE_ELEMENTS = ['metadata', 'data']
+
         site_structure = self.config.get('site_structure')
 
         if site_location_type == SiteLocationType.SYSTEM:
@@ -29,7 +31,7 @@ class SiteCatalog:
             element_type = element_type.lower()
 
             # Don't process metadata like any other project element
-            if element_type == 'metadata':
+            if element_type in NON_SITE_ELEMENTS:
                 continue
 
             element_directory = Element.get_element_path(self.site, site_location_type, element_type)
