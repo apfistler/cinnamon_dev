@@ -37,5 +37,17 @@ class Common:
         return matches
 
     @staticmethod
+    def find_files_by_name(directory, filename):
+        matches = []
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                print(f"{file}")
+                if file.lower() == filename.lower():
+                    full_path = os.path.join(root, file)
+                    matches.append(full_path)
+        return matches
+
+    @staticmethod
     def file_exists(file_path):
         return os.path.exists(file_path)
+

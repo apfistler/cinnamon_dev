@@ -18,6 +18,8 @@ class Element(BaseContent):
 
         if element_type not in self.site_structure.keys():
             raise ValueError(f"Error: Element type '{element_type}' is not valid in the site structure.")
+        
+        self.element_type_path = self.site_structure[element_type]
 
         self.base_system_site_directory = site.get('base_system_site_directory')
         self.base_user_site_directory = site.get('base_user_site_directory')

@@ -3,15 +3,21 @@ import sys
 
 from lib.base_content import BaseContent
 from lib.metadata.metadata_parser import MetadataParser
+from lib.common import Common
 
 class Metadata(BaseContent):
 
     def __init__(self, element, key=None, path=None):
+        self.element = element
+        self.site = self.element.get('site')
+        self.config = self.site.get('config')
         self.site_location_type = element.get('site_location_type')
         self.base_system_site_directory = element.get('base_system_site_directory')
         self.base_user_site_directory = element.get('base_user_site_directory')
         self.base_site_directory = element.get(f'base_{self.site_location_type.value}_site_directory')
-        self.site_directory = element.get(f'site_directory')
+        self.site_directory = self.element.get(f'site_directory')
+        self.element_type = self.element.get('element_type')
+        self.element_type_path = self.element.get('element_type_path')
 
         if not (key or path):
             raise ValueError("Either key or path must be supplied to the metadata class.")
@@ -25,8 +31,22 @@ class Metadata(BaseContent):
             self.key = key
             self.path = os.path.join(self.site_directory, self.key)
 
-        print(f'MD   PATH IS {self.path}')
+        if not Common.file_exists(self.path):
+            raise ValueError("Metadata file #{self.path} cannot be located.")
 
+        self.apply_cascading()
+
+    def apply_cascading(self):
+        site_structure = self.config.get('site_structure')
+        metadata_subdir = site_structure['metadata']
+
+        metadata_filename = 'metadata.yaml'
+
+        directory = os.path.join(self.site_directory, metadata_subdir, self.element_type_path)
+
+        print(f"MD ETP {directory}")
+        files = Common.find_files_by_name(directory, metadata_filename)
+        print(f'MD FILES {files}')
 
     def merge_attributes(self, new_attributes):
         """
