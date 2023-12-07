@@ -64,6 +64,10 @@ class Common:
 
         return hash_algorithm.hexdigest()
 
+    def mkdir(directory):
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
     @staticmethod
     def merge_dicts(*dicts):
         """

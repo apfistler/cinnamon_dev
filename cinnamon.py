@@ -7,7 +7,7 @@ def main():
     config = Config()
     config.initialize()
 
-    site = Site(config, 'afistler')
+    site = Site(config, 'system', 'afistler')
 
 if __name__ == '__main__':
     main()

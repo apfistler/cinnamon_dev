@@ -6,10 +6,10 @@ from lib.common import Common
 
 
 class Element(BaseContent):
-    def __init__(self, site, element_type, full_path=None, key=None, file_location_type='user'):
-        self.element_type = element_type.lower()  # Fix here
+    def __init__(self, site, element_type, full_path=None, key=None):
+        self.element_type = element_type.lower() 
         self.site = site
-        self.file_location_type = file_location_type
+        self.file_location_type = site.get('file_location_type')
 
         config = self.site.get('config')
         self.config = config
@@ -25,7 +25,7 @@ class Element(BaseContent):
 
         if full_path:
             # Determine the correct site directory based on file_location_type
-            target_site_directory = self.site.get('base_site_directory')[file_location_type]
+            target_site_directory = self.site.get('base_site_directory')[self.file_location_type]
 
             # Check if the relative path matches the target site directory
             if self.base_site_directory != target_site_directory:
@@ -43,12 +43,14 @@ class Element(BaseContent):
         self.metadata_key = os.path.relpath(self.metadata_path, self.site_directory)
 
         self.metadata = Metadata(self, key=self.metadata_key)
-        
 
     def find_path_by_key(self, key):
         path = self._get_element_path(self.element_type)
 
         return Common.find_files_by_partial_name(path, key)[0]
+
+    def get_filename(self):
+        return os.path.basename(self.path)
 
     def get_metadata_path(self):
         name = f"{os.path.splitext(self.key)[0]}.yaml"

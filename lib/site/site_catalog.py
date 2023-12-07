@@ -1,4 +1,5 @@
 import os
+import yaml
 from pprint import pprint
 
 from lib.common import Common 
@@ -9,11 +10,11 @@ class SiteCatalog:
         self.site = site
         self.site_key = site.get('key')
         self.config = site.get('config')
+        self.file_location_type = site.get('file_location_type')
         self.catalog = {}
 
-        flt = 'system'
-
-        self.catalog_site_files(flt)
+        self.catalog_site_files(self.file_location_type)
+        self.write(self.file_location_type)
 
     def reset_attributes(self):
         self.file_location_type = None
@@ -42,7 +43,11 @@ class SiteCatalog:
 
         self.site_directory = self.site.get('site_directory')[self.file_location_type]
         self.base_site_directory = self.site.get('base_site_directory')[self.file_location_type]
-        self.catalog_filename = os.path.join(self.site_directory, self.site_structure['data'], catalog_filename) 
+
+        data_directory = os.path.join(self.site_directory, self.site_structure['data'])
+        Common.mkdir(data_directory)
+
+        self.catalog_filename = os.path.join(data_directory, catalog_filename) 
 
         return self.get_attributes_as_dict()
 
@@ -66,20 +71,33 @@ class SiteCatalog:
 
          self.catalog = YamlParser.parse_yaml(self.catalog_filename)
 
-    def get_catalog_item(self, file_location_type, key):
+    def write(self, file_location_type):
+        self.set_attributes_by_file_location_type(file_location_type)
+
+        with open(self.catalog_filename, 'w') as file:
+            yaml.dump(self.catalog, file, default_flow_style=False)
+
+    def get_catalog_item(self, file_location_type, element_type, key):
         default_item = {
             'key': None,
+            'filename': None,
+            'path': None,
+            'element_type': None,
+            'metadata_filename': None,
             'checksum': None,
             'modified': False
         }
 
-        return self.catalog.get(file_location_type, {}).get(key, default_item)
+        return self.catalog.get(file_location_type, {}).get(element_type, {}).get(key, default_item)
 
-    def set_catalog_item(self, file_location_type, key, value):
+    def set_catalog_item(self, file_location_type, element_type, key, value):
         if file_location_type not in self.catalog:
             self.catalog[file_location_type] = {}
 
-        self.catalog[file_location_type][key] = value
+        if key not in self.catalog[file_location_type]:
+            self.catalog[file_location_type][key] = {}
+
+        self.catalog[file_location_type][key][element_type] = value
 
 
     def catalog_site_files(self, file_location_type):
@@ -104,10 +122,12 @@ class SiteCatalog:
             file_dict = Common.get_files_recursively(element_directory)
 
             for full_path, d in file_dict.items():
-                element = Element(self.site, element_type, file_location_type=file_location_type, full_path=full_path)
+                element = Element(self.site, element_type, full_path=full_path)
                 key = element.get('key')
+                metadata_filename = element.get_metadata_path()
+                filename = element.get_filename()
 
-                item = self.get_catalog_item(file_location_type, key)
+                item = self.get_catalog_item(file_location_type, element_type, key)
                 catalog_checksum = item['checksum']
                 current_checksum = Common.calculate_checksum(full_path)
 
@@ -115,9 +135,14 @@ class SiteCatalog:
 
                 item = {
                     'key': key,
+                    'filename': filename,
+                    'path': full_path,
+                    'element_type': element_type,
+                    'metadata_filename': metadata_filename,
                     'checksum': current_checksum,
                     'modified': modified
                 }
 
-                self.set_catalog_item(file_location_type, key, item)
+                self.set_catalog_item(file_location_type, element_type, key, item)
 
+        return self.catalog

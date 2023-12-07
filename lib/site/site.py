@@ -8,11 +8,21 @@ from lib.site.site_catalog import SiteCatalog
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']
     
-    def __init__(self, config, key):
+    def __init__(self, config, file_location_type, key):
         self.key = key 
         self.config = config
+        self.file_location_type = file_location_type
+
+        self.check_file_location_type()
         self.set_file_location_types()
+
         self.site_catalog = SiteCatalog(self)
+
+    def check_file_location_type(self):
+        flt = self.config.get('file_location_types')
+
+        if self.file_location_type not in flt:
+            raise ValueError(f"File location type: {self.file_location_type} is unrecognized when invoking Site class.")
 
     def set_file_location_types(self):
         self.base_site_directory = {}
