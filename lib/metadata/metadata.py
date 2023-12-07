@@ -2,7 +2,6 @@ import os
 import sys
 
 from lib.base_content import BaseContent
-from lib.metadata.metadata_parser import MetadataParser
 from lib.common import Common
 from lib.yaml_parser import YamlParser
 
@@ -118,8 +117,8 @@ class Metadata(BaseContent):
             return result
 
         def set(self, key, value):
-            self._params[key] = value
+            setattr(self, key, value)
 
         def get(self, key):
-            return self._params.get(key, None)
+            return getattr(self, key, None)
 

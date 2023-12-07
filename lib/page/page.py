@@ -3,29 +3,28 @@
 import os
 import sys
 from bs4 import BeautifulSoup
+from pprint import pprint
 
-from lib.base_content import BaseContent
-from lib.page.page_template import PageTemplate
+from lib.element.element import Element
 from lib.page.page_parser import PageParser
+from lib.page.page_template import PageTemplate
 
-class Page(BaseContent):
-    def __init__(self, site, page_metadata):
-        from .page_template import PageTemplate  # Import inside the class to avoid circular import
+class Page(Element):
+    def __init__(self, site, full_path=None, key=None):
+        self.element_type = 'page'
+        super().__init__(site, self.element_type, full_path=full_path, key=key)
 
-        self.type = 'page'
-        self.site = site
-        self.page_metadata = page_metadata
-        self.id = page_metadata.get('id')
-        self.path = self._generate_path()
-        self.page_template_filename = self.page_metadata.template
+        self.template_filename = os.path.join(self.site.get('site_directory')[self.file_location_type], self.metadata.collective_params.get('template'))
+        self.content = self.parse_page()
+        self.apply_page_template()
+#        self.apply_template(content)
 
-        super().__init__(content_id=self.id, content_path=self.path, metadata={})
-        self.content = self.open_and_parse()
+#        print(self.content)
 
-        self.page_template = PageTemplate(self.site, self.page_metadata, self.page_template_filename)
+###        self.page_template = PageTemplate(self.site, self.page_metadata, self.page_template_filename)
 
         # Apply the page_template
-        self.apply_page_template()
+        #self.apply_page_template()
     
     def get_content(self):
         page_indent = 2
@@ -53,26 +52,31 @@ class Page(BaseContent):
         page_path = os.path.join(self.site.site_dir, 'pages', f"{id_path}.html")
         return page_path
 
-    def exists(self):
-        # Check if the page file exists
-        return os.path.isfile(self.path)
-
-    def open_and_parse(self):
+    def open(self):
         # Open the page file and read its content
         with open(self.path, 'r', encoding='utf-8') as file:
             page_content = file.read()
 
-        # Convert page_metadata to dictionary
-        page_metadata_dict = self.page_metadata.to_dict()
+        return(page_content)
+
+    def parse(self, page_content):
+        metadata_dict = self.metadata.collective_params.to_dict()
 
         # Parse the content
-        parsed_content = PageParser.parse(page_content, self.site.site_dir, page_metadata_dict)
+        parsed_content = PageParser.parse(page_content, self.site.get('site_directory'), metadata_dict)
 
         return parsed_content
 
-    def apply_page_template(self):
-        page_template_content = self.page_template.get_content()
-        if '&{{page}}' in page_template_content:
-            # Replace &{{page}} with the page content
-            self.content = page_template_content.replace('&{{page}}', self.content)
+    def parse_page(self):
+        content = self.open();
+        content = self.parse(content)
 
+        return content
+
+    def apply_page_template(self):
+        template = PageTemplate(self.site, self, full_path=self.template_filename)
+        #page_template_content = self.page_template.get_content()
+
+        #if '&{{page}}' in page_template_content:
+            # Replace &{{page}} with the page content
+        #    self.content = page_template_content.replace('&{{page}}', self.content)

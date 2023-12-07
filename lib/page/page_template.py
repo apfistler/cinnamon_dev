@@ -3,40 +3,44 @@
 import os
 import re
 
+from lib.element.element import Element
 from lib.page.header.header_manager import HeaderManager
 from lib.page.page_parser import PageParser
-from lib.base_content import BaseContent
 
-class PageTemplate(BaseContent):
-    def __init__(self, site, page_metadata, page_template_filename):
-        self.site = site
-        self.page_metadata = page_metadata
-        self.path = self._generate_path(page_template_filename)
-        self.type = 'page_template'
-        self.content = self.open_and_parse()
+class PageTemplate(Element):
+    def __init__(self, site, page, full_path=None, key=None):
+        self.page = page
+        self.element_type = 'template'
+        self.metadata = page.get('metadata')
+        super().__init__(site, self.element_type, full_path=full_path, key=key)
+        print(f"This is a template")
+        self.content = self.parse_template()
+        print(template)
 
     def get_content(self):
         return self.get('content')
 
-    def _generate_path(self, filename):
-        if not filename.startswith('/'):
-            page_template_path = os.path.join(self.site.site_dir, filename)
-        else:
-            page_template_path = filename
-        return page_template_path
-
-    def open_and_parse(self):
+    def open(self):
+        # Open the page file and read its content
         with open(self.path, 'r', encoding='utf-8') as file:
-            page_template_content = file.read()
+            page_content = file.read()
 
-        page_template_metadata_dict = self.page_metadata.to_dict()
+        return(page_content)
 
-        # Get custom headers based on the header case specified in the metadata
-        #header_case = page_template_metadata_dict.get('header_case', 'default')
+    def parse(self, page_content):
+        metadata_dict = self.metadata.collective.to_dict()
 
-        # Insert custom headers after the <head> tag
-        page_template_content = self.insert_custom_headers(page_template_content)
+        # Parse the content
+        parsed_content = PageParser.parse(page_content, self.site.get('site_directory'), metadata_dict)
 
+        return parsed_content
+
+
+    def parse_template(self):
+        metadata_dict = self.page.metadata.collective_metadata.to_dict()
+        content = self.open()
+
+        page_template_content = self.insert_custom_headers(content)
         parsed_content = PageParser.parse(page_template_content, self.site.site_dir, page_template_metadata_dict)
         return parsed_content
 

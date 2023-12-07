@@ -32,7 +32,7 @@ class BaseContent:
 
     def display_all(self):
         # Display all properties in the content (both site and page)
-        print(f"\nAll Properties for {self.__class__.__name__} '{self.id}':")
+        print(f"\nAll Properties for {self.__class__.__name__}:")
         self._display_property(self.__dict__, indent=2)
 
     def _display_property(self, prop, indent):

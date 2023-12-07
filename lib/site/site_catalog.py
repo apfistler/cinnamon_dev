@@ -4,6 +4,8 @@ from pprint import pprint
 
 from lib.common import Common 
 from lib.element.element import Element
+from lib.page.page import Page
+from lib.yaml_parser import YamlParser
 
 class SiteCatalog:
     def __init__(self, site):
@@ -13,6 +15,7 @@ class SiteCatalog:
         self.file_location_type = site.get('file_location_type')
         self.catalog = {}
 
+        self.read(self.file_location_type)
         self.catalog_site_files(self.file_location_type)
         self.write(self.file_location_type)
 
@@ -94,10 +97,10 @@ class SiteCatalog:
         if file_location_type not in self.catalog:
             self.catalog[file_location_type] = {}
 
-        if key not in self.catalog[file_location_type]:
-            self.catalog[file_location_type][key] = {}
+        if element_type not in self.catalog[file_location_type]:
+            self.catalog[file_location_type][element_type] = {}
 
-        self.catalog[file_location_type][key][element_type] = value
+        self.catalog[file_location_type][element_type][key] = value
 
 
     def catalog_site_files(self, file_location_type):
@@ -122,7 +125,11 @@ class SiteCatalog:
             file_dict = Common.get_files_recursively(element_directory)
 
             for full_path, d in file_dict.items():
-                element = Element(self.site, element_type, full_path=full_path)
+                if element_type == 'page':
+                    element = Page(self.site, full_path=full_path)
+                else:
+                    element = Element(self.site, element_type, full_path=full_path)
+
                 key = element.get('key')
                 metadata_filename = element.get_metadata_path()
                 filename = element.get_filename()
@@ -131,7 +138,7 @@ class SiteCatalog:
                 catalog_checksum = item['checksum']
                 current_checksum = Common.calculate_checksum(full_path)
 
-                modified = catalog_checksum is not current_checksum
+                modified = catalog_checksum != current_checksum
 
                 item = {
                     'key': key,
