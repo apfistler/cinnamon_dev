@@ -48,11 +48,11 @@ class Page(Element):
 
         return(content)
 
-    def parse(self, page_content):
+    def parse(self, content):
         metadata_dict = self.metadata.collective_params.to_dict()
 
         # Parse the content
-        parsed_content = PageParser.parse(page_content, self.site.get_site_directory(), metadata_dict)
+        parsed_content = PageParser.parse(content, self.site.get_site_directory(), metadata_dict)
 
         return parsed_content
 
