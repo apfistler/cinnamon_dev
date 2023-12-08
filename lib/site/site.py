@@ -4,6 +4,7 @@ import os
 
 from lib.base_content import BaseContent
 from lib.site.site_catalog import SiteCatalog
+from lib.common import Common
 
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']
@@ -32,6 +33,21 @@ class Site(BaseContent):
         for flt in file_location_types:
             self.base_site_directory[flt] = self.config.get(f'{flt}_site_directory')
             self.site_directory[flt] = os.path.join(self.base_site_directory[flt], self.key)
+
+    def get_site_structure(self):
+        REQUIRED_ELEMENTS = ['metadata', 'data', 'template', 'page', 'widget']
+        site_structure = self.config.get('site_structure')
+
+        missing_elements = [elem for elem in REQUIRED_ELEMENTS if elem not in site_structure]
+        if missing_elements:
+            raise ValueError(f"Missing required elements in configuration site_structure: {missing_elements}")
+
+        self.site_structure = site_structure
+        return self.site_structure 
+
+    def get_element_directory(self, element_type):
+        self.get_site_structure()
+        return Common.clean_path(self.site_structure[element_type])
 
     def get_site_directory(self):
         return self.site_directory[self.file_location_type]

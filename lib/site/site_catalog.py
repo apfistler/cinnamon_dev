@@ -8,16 +8,14 @@ from lib.page.page import Page
 from lib.yaml_parser import YamlParser
 
 class SiteCatalog:
-    def __init__(self, site):
+    def __init__(self, site, file_location_type=None):
         self.site = site
         self.site_key = site.get('key')
         self.config = site.get('config')
-        self.file_location_type = site.get('file_location_type')
+        self.file_location_type = file_location_type or self.site.get('file_location_type')
         self.catalog = {}
 
-        self.read(self.file_location_type)
-        self.catalog_site_files(self.file_location_type)
-        self.write(self.file_location_type)
+        self.build_catalog(self.file_location_type)
 
     def reset_attributes(self):
         self.file_location_type = None
@@ -29,7 +27,7 @@ class SiteCatalog:
     def get_attributes_as_dict(self):
         return {
             'file_location_type': self.file_location_type,
-            'site_structure': self.site_structure,
+            'site_structure': self.site.get_site_structure(),
             'site_directory': self.site_directory,
             'base_site_directory': self.base_site_directory,
             'catalog_filename': self.catalog_filename
@@ -41,8 +39,7 @@ class SiteCatalog:
         catalog_filename = 'catalog.yaml'
 
         self.file_location_type = file_location_type
-        self.site_structure = self.config.get('site_structure')
-        self.check_site_structure()
+        self.site_structure = self.site.get_site_structure() 
 
         self.site_directory = self.site.get('site_directory')[self.file_location_type]
         self.base_site_directory = self.site.get('base_site_directory')[self.file_location_type]
@@ -53,17 +50,6 @@ class SiteCatalog:
         self.catalog_filename = os.path.join(data_directory, catalog_filename) 
 
         return self.get_attributes_as_dict()
-
-    def check_site_structure(self):
-        REQUIRED_ELEMENTS = ['metadata', 'data', 'template', 'page', 'widget']
-        self.site_structure = self.config.get('site_structure')
-
-        missing_elements = [elem for elem in REQUIRED_ELEMENTS if elem not in self.site_structure]
-        if missing_elements:
-            raise ValueError(f"Missing required elements in configuration site_structure: {missing_elements}")
-       
-    def get_element_directory(self, element_type):
-        return Common.clean_path(self.site_structure[element_type]) 
 
     def read(self, file_location_type):
          # Make sure attributes are set
@@ -103,11 +89,12 @@ class SiteCatalog:
         self.catalog[file_location_type][element_type][key] = value
 
 
-    def catalog_site_files(self, file_location_type):
+    def build_catalog(self, file_location_type):
         NON_SITE_ELEMENTS = ['metadata', 'data']
 
+        self.read(file_location_type)
         self.set_attributes_by_file_location_type(file_location_type)
-        metadata_directory = os.path.join(self.site_directory, self.get_element_directory('metadata'))
+        metadata_directory = os.path.join(self.site_directory, self.site.get_element_directory('metadata'))
 
         for element_type, sub_directory in self.site_structure.items():
             element_type = element_type.lower()
@@ -152,4 +139,4 @@ class SiteCatalog:
 
                 self.set_catalog_item(file_location_type, element_type, key, item)
 
-        return self.catalog
+        self.write()
