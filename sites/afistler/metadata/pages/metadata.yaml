@@ -62,18 +62,3 @@ menus:
     "Upcoming Events": "/html/main/upcoming_events.html"
     "Articles": "/html/articles/articles.html"
     "Contact Us": "/html/main/contact_us.html"
-
-data:
-  address:
-    street: "Coming Soon"
-    city: "South Jersey"
-    state: "NJ"
-    zipcode: "08104"
-  phone: "(856) 209-3350"
-  email: "afistler.services@gmail.com"
-  footer:
-    - "Copyright © 2023 - Adam Fistler Services"
-    - "Adam Fistler Services - New Office Coming Soon (856) 209-3350"
-    - "Serving South Jersey with the latest in hypnosis, addiction alternatives, mindfullness and technology."
-    - "South Jersey's Choice for Holisitc Healing"
-

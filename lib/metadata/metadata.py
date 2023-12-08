@@ -4,6 +4,7 @@ import sys
 from lib.base_content import BaseContent
 from lib.common import Common
 from lib.yaml_parser import YamlParser
+from pprint import pprint
 
 class Metadata(BaseContent):
 
@@ -15,11 +16,6 @@ class Metadata(BaseContent):
         self.site_directory = self.site.get_site_directory()
         self.element_type = self.element.get('element_type')
         self.element_type_path = self.element.get('element_type_path')
-
-#        print(f'MD Site Location Type: {self.file_location_type}')
-#        print(f'MD Site Directory: {self.site_directory}')
-#        print(f"MD Key: {key}")
-#        print(f"MD Path: {path}")
 
         if not (key or path):
             raise ValueError("Either key or path must be supplied to the metadata class.")
@@ -34,27 +30,19 @@ class Metadata(BaseContent):
 #        if not Common.file_exists(self.path):
 #            raise ValueError("Metadata file: {path} does not exist when instantiating Metadata class.")
 
+#        print(f'MD Site Directory: {self.site.get_site_directory()}')
+#        print(f"MD Key: {self.key}")
+#        print(f"MD Path: {self.path}")
+
         self.read()
+
+#        if self.element_type != 'site':
         self.apply_cascading()
 
-    def read_cascading(self):
-        if not hasattr(self, 'self'):
-            self.read()
-
-        site_structure = self.config.get('site_structure')
-        metadata_subdir = site_structure['metadata']
-        metadata_filename = self.config.get('metadata_filename')
-
-        directory = os.path.join(self.site_directory, metadata_subdir, self.element_type_path)
-        files = Common.find_files_by_name(directory, metadata_filename)
-
-        dicts = []
-        for file in files:
-            dicts.append(YamlParser.parse_yaml(file))
-
-        return dicts
-
     def apply_cascading(self):
+        if self.element_type == 'site':
+            return
+
         if not hasattr(self, 'self'):
             self.read()
 
@@ -65,8 +53,17 @@ class Metadata(BaseContent):
         directory = os.path.join(self.site_directory, metadata_subdir, self.element_type_path)
         files = Common.find_files_by_name(directory, metadata_filename)
 
+        depth_limit = len(os.path.normpath(self.path).split(os.path.sep))
+
         dicts = []
         for file in files:
+            # Get the depth of the current file
+            file_depth = len(os.path.normpath(file).split(os.path.sep))
+    
+            # Check if the depth exceeds the limit
+            if file_depth > depth_limit:
+                break 
+
             file_dict = YamlParser.parse_yaml(file)
             if file_dict:  # Check if the parsing was successful
                 #del file_dict['key']
@@ -79,7 +76,21 @@ class Metadata(BaseContent):
         all_dict = Common.merge_dicts(*dicts, self.self.to_dict())
         self.all = self.Param(all_dict)
 
+        site_md = self.site.get_metadata()
+        self.all = self._merge_site_metadata(self.all)
+        
+
+        pprint(self.all.to_dict())
+         
+
+    def _merge_site_metadata(self, metadata):
+        site_metadata = self.site.get_metadata()
+        metadata.merge(site_metadata)
+
+        return metadata
+
     def read(self):
+        print(f"PATH is {self.path}")
         if Common.file_exists(self.path):
             dictionary = YamlParser.parse_yaml(self.path)
         else:
@@ -121,3 +132,9 @@ class Metadata(BaseContent):
         def get(self, key, default=None):
             return getattr(self, key, default)
 
+        def merge(self, other_param):
+            if not isinstance(other_param, Metadata.Param):
+                raise ValueError("Merge can only be performed with another Param instance.")
+
+            for key, value in other_param.__dict__.items():
+                self.set(key, value)

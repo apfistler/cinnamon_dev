@@ -58,6 +58,7 @@ class Element(BaseContent):
     def get_metadata_path(self):
         name = f"{os.path.splitext(self.key)[0]}.yaml"
         metadata_path = self._get_element_path('metadata')
+        
         return os.path.join(metadata_path, name)
 
     @staticmethod

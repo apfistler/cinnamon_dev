@@ -16,9 +16,7 @@ class Site(BaseContent):
         self.file_location_type = file_location_type
         self.element_type = 'site'
         self.element_type_path = '.'
-
-        self.metadata = Metadata(self, key=self.key)
-
+        self.metadata = self.get_metadata()
         self.check_file_location_type()
         self.set_file_location_types()
 
@@ -27,6 +25,12 @@ class Site(BaseContent):
 
     def get_site(self):
         return self
+
+    def get_metadata(self):
+        metadata_key = os.path.join(self.get_element_directory('metadata'), 'metadata.yaml')
+        metadata = Metadata(self, key=metadata_key)
+
+        return metadata.self
 
     def check_file_location_type(self):
         flt = self.config.get('file_location_types')
