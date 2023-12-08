@@ -2,6 +2,7 @@
 
 import os
 import sys
+import markdown2
 from pprint import pprint
 
 from lib.page.page_parser import PageParser
@@ -9,6 +10,7 @@ from lib.page.page_template import PageTemplate
 from lib.element.element import Element
 from bs4 import BeautifulSoup
 from bs4.formatter import HTMLFormatter
+
 
 
 class Page(Element):
@@ -52,7 +54,15 @@ class Page(Element):
 
         return(content)
 
+    def pre_parse_pase(self):
+        content = self.open()
+        content = markdown2.markdown(content)
+
+        return content
+
+
     def parse(self, content):
+        print(f"READING {self.path}")
         metadata_dict = self.metadata.all.to_dict()
 
         # Parse the content
@@ -61,8 +71,10 @@ class Page(Element):
         return parsed_content
 
     def parse_page(self):
-        content = self.open();
+        content = self.pre_parse_pase()
         content = self.parse(content)
+        print(content)
+        exit(1)
 
         return content
 

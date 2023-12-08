@@ -1,8 +1,9 @@
-key: afistler
+key: metadata/afistler.yaml
 name: "Adam Fistler Services"
 url: "https://www.afistler.us.to"
 
 minify: false
+md_to_html: false
 
 data:
   address:

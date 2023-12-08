@@ -78,10 +78,6 @@ class Metadata(BaseContent):
 
         site_md = self.site.get_metadata()
         self.all = self._merge_site_metadata(self.all)
-        
-
-        pprint(self.all.to_dict())
-         
 
     def _merge_site_metadata(self, metadata):
         site_metadata = self.site.get_metadata()
@@ -90,7 +86,6 @@ class Metadata(BaseContent):
         return metadata
 
     def read(self):
-        print(f"PATH is {self.path}")
         if Common.file_exists(self.path):
             dictionary = YamlParser.parse_yaml(self.path)
         else:

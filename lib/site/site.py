@@ -16,12 +16,23 @@ class Site(BaseContent):
         self.file_location_type = file_location_type
         self.element_type = 'site'
         self.element_type_path = '.'
+
+        self.lock_file_path = os.path.join(self.get_site_directory(), self.get_element_directory('data'), 'lockfile')
+
+        if self.lockfile_exists():
+            raise RuntimeError(f"Site is locked. Lock file exists: {self.lock_file_path}")
+
+        self.create_lock_file()
+
         self.metadata = self.get_metadata()
         self.check_file_location_type()
         self.set_file_location_types()
 
         self.site_catalog = SiteCatalog(self)
+        atexit.register(self.remove_lock_file)
 
+    def __del__(self):
+        self.remove_lock_file()
 
     def get_site(self):
         return self
@@ -71,4 +82,15 @@ class Site(BaseContent):
 
     def check_required_fields(self):
         super().check_required_fields()  # Call the base class method
+
+    def lockfile_exists(self):
+        return os.path.exists(self.lock_file_path)
+
+    def create_lock_file(self):
+        with open(self.lock_file_path, 'w') as lock_file:
+            lock_file.write("Locked")
+
+    def remove_lock_file(self):
+        if self.lockfile_exists():
+            os.remove(self.lock_file_path)
 
