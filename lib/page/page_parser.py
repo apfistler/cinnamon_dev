@@ -1,22 +1,21 @@
+# lib/page/page_parser.py
+
 import re
-from markdown_it import MarkdownIt
 from lib.base_content import BaseContent
-from lib.widget.widget import Widget
+from lib.widget.widget import Widget  # Adjust the import path accordingly
 
 class PageParser:
     def __init__(self, site_directory, data):
         self.data = data
-        self.md = MarkdownIt()
 
     @staticmethod
-    def parse(content, site_directory, metadata_dict):
-        md = MarkdownIt()
+    def parse(content, site_directory, page_metadata_dict):
         widget_directory = f'{site_directory}/widgets'
 
         def replace(match):
             placeholder = match.group(1)
             try:
-                value = PageParser.evaluate_nested_value(placeholder, metadata_dict)
+                value = PageParser.evaluate_nested_value(placeholder, page_metadata_dict)
 
                 # Check if the value is a list (array)
                 if isinstance(value, list):
@@ -25,7 +24,7 @@ class PageParser:
 
                 return str(value)
             except (NameError, KeyError, IndexError):
-                print(f"Error: Placeholder '{placeholder}' not found in metadata_dict.")
+                print(f"Error: Placeholder '{placeholder}' not found in page_metadata_dict.")
                 return match.group(0)
 
         def process_widget(match):
@@ -39,8 +38,8 @@ class PageParser:
         # Replace other placeholders
         content_with_placeholder_sub = re.sub(r'#\{\{([^}]*)\}\}', replace, content)
 
-        # Convert mixed content to HTML using markdown-it-py
-        parsed_content = md.render(content_with_placeholder_sub)
+        # Process widgets first
+        parsed_content = re.sub(r'@\{\{([^}].*)\}\}', process_widget, content_with_placeholder_sub)
 
         return parsed_content
 
