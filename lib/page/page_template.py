@@ -11,7 +11,7 @@ class PageTemplate(Element):
     def __init__(self, site, page, full_path=None, key=None):
         self.site_directory = site.get_site_directory()
         self.metadata = page.get('metadata')
-        self.metadata_dict = self.metadata.collective_params.to_dict()
+        self.metadata_dict = self.metadata.all.to_dict()
         self.element_type = 'template'
 
         super().__init__(site, self.element_type, full_path=full_path, key=key)

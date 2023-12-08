@@ -5,6 +5,7 @@ import os
 from lib.base_content import BaseContent
 from lib.site.site_catalog import SiteCatalog
 from lib.common import Common
+from lib.metadata.metadata import Metadata
 
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']
@@ -13,11 +14,19 @@ class Site(BaseContent):
         self.key = key 
         self.config = config
         self.file_location_type = file_location_type
+        self.element_type = 'site'
+        self.element_type_path = '.'
+
+        self.metadata = Metadata(self, key=self.key)
 
         self.check_file_location_type()
         self.set_file_location_types()
 
         self.site_catalog = SiteCatalog(self)
+
+
+    def get_site(self):
+        return self
 
     def check_file_location_type(self):
         flt = self.config.get('file_location_types')
@@ -50,6 +59,7 @@ class Site(BaseContent):
         return Common.clean_path(self.site_structure[element_type])
 
     def get_site_directory(self):
+        self.set_file_location_types()
         return self.site_directory[self.file_location_type]
 
     def get_base_site_directory(self):

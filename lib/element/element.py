@@ -49,6 +49,9 @@ class Element(BaseContent):
 
         return Common.find_files_by_partial_name(path, key)[0]
 
+    def get_site(self):
+        return self.site
+
     def get_filename(self):
         return os.path.basename(self.path)
 

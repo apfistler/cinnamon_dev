@@ -9,7 +9,7 @@ class Metadata(BaseContent):
 
     def __init__(self, element, key=None, path=None):
         self.element = element
-        self.site = self.element.get('site')
+        self.site = self.element.get_site()
         self.config = self.site.get('config')
 
         self.site_directory = self.site.get_site_directory()
@@ -38,7 +38,7 @@ class Metadata(BaseContent):
         self.apply_cascading()
 
     def read_cascading(self):
-        if not hasattr(self, 'element_params'):
+        if not hasattr(self, 'self'):
             self.read()
 
         site_structure = self.config.get('site_structure')
@@ -55,7 +55,7 @@ class Metadata(BaseContent):
         return dicts
 
     def apply_cascading(self):
-        if not hasattr(self, 'element_params'):
+        if not hasattr(self, 'self'):
             self.read()
 
         site_structure = self.config.get('site_structure')
@@ -76,8 +76,8 @@ class Metadata(BaseContent):
             return
 
         # Merge the list of dictionaries using Common.merge_dicts
-        collective_params_dict = Common.merge_dicts(*dicts, self.element_params.to_dict())
-        self.collective_params = self.Param(collective_params_dict)
+        all_dict = Common.merge_dicts(*dicts, self.self.to_dict())
+        self.all = self.Param(all_dict)
 
     def read(self):
         if Common.file_exists(self.path):
@@ -85,19 +85,19 @@ class Metadata(BaseContent):
         else:
             dictionary = {}
 
-        self.element_params = self.Param(dictionary)
+        self.self = self.Param(dictionary)
 
     def write(self):
-        yaml_content = yaml.dump(self.element_params.to_dict(), default_flow_style=False)
+        yaml_content = yaml.dump(self.self.to_dict(), default_flow_style=False)
 
         with open(self.path, 'w') as file:
             file.write(yaml_content)
 
     def set_param(self, param, value):
-        self.element_params.set(param, value)
+        self.self.set(param, value)
 
     def get_param(self, param):
-        return self.element_params.get(param)
+        return self.self.get(param)
 
     class Param:
         def __init__(self, dictionary):
