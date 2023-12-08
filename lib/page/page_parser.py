@@ -5,12 +5,12 @@ from lib.base_content import BaseContent
 from lib.widget.widget import Widget  # Adjust the import path accordingly
 
 class PageParser:
-    def __init__(self, site_dir, data):
+    def __init__(self, site_directory, data):
         self.data = data
 
     @staticmethod
-    def parse(content, site_dir, page_metadata_dict):
-        widget_dir = f'{site_dir}/widgets'
+    def parse(content, site_directory, page_metadata_dict):
+        widget_directory = f'{site_directory}/widgets'
 
         def replace(match):
             placeholder = match.group(1)
@@ -29,7 +29,7 @@ class PageParser:
 
         def process_widget(match):
             widget_input = match.group(1)
-            widget = Widget(widget_input, widget_dir)
+            widget = Widget(widget_input, widget_directory)
             return widget.generate_output()
 
         # Initialize content_with_widgets

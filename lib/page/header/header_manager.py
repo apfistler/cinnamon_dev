@@ -1,9 +1,9 @@
 import yaml
 
 class HeaderManager:
-    def __init__(self, site, page_metadata):
+    def __init__(self, site, metadata_dict):
         self.site = site
-        self.page_metadata = page_metadata
+        self.metadata_dict = metadata_dict 
 
     def get_custom_headers(self):
         # Add your logic to retrieve custom headers based on site and page_metadata
@@ -21,8 +21,8 @@ class HeaderManager:
 
         for element in types:
             # Check if the element is an attribute of self.page_metadata and is not None
-            if self.page_metadata.has_attr(element):
-                data = self.page_metadata.get(element)
+            if self.metadata_dict.get(element) is not None:
+                data = self.metadata_dict.get(element)
 
                 dictionary = {}  # Initialize the 'dictionary' variable outside the loop
 
@@ -47,8 +47,8 @@ class HeaderManager:
         return cmd_str
 
     def get_keywords(self):
-        if self.page_metadata.has_attr('keywords'):
-            keywords = ','.join(self.page_metadata.keywords)  # Fix the typo here (elf -> self)
+        if self.metadata_dict.get('keywords'):
+            keywords = ','.join(self.metadata_dict.get('keywords'))  # Fix the typo here (elf -> self)
             dictionary = {
                 'meta': [{
                     'name': 'keywords',
@@ -62,8 +62,8 @@ class HeaderManager:
     def get_from_metadata_header(self):
         cmd_str = ''
 
-        if self.page_metadata.has_attr('head'):
-            yaml_str = yaml.dump(self.page_metadata.head)
+        if self.metadata_dict.get('head'):
+            yaml_str = yaml.dump(self.metadata_dict.get('head'))
             dictionary = yaml.safe_load(yaml_str)
 
             cmd_str += self.generate_tag_cmd(dictionary)
@@ -83,7 +83,7 @@ class HeaderManager:
         if attribute is None:
             attribute = tag_name
 
-        value = self.page_metadata.get( attribute)
+        value = self.metadata_dict.get(attribute)
         tag = f'<{tag_name}>{value}</{tag_name}>\n'
         return tag
 
@@ -92,8 +92,8 @@ class HeaderManager:
 
     def get_base(self, href=None):
         if href is None:
-            if self.page_metadata.has_attr('base'):
-                href = self.page_metadata.base
+            if self.metadata_dict.get('base'):
+                href = self.metadata_dict.get('base')
             else:
                 return
 

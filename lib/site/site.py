@@ -33,6 +33,12 @@ class Site(BaseContent):
             self.base_site_directory[flt] = self.config.get(f'{flt}_site_directory')
             self.site_directory[flt] = os.path.join(self.base_site_directory[flt], self.key)
 
+    def get_site_directory(self):
+        return self.site_directory[self.file_location_type]
+
+    def get_base_site_directory(self):
+        return self.base_site_directory[self.file_location_type]
+
     def check_required_fields(self):
         super().check_required_fields()  # Call the base class method
 

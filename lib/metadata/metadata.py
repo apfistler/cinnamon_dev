@@ -11,9 +11,8 @@ class Metadata(BaseContent):
         self.element = element
         self.site = self.element.get('site')
         self.config = self.site.get('config')
-        self.file_location_type = element.get('file_location_type')
 
-        self.site_directory = self.element.get('site_directory')
+        self.site_directory = self.site.get_site_directory()
         self.element_type = self.element.get('element_type')
         self.element_type_path = self.element.get('element_type_path')
 
@@ -27,7 +26,7 @@ class Metadata(BaseContent):
 
         if key:
             self.key = key
-            self.path = os.path.join(self.site_directory, self.key)
+            self.path = os.path.join(self.site.get_site_directory(), self.key)
         elif path:
             self.key = os.relpath(path, self.site_directory)
             self.path = path
@@ -119,6 +118,6 @@ class Metadata(BaseContent):
         def set(self, key, value):
             setattr(self, key, value)
 
-        def get(self, key):
-            return getattr(self, key, None)
+        def get(self, key, default=None):
+            return getattr(self, key, default)
 
