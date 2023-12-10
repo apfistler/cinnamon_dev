@@ -1,11 +1,15 @@
 #lib/site/site.py
 
 import os
+import yaml
+import atexit
+from datetime import datetime
 
 from lib.base_content import BaseContent
 from lib.site.site_catalog import SiteCatalog
 from lib.common import Common
 from lib.metadata.metadata import Metadata
+from lib.yaml_parser import YamlParser
 
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']
@@ -17,10 +21,10 @@ class Site(BaseContent):
         self.element_type = 'site'
         self.element_type_path = '.'
 
+        self.keep_lock_file = False
         self.lock_file_path = os.path.join(self.get_site_directory(), self.get_element_directory('data'), 'lockfile')
 
-        if self.lockfile_exists():
-            raise RuntimeError(f"Site is locked. Lock file exists: {self.lock_file_path}")
+        self.lockfile_exists_with_error()
 
         self.create_lock_file()
 
@@ -83,14 +87,46 @@ class Site(BaseContent):
     def check_required_fields(self):
         super().check_required_fields()  # Call the base class method
 
+    def lockfile_exists_with_error(self):
+        if self.lockfile_exists(): 
+            self.keep_lock_file = True
+
+            yaml = YamlParser.parse_yaml(self.lock_file_path)
+            #lock_datetime = datetime.strptime(yaml['datetime'], '%Y-%m-%d %H:%M:%S.%f')
+            total_seconds = int((datetime.now() - yaml['datetime']).total_seconds())
+            s = 's' if total_seconds != 1 else ''  # Adjusted the variable name
+
+            print(f"Site: {self.key} has been temporarily locked by {yaml['username']} ({yaml['fullname']} - {yaml['email']}) at {yaml['datetime']} ({total_seconds} second{s} ago).")
+
+            if total_seconds > 500:
+                print(f"You may safely remove {self.lock_file_path} and try again.")
+
+            exit(1)
+        else:
+            return False
+
     def lockfile_exists(self):
         return os.path.exists(self.lock_file_path)
 
+
     def create_lock_file(self):
+        lock_data = {
+            'status': 'locked',
+            'username': self.config.get('username'),
+            'fullname': self.config.get('fullname'),
+            'email': self.config.get('email'),
+            'datetime': datetime.now()
+        }
+
+        lock_str = yaml.dump(lock_data)
+
         with open(self.lock_file_path, 'w') as lock_file:
-            lock_file.write("Locked")
+            lock_file.write(lock_str)
 
     def remove_lock_file(self):
+        if self.keep_lock_file:
+            return
+
         if self.lockfile_exists():
             os.remove(self.lock_file_path)
 

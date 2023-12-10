@@ -68,6 +68,7 @@ class SiteCatalog:
 
     def get_catalog_item(self, file_location_type, element_type, key):
         default_item = {
+            'id': self.get_next_catalog_id(file_location_type),
             'key': None,
             'filename': None,
             'path': None,
@@ -88,6 +89,15 @@ class SiteCatalog:
 
         self.catalog[file_location_type][element_type][key] = value
 
+    def get_next_catalog_id(self, file_location_type):
+        catalog_ids = []
+
+        for element_type, catalog_item in self.catalog.get(file_location_type, {}).items():
+            for key, item in catalog_item.items():
+                if item.get('id') is not None:
+                    catalog_ids.append(item.get('id'))
+
+        return max(catalog_ids, default=0) + 1
 
     def build_catalog(self, file_location_type):
         NON_SITE_ELEMENTS = ['metadata', 'data']
@@ -122,12 +132,15 @@ class SiteCatalog:
                 filename = element.get_filename()
 
                 item = self.get_catalog_item(file_location_type, element_type, key)
+
+                catalog_id = item['id']
                 catalog_checksum = item['checksum']
                 current_checksum = Common.calculate_checksum(full_path)
 
                 modified = catalog_checksum != current_checksum
 
                 item = {
+                    'id': catalog_id,
                     'key': key,
                     'filename': filename,
                     'path': full_path,
@@ -139,4 +152,4 @@ class SiteCatalog:
 
                 self.set_catalog_item(file_location_type, element_type, key, item)
 
-        self.write()
+        self.write(file_location_type)

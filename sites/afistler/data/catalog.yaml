@@ -1,192 +1,10 @@
 system:
-  css:
-    css/articles/articles.css:
-      checksum: f4545cfbc4a879e49d69cd499dbf556b46b64bb075ea04bbebbd4b2870e4729f
-      element_type: css
-      filename: articles.css
-      key: css/articles/articles.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/articles/articles.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/articles/articles.css
-    css/astrology/astrology.css:
-      checksum: 6b8c21cfeea4ec578a431f04b4f3a45db9eceb2bfeb2453bbc0b036eccb5f508
-      element_type: css
-      filename: astrology.css
-      key: css/astrology/astrology.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/astrology/astrology.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/astrology/astrology.css
-    css/graphology/graphology.css:
-      checksum: 8531943a85c3f267cc79fdbbaf93befc0bac16893583090985c68ca8992add30
-      element_type: css
-      filename: graphology.css
-      key: css/graphology/graphology.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/graphology/graphology.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/graphology/graphology.css
-    css/pie/article.css:
-      checksum: 9508e4f95a0a4e4a995d20747e5fcdf4d6eb915fded664cad0b952fd7fb2946d
-      element_type: css
-      filename: article.css
-      key: css/pie/article.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/article.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/article.css
-    css/pie/articles/articles.css:
-      checksum: f4545cfbc4a879e49d69cd499dbf556b46b64bb075ea04bbebbd4b2870e4729f
-      element_type: css
-      filename: articles.css
-      key: css/pie/articles/articles.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/articles/articles.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/articles/articles.css
-    css/pie/astrology/astrology.css:
-      checksum: 6b8c21cfeea4ec578a431f04b4f3a45db9eceb2bfeb2453bbc0b036eccb5f508
-      element_type: css
-      filename: astrology.css
-      key: css/pie/astrology/astrology.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/astrology/astrology.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/astrology/astrology.css
-    css/pie/display_table.css:
-      checksum: cb68f5c7d8855b4b1f107f58d4c8008790ed3c96ee8bdafd0f1620d3a4b21779
-      element_type: css
-      filename: display_table.css
-      key: css/pie/display_table.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/display_table.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/display_table.css
-    css/pie/graphology/graphology.css:
-      checksum: 8531943a85c3f267cc79fdbbaf93befc0bac16893583090985c68ca8992add30
-      element_type: css
-      filename: graphology.css
-      key: css/pie/graphology/graphology.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/graphology/graphology.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/graphology/graphology.css
-    css/pie/main.css:
-      checksum: d9bc04b15b22ca5e5146f1947b66e19f094df65237e5993978e16a6f05e27c1a
-      element_type: css
-      filename: main.css
-      key: css/pie/main.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/main.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/main.css
-    css/pie/menu.css:
-      checksum: ed5ac57c9b969092670c9b01fdabce8eead04513a4fba384977438db841564e1
-      element_type: css
-      filename: menu.css
-      key: css/pie/menu.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/menu.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/menu.css
-    css/pie/technology/resume.css:
-      checksum: 16c34fcf3faf38dc5d1e6f0646f81ef7d4454466dd0283fa52de105127f1213a
-      element_type: css
-      filename: resume.css
-      key: css/pie/technology/resume.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/technology/resume.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/pie/technology/resume.css
-    css/site/article.css:
-      checksum: 0067aa83b3d2faf19216292e6b8b6831db7a1afd210161be0cb0efc5ced1b68e
-      element_type: css
-      filename: article.css
-      key: css/site/article.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/article.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/article.css
-    css/site/content.css:
-      checksum: 6b04750fe9b205ef9c077ad0a5bab54de7e829361a665ca035cdb40f0ff13cfd
-      element_type: css
-      filename: content.css
-      key: css/site/content.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/content.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/content.css
-    css/site/display_table.css:
-      checksum: 83804909e5b3a615914bed217a56a4954779cf6bdd91aba3290b168a5e661991
-      element_type: css
-      filename: display_table.css
-      key: css/site/display_table.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/display_table.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/display_table.css
-    css/site/header.css:
-      checksum: 4f8f5155b9aad37eb0bf423a8150eda1acd23e66c2d9a7565447957c133e6d19
-      element_type: css
-      filename: header.css
-      key: css/site/header.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/header.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/header.css
-    css/site/main.css:
-      checksum: cb683eb92d281cbcc020ae24ab6c0773434af65364ab6576cb92c4b69f19ed9f
-      element_type: css
-      filename: main.css
-      key: css/site/main.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/main.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/main.css
-    css/site/menu.css:
-      checksum: d8c967cfa9b4cfeb6d764c1527355148c59c9c5bd6cf528541ce606276a6ec2d
-      element_type: css
-      filename: menu.css
-      key: css/site/menu.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/menu.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/menu.css
-    css/site/message_box.css:
-      checksum: 44f4d65a6091aa6f56d3d9f89183ca77e93ca754223197e2aa19fe3cd4627248
-      element_type: css
-      filename: message_box.css
-      key: css/site/message_box.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/message_box.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/site/message_box.css
-    css/technology/artwork.css:
-      checksum: 54df1221b12c57bfff66b657cf7c1635e8b41af721731fd1888dc0888d8616dd
-      element_type: css
-      filename: artwork.css
-      key: css/technology/artwork.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/artwork.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/technology/artwork.css
-    css/technology/projects.css:
-      checksum: 1239bc1c660f9776c18bd7ed8a8e43c9144a165e586a7067caf83b8f8653297f
-      element_type: css
-      filename: projects.css
-      key: css/technology/projects.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/projects.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/technology/projects.css
-    css/technology/resume.css:
-      checksum: 2ceb50499c28512abcaecf4fbadadf12fbabb7f2bd00dd0da1bd53c1fe4b20db
-      element_type: css
-      filename: resume.css
-      key: css/technology/resume.css
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/resume.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/css/technology/resume.css
-  image:
-    images/addiction/addiction_services/addict.png:
-      checksum: e6973abb51256dce46fa9f78c840ab403cd08c9190c0d65ba1a8a55c2f361a8e
-      element_type: image
-      filename: addict.png
-      key: images/addiction/addiction_services/addict.png
-      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/addict.yaml
-      modified: false
-      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/addict.png
-    images/addiction/addiction_services/breaking_chains.png:
-      checksum: 4566b216738d23aa21c2a4d3dec738d64142dd6c19bbe4314862da18122596dc
-      element_type: image
-      filename: breaking_chains.png
-      key: null
   page:
     pages/articles/articles.html:
       checksum: ae98097a6d224c2c29af7d8f8d23cdb8e17f625af5ee144750102cffabf9f1a9
       element_type: page
       filename: articles.html
+      id: 18
       key: pages/articles/articles.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/articles.yaml
       modified: false
@@ -195,6 +13,7 @@ system:
       checksum: 22c12a8b26761d9cfe91957134c325e11907d0ff83d8b8c9eb1f9166ab877cd1
       element_type: page
       filename: 10_things_choosing_a_hypnotist.html
+      id: 19
       key: pages/articles/hypnosis/10_things_choosing_a_hypnotist.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/10_things_choosing_a_hypnotist.yaml
       modified: false
@@ -203,6 +22,7 @@ system:
       checksum: ee47662683cc9d1b45353d38e7687d466ed83324273baec3d17046bee50cf332
       element_type: page
       filename: 10_things_weight_loss.html
+      id: 20
       key: pages/articles/hypnosis/10_things_weight_loss.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/10_things_weight_loss.yaml
       modified: false
@@ -211,6 +31,7 @@ system:
       checksum: 8a5e1a7938ed34a2a02e5d834d75982264d1f0a03d19d133cbede903bef228b4
       element_type: page
       filename: attract_your_ideal_partner.html
+      id: 21
       key: pages/articles/hypnosis/attract_your_ideal_partner.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/attract_your_ideal_partner.yaml
       modified: false
@@ -219,6 +40,7 @@ system:
       checksum: 1ef5819097807e659714d7edd5d3d5dd3311d0a2462f1bb698bf2e940f2b953f
       element_type: page
       filename: bhc.html
+      id: 22
       key: pages/articles/hypnosis/bhc.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/bhc.yaml
       modified: false
@@ -227,6 +49,7 @@ system:
       checksum: 2051cec4fb439d42adcb7b9374932bddbcf14c85902bc783c76c96c18404ca6d
       element_type: page
       filename: chronic_pain.html
+      id: 23
       key: pages/articles/hypnosis/chronic_pain.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/chronic_pain.yaml
       modified: false
@@ -235,6 +58,7 @@ system:
       checksum: c52c6f4ae2e6c1f90b7a026e92f01798acf2930a9841327233fdef6b84a2ac76
       element_type: page
       filename: eoc.html
+      id: 24
       key: pages/articles/hypnosis/eoc.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/eoc.yaml
       modified: false
@@ -243,6 +67,7 @@ system:
       checksum: 9f750b8563f34ce7b55acbe5e4f49d40e878e20cc07bff1da7b4676202111dfb
       element_type: page
       filename: evolution_of_hypnosis.html
+      id: 25
       key: pages/articles/hypnosis/evolution_of_hypnosis.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/evolution_of_hypnosis.yaml
       modified: false
@@ -251,6 +76,7 @@ system:
       checksum: cde89b7b41deb3bf986bacf288c8705f8b081fa09a23684a24a12be7ee486896
       element_type: page
       filename: gratitude.html
+      id: 26
       key: pages/articles/hypnosis/gratitude.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/gratitude.yaml
       modified: false
@@ -259,6 +85,7 @@ system:
       checksum: f2e0d8ec16ad739c6f585d443a18c05b95347b06b2e4c996c2d1634ef5f7389c
       element_type: page
       filename: how_long_does_hypnosis_last.html
+      id: 27
       key: pages/articles/hypnosis/how_long_does_hypnosis_last.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/how_long_does_hypnosis_last.yaml
       modified: false
@@ -267,6 +94,7 @@ system:
       checksum: bc5c24502d65b35b2c2247bce718fd031599b232463521088af5369c455129ec
       element_type: page
       filename: hrlrss.html
+      id: 28
       key: pages/articles/hypnosis/hrlrss.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/hrlrss.yaml
       modified: false
@@ -275,6 +103,7 @@ system:
       checksum: 94735bfed5e978a70a6e7006168c785bd8cc1bc707d90b7b62f04c206cdb10d8
       element_type: page
       filename: hrlrwl.html
+      id: 29
       key: pages/articles/hypnosis/hrlrwl.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/hrlrwl.yaml
       modified: false
@@ -283,6 +112,7 @@ system:
       checksum: c8d0099fc0e2fb5ce7b4821716f52335d6c20b71ad6d11b9fdb8e5e31aa6d790
       element_type: page
       filename: hypnosis_myths.html
+      id: 30
       key: pages/articles/hypnosis/hypnosis_myths.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/hypnosis_myths.yaml
       modified: false
@@ -291,6 +121,7 @@ system:
       checksum: 552a56cd60bf76d80ef447a3382485ff27f5d10fab86230a9e5872d401963553
       element_type: page
       filename: mental_health.html
+      id: 31
       key: pages/articles/hypnosis/mental_health.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/mental_health.yaml
       modified: false
@@ -299,6 +130,7 @@ system:
       checksum: 169be577407600ad3d8d56c80dcadacea6281dda67716986be42c051a8d76066
       element_type: page
       filename: mind_body.html
+      id: 32
       key: pages/articles/hypnosis/mind_body.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/mind_body.yaml
       modified: false
@@ -307,6 +139,7 @@ system:
       checksum: 672e30eea7c112a0c86f680b1078eeff7cd5d3a4101d3b8783d6ac068f02a5db
       element_type: page
       filename: nice_guy.html
+      id: 33
       key: pages/articles/hypnosis/nice_guy.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/nice_guy.yaml
       modified: false
@@ -315,6 +148,7 @@ system:
       checksum: a28962727fcad6b298776520f3a3b4256a193bcf59c141aaa95b6a83bd588e76
       element_type: page
       filename: stress.html
+      id: 34
       key: pages/articles/hypnosis/stress.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/stress.yaml
       modified: false
@@ -323,6 +157,7 @@ system:
       checksum: ffc0b5fe713b64c14e0b4e8c1f6b356c2d9f51f18ee2501420a33f039f5d744d
       element_type: page
       filename: subconcious.html
+      id: 35
       key: pages/articles/hypnosis/subconcious.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/subconcious.yaml
       modified: false
@@ -331,6 +166,7 @@ system:
       checksum: fd93ca69425b14587ffded51c7eb49cf118762510ef0185a8a22546be8950b50
       element_type: page
       filename: winning_the_battle_within.html
+      id: 36
       key: pages/articles/hypnosis/winning_the_battle_within.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/articles/hypnosis/winning_the_battle_within.yaml
       modified: false
@@ -339,6 +175,7 @@ system:
       checksum: 0fad650ea4f990e5acac241f620cc71ae5be588fadddb8829c60a63768d0eb21
       element_type: page
       filename: astrology.html
+      id: 8
       key: pages/astrology/astrology.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/astrology/astrology.yaml
       modified: false
@@ -347,6 +184,7 @@ system:
       checksum: f72ab4a6fbb963536c16a53c7ae806feeccdad5480f8798b6e26fe6ad5ae2378
       element_type: page
       filename: graphology.html
+      id: 9
       key: pages/graphology/graphology.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/graphology/graphology.yaml
       modified: false
@@ -355,6 +193,7 @@ system:
       checksum: 6bbbdbe6fe4379fd02bc1946657d4c648cca79ab3dc7aa4eec26c259be9239fd
       element_type: page
       filename: about_hypnosis.html
+      id: 11
       key: pages/hypnosis/about_hypnosis.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/about_hypnosis.yaml
       modified: false
@@ -363,6 +202,7 @@ system:
       checksum: 00c0a800373e40586269d843e2223d6e4c08f6c5e53015c310415c9dd9afa4a9
       element_type: page
       filename: anger.html
+      id: 13
       key: pages/hypnosis/anger.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/anger.yaml
       modified: false
@@ -371,6 +211,7 @@ system:
       checksum: 4b59b910341a33dc00110ad79dcfd0ca1f929d70b9ac2de85e93dd3936f737a9
       element_type: page
       filename: hypnosis_services.html
+      id: 12
       key: pages/hypnosis/hypnosis_services.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/hypnosis_services.yaml
       modified: false
@@ -379,6 +220,7 @@ system:
       checksum: bbba0aa7f0ed3aeb2d701dd3bd4e591a3cc02afd3a546e7e601050d1c648efa8
       element_type: page
       filename: smoking_cessation.html
+      id: 14
       key: pages/hypnosis/smoking_cessation.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/smoking_cessation.yaml
       modified: false
@@ -387,6 +229,7 @@ system:
       checksum: ee93021f2a2e74851a3f92c52ae03a7d3e43278f42f1e96416a462c4a2b5fc29
       element_type: page
       filename: smoking_cessation_approach.html
+      id: 15
       key: pages/hypnosis/smoking_cessation_approach.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/smoking_cessation_approach.yaml
       modified: false
@@ -395,6 +238,7 @@ system:
       checksum: cb54851cb9679bacaff479ecaf2a6b23d7dfd2ebeb23b3564b5a459d0d6d8371
       element_type: page
       filename: testimonials.html
+      id: 10
       key: pages/hypnosis/testimonials.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/testimonials.yaml
       modified: false
@@ -403,6 +247,7 @@ system:
       checksum: b49de4d7f7401f30a4bcd4ec6fdd7506ae997e0a1ca0f1a520afd036197887b6
       element_type: page
       filename: weight_loss.html
+      id: 16
       key: pages/hypnosis/weight_loss.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/weight_loss.yaml
       modified: false
@@ -411,38 +256,43 @@ system:
       checksum: cddb6a2f22e2b60f9d11faef37e30fd1e44af684cf29ac12c8ecb89b5559b37f
       element_type: page
       filename: weight_loss_approach.html
+      id: 17
       key: pages/hypnosis/weight_loss_approach.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/hypnosis/weight_loss_approach.yaml
       modified: false
       path: /opt/cinnamon_dev/sites/afistler/pages/hypnosis/weight_loss_approach.html
     pages/main/contact_us.html:
-      checksum: 1d9867e574e198e6105f4c7d0a78dda84ac5ce275a9a15e80930792207bed74d
+      checksum: eb3122326dd17e4af587d383b381c2393e4a28f4438386a9d3100f16581ddc25
       element_type: page
       filename: contact_us.html
+      id: 2
       key: pages/main/contact_us.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/main/contact_us.yaml
       modified: false
       path: /opt/cinnamon_dev/sites/afistler/pages/main/contact_us.html
     pages/main/go_fund_me.html:
-      checksum: 92b6b46ac9cdc49f6ea326d3ed5b3cf34ed76e60a456c96f1fac5f4a761355ef
+      checksum: a8d082008146a8c3896172e85e08b873da11e9ad5f9f7f835fe86efb369354c9
       element_type: page
       filename: go_fund_me.html
+      id: 1
       key: pages/main/go_fund_me.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/main/go_fund_me.yaml
       modified: false
       path: /opt/cinnamon_dev/sites/afistler/pages/main/go_fund_me.html
     pages/main/home.html:
-      checksum: 02bf5c6986cda0a888bdc12b2ee47204e585ece68082c5d086255cb3f55375ac
+      checksum: ad8bd0482e957f2806eaea2257ad12d21607a1dbea4d7e5b033785bcf6195a9e
       element_type: page
       filename: home.html
+      id: 3
       key: pages/main/home.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/main/home.yaml
       modified: false
       path: /opt/cinnamon_dev/sites/afistler/pages/main/home.html
     pages/main/upcoming_events.html:
-      checksum: d1a4e2b5736b88da321c5ae0bdd5b61d861da76e54ead4b5b5ee873c4d843347
+      checksum: c5f63d5522f273e42f20f7384639fa5586fa7493bab410be2c44f1be19d7ca15
       element_type: page
       filename: upcoming_events.html
+      id: 4
       key: pages/main/upcoming_events.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/main/upcoming_events.yaml
       modified: false
@@ -451,6 +301,7 @@ system:
       checksum: b8822305f91e27f38a157ca6723c2441fea25fd5172dba34e55aec6ae46e0a43
       element_type: page
       filename: artwork.html
+      id: 5
       key: pages/technology/artwork.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/technology/artwork.yaml
       modified: false
@@ -459,6 +310,7 @@ system:
       checksum: 4065bc6986d06a3984d0512ae9340ab55f6bbd0919101a17b4edbd8f4507f40d
       element_type: page
       filename: projects.html
+      id: 6
       key: pages/technology/projects.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/technology/projects.yaml
       modified: false
@@ -467,6 +319,7 @@ system:
       checksum: 0e888a2fa9f4e91f16952c1d045133b2082c723248f304888c7446bf38c9983c
       element_type: page
       filename: resume.html
+      id: 7
       key: pages/technology/resume.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/pages/technology/resume.yaml
       modified: false
@@ -476,6 +329,7 @@ system:
       checksum: d7749bbdefc4e88c6e1aebd219fbaff623b5fbfc48d0f4cfb5a0b3c786fcfdc0
       element_type: template
       filename: afistler.html
+      id: 37
       key: templates/afistler.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/templates/afistler.yaml
       modified: false
@@ -485,6 +339,7 @@ system:
       checksum: e89fe5da9f0daec353f21fd3aecf29fc8ecd15596259f10030b5df1fb1aa8f2d
       element_type: widget
       filename: menu.html
+      id: 38
       key: widgets/menu/menu.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/widgets/menu/menu.yaml
       modified: false
@@ -493,6 +348,7 @@ system:
       checksum: 23f4eff9bc4602584a3f152055dc2848318fee7e93e9c65be428d1ae3ebc3d64
       element_type: widget
       filename: page.html
+      id: 39
       key: widgets/page/page.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/widgets/page/page.yaml
       modified: false
@@ -501,6 +357,7 @@ system:
       checksum: 777214c5c015d934222591fc10006f3bc19a659ece6da0d7dd5fa416c523de5b
       element_type: widget
       filename: tag.html
+      id: 40
       key: widgets/tag/tag.html
       metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/widgets/tag/tag.yaml
       modified: false

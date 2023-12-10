@@ -24,7 +24,6 @@ class Page(Element):
         content = self.apply_page_template(content)
 
         self.content = self.format_content(content)
-        print(self.content)
 
 
     def format_content(self, content):
@@ -62,7 +61,6 @@ class Page(Element):
 
 
     def parse(self, content):
-        print(f"READING {self.path}")
         metadata_dict = self.metadata.all.to_dict()
 
         # Parse the content
@@ -73,8 +71,6 @@ class Page(Element):
     def parse_page(self):
         content = self.pre_parse_pase()
         content = self.parse(content)
-        print(content)
-        exit(1)
 
         return content
 
