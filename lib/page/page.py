@@ -60,17 +60,9 @@ class Page(Element):
         return content
 
 
-    def parse(self, content):
-        metadata_dict = self.metadata.all.to_dict()
-
-        # Parse the content
-        parsed_content = PageParser.parse(content, self.site.get_site_directory(), metadata_dict)
-
-        return parsed_content
-
     def parse_page(self):
         content = self.pre_parse_pase()
-        content = self.parse(content)
+        content = PageParser(self).parse(content) 
 
         return content
 
@@ -79,8 +71,8 @@ class Page(Element):
         self.template = PageTemplate(self.site, self, full_path=self.template_filename)
         template_content = self.template.get_content()
 
-        if '&{{page}}' in template_content:
-            content = template_content.replace('&{{page}}', content)
+        if '@{{page}}' in template_content:
+            content = template_content.replace('@{{page}}', content)
 
         return content
 

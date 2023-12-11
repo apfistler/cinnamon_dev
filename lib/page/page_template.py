@@ -9,6 +9,7 @@ from lib.element.element import Element
 
 class PageTemplate(Element):
     def __init__(self, site, page, full_path=None, key=None):
+        self.page = page
         self.site_directory = site.get_site_directory()
         self.metadata = page.get('metadata')
         self.metadata_dict = self.metadata.all.to_dict()
@@ -20,18 +21,21 @@ class PageTemplate(Element):
     def open(self):
         # Open the page file and read its content
         with open(self.path, 'r', encoding='utf-8') as file:
-            page_content = file.read()
+            content = file.read()
 
-        return(page_content)
+        return(content)
 
     def get_content(self):
         return self.content
 
     def parse_template(self):
         content = self.open()
-        content = PageParser.parse(content, self.site.get_site_directory(), self.metadata_dict)
+
+        page_parser = PageParser(self.page)
+        content = page_parser.parse(content)
         template_content = self.insert_custom_headers(content)
-        content = PageParser.parse(template_content, self.site.get_site_directory(), self.metadata_dict)
+        content = page_parser.parse(template_content)
+        
 
         return content
 

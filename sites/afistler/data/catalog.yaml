@@ -326,7 +326,7 @@ system:
       path: /opt/cinnamon_dev/sites/afistler/pages/technology/resume.html
   template:
     templates/afistler.html:
-      checksum: d7749bbdefc4e88c6e1aebd219fbaff623b5fbfc48d0f4cfb5a0b3c786fcfdc0
+      checksum: a90d371204851c6852a3fd382eafc615637158c6da587c2a181f1fe275d51590
       element_type: template
       filename: afistler.html
       id: 37

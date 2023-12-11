@@ -7,7 +7,8 @@ from lib.base_content import BaseContent
 from lib.yaml_parser import YamlParser
 
 class Shortcut(BaseContent):
-    def __init__(self, input_str):
+    def __init__(self, site, input_str):
+        self.site = site
         self.input_str = input_str
         (self.template_name, self.args) = self.extract_args()
         # Do not return anything from __init__, just call the method

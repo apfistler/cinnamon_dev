@@ -6,17 +6,46 @@ from lib.widget.widget import Widget  # Adjust the import path accordingly
 from lib.shortcut.shortcut import Shortcut
 
 class PageParser:
-    def __init__(self, site_directory, data):
-        self.data = data
+    def __init__(self, page):
+        self.page = page
+        self.site = page.get('site')
 
-    @staticmethod
-    def parse(content, site_directory, page_metadata_dict):
-        widget_directory = f'{site_directory}/widgets'
+    def parse(self, content):
+        metadata_dict = self.page.metadata.all.to_dict()
 
-        def replace(match):
-            placeholder = match.group(1)
+        #content = re.sub(r'(.)\{\{([^}].*)\}\}', handle_place_holders, content)
+
+        def parse_place_holders(content):
+            match_order = ['#', '%', '@']
+
+            for symbol in match_order:
+                if symbol in ['%', '@']:
+                    pattern = re.escape(symbol) + r'\{\{([^}}].*)\}\}'
+                elif symbol == '#':
+                    pattern = re.escape(symbol) + r'\{\{([^}}]*)\}\}'
+
+                content = re.sub(pattern, lambda match: parse_place_holder(match, symbol), content)
+
+            return content
+
+        def parse_place_holder(match, symbol):
+            match_string = match.group(1)
+
+            if symbol == '#':
+                return process_metadata(match_string) 
+            elif symbol == '%':
+                return Shortcut(self.site, match_string).generate_output()
+            elif symbol == '@':  # Fix: Added missing colon
+                # This should be handled by the template
+                if match_string == 'page':
+                    return '@{{page}}'
+
+                return  Widget(self.site, match_string).generate_output()
+
+
+        def process_metadata(match_string):
             try:
-                value = PageParser.evaluate_nested_value(placeholder, page_metadata_dict)
+                value = PageParser.evaluate_nested_value(match_string, metadata_dict)
 
                 # Check if the value is a list (array)
                 if isinstance(value, list):
@@ -25,32 +54,11 @@ class PageParser:
 
                 return str(value)
             except (NameError, KeyError, IndexError):
-                print(f"Error: Placeholder '{placeholder}' not found in page_metadata_dict.")
+                print(f"Error: Metadata param '{match_string}' not found in metadata_dict.")
                 return match.group(0)
 
-        def process_widget(match):
-            widget_input = match.group(1)
-            widget = Widget(widget_input, widget_directory)
-            return widget.generate_output()
-
-        def process_shortcut(match):
-            shortcut_input = match.group(1)
-            shortcut = Shortcut(shortcut_input)
-            return shortcut.generate_output()
-
-        # Initialize content_with_widgets
-        content_with_widgets = content
-
-        # Replace other placeholders
-        content_with_placeholder_sub = re.sub(r'#\{\{([^}]*)\}\}', replace, content)
-
-        # Process Shortcuts
-        parsed_content = re.sub(r'%\{\{([^}].*)\}\}', process_shortcut, content_with_placeholder_sub)
-
-        # Process widgets first
-        parsed_content = re.sub(r'@\{\{([^}].*)\}\}', process_widget, parsed_content)
-
-        return parsed_content
+        content = parse_place_holders(content)
+        return content
 
     @staticmethod
     def evaluate_nested_value(placeholder, data):

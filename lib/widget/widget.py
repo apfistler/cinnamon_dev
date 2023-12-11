@@ -2,18 +2,20 @@
 
 import re
 import yaml
+import os
 
 from lib.widget.widget_template_loader import WidgetTemplateLoader
 from lib.base_content import BaseContent
 from lib.yaml_parser import YamlParser
 
 class Widget(BaseContent):
-    def __init__(self, input_str, widget_dir):
+    def __init__(self, site, input_str):
+        self.site = site
         self.input_str = input_str
-        self.widget_dir = widget_dir
+        self.widget_dir = os.path.join(self.site.get_site_directory(), self.site.get_element_directory('widget'))
+
         (self.template_name, self.args) = self.extract_args()
-        self.path = f'{widget_dir}/{self.template_name}/{self.template_name}.html'
-        # Do not return anything from __init__, just call the method
+        self.path = os.path.join(self.widget_dir, f'{self.template_name}.html')
 
     def extract_args(self):
         # Use a regex pattern to capture the first word as the template name and the remaining string as arguments
