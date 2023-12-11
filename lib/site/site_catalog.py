@@ -1,6 +1,7 @@
 import os
 import yaml
 from pprint import pprint
+from collections import defaultdict
 
 from lib.common import Common 
 from lib.element.element import Element
@@ -59,12 +60,30 @@ class SiteCatalog:
              return
 
          self.catalog = YamlParser.parse_yaml(self.catalog_filename)
+         self.update_catalog_integrity(file_location_type)
 
     def write(self, file_location_type):
         self.set_attributes_by_file_location_type(file_location_type)
+        self.update_catalog_integrity(file_location_type)
 
         with open(self.catalog_filename, 'w') as file:
             yaml.dump(self.catalog, file, default_flow_style=False)
+
+
+    def update_catalog_integrity(self, file_location_type):
+        catalog_items = self.catalog.get(file_location_type, {})
+
+        keys_to_purge = defaultdict(list)
+
+        for element_type, element_dict in catalog_items.items():
+            for key, catalog_item in element_dict.items():
+                if full_path := catalog_item.get('path'):
+                    if not Common.file_exists(full_path):
+                        keys_to_purge[element_type].append(key)
+
+        for element_type, keys in keys_to_purge.items():
+            for key in keys:
+                self.remove_catalog_item(file_location_type, element_type, key)
 
     def get_catalog_item(self, file_location_type, element_type, key):
         default_item = {
@@ -89,6 +108,12 @@ class SiteCatalog:
 
         self.catalog[file_location_type][element_type][key] = value
 
+    def remove_catalog_item(self, file_location_type, element_type, key):
+        try:
+            del self.catalog[file_location_type][element_type][key]
+        except KeyError:
+            pass
+
     def get_next_catalog_id(self, file_location_type):
         catalog_ids = []
 
@@ -98,6 +123,34 @@ class SiteCatalog:
                     catalog_ids.append(item.get('id'))
 
         return max(catalog_ids, default=0) + 1
+
+    def get_duplicate_elements(self, file_location_type):
+        catalog_items = self.catalog.get(file_location_type)
+
+        new_dict = {}
+        filtered_dict = defaultdict(lambda: defaultdict(lambda: defaultdict(str)))
+
+        for element_type, element_dict in catalog_items.items():
+            if not new_dict.get(element_type):
+                new_dict[element_type] = {}
+ 
+            for key, catalog_item in element_dict.items():
+                if full_path := catalog_item.get('path'):
+                    path, filename = os.path.split(full_path)
+                    base_name, extension = os.path.splitext(filename)
+
+                    if not new_dict[element_type].get(path):
+                        new_dict[element_type][path] = {} 
+
+                    if not new_dict[element_type][path].get(base_name):
+                        new_dict[element_type][path][base_name] = []
+
+                    new_dict[element_type][path][base_name].append(filename)
+
+                    if (len(new_dict[element_type][path].get(base_name)) > 1):
+                        filtered_dict[element_type][path][base_name] = new_dict[element_type][path].get(base_name)
+
+        return(filtered_dict)
 
     def build_catalog(self, file_location_type):
         NON_SITE_ELEMENTS = ['metadata', 'data']
@@ -150,6 +203,26 @@ class SiteCatalog:
                     'modified': modified
                 }
 
-                self.set_catalog_item(file_location_type, element_type, key, item)
+                if Common.file_exists(full_path):
+                    self.set_catalog_item(file_location_type, element_type, key, item)
+                else:
+                    self.remove_catalog_item(file_location_type, element_type, key)
 
-        self.write(file_location_type)
+        matching_files = self.get_duplicate_elements(file_location_type)
+
+        if matching_files:
+            print("Error: You may not have two elements with the same name but different extensions in the same directory.")
+
+            for element_type, paths in matching_files.items():
+                print(f"Element Type: {element_type}")
+
+                for directory, item_dict in paths.items():
+                    print(f"  Directory: {directory}")
+                    print("\n".join([f"    - {file}" for file in item_dict.values()]))
+
+                print("")
+
+            exit(1)
+
+        self.write
+

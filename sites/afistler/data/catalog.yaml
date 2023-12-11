@@ -1,4 +1,2599 @@
 system:
+  css:
+    css/articles/articles.css:
+      checksum: f4545cfbc4a879e49d69cd499dbf556b46b64bb075ea04bbebbd4b2870e4729f
+      element_type: css
+      filename: articles.css
+      id: 302
+      key: css/articles/articles.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/articles/articles.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/articles/articles.css
+    css/astrology/astrology.css:
+      checksum: 6b8c21cfeea4ec578a431f04b4f3a45db9eceb2bfeb2453bbc0b036eccb5f508
+      element_type: css
+      filename: astrology.css
+      id: 303
+      key: css/astrology/astrology.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/astrology/astrology.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/astrology/astrology.css
+    css/graphology/graphology.css:
+      checksum: 8531943a85c3f267cc79fdbbaf93befc0bac16893583090985c68ca8992add30
+      element_type: css
+      filename: graphology.css
+      id: 304
+      key: css/graphology/graphology.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/graphology/graphology.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/graphology/graphology.css
+    css/pie/article.css:
+      checksum: 9508e4f95a0a4e4a995d20747e5fcdf4d6eb915fded664cad0b952fd7fb2946d
+      element_type: css
+      filename: article.css
+      id: 305
+      key: css/pie/article.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/article.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/article.css
+    css/pie/articles/articles.css:
+      checksum: f4545cfbc4a879e49d69cd499dbf556b46b64bb075ea04bbebbd4b2870e4729f
+      element_type: css
+      filename: articles.css
+      id: 311
+      key: css/pie/articles/articles.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/articles/articles.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/articles/articles.css
+    css/pie/astrology/astrology.css:
+      checksum: 6b8c21cfeea4ec578a431f04b4f3a45db9eceb2bfeb2453bbc0b036eccb5f508
+      element_type: css
+      filename: astrology.css
+      id: 309
+      key: css/pie/astrology/astrology.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/astrology/astrology.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/astrology/astrology.css
+    css/pie/display_table.css:
+      checksum: cb68f5c7d8855b4b1f107f58d4c8008790ed3c96ee8bdafd0f1620d3a4b21779
+      element_type: css
+      filename: display_table.css
+      id: 306
+      key: css/pie/display_table.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/display_table.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/display_table.css
+    css/pie/graphology/graphology.css:
+      checksum: 8531943a85c3f267cc79fdbbaf93befc0bac16893583090985c68ca8992add30
+      element_type: css
+      filename: graphology.css
+      id: 312
+      key: css/pie/graphology/graphology.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/graphology/graphology.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/graphology/graphology.css
+    css/pie/main.css:
+      checksum: d9bc04b15b22ca5e5146f1947b66e19f094df65237e5993978e16a6f05e27c1a
+      element_type: css
+      filename: main.css
+      id: 307
+      key: css/pie/main.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/main.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/main.css
+    css/pie/menu.css:
+      checksum: ed5ac57c9b969092670c9b01fdabce8eead04513a4fba384977438db841564e1
+      element_type: css
+      filename: menu.css
+      id: 308
+      key: css/pie/menu.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/menu.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/menu.css
+    css/pie/technology/resume.css:
+      checksum: 16c34fcf3faf38dc5d1e6f0646f81ef7d4454466dd0283fa52de105127f1213a
+      element_type: css
+      filename: resume.css
+      id: 310
+      key: css/pie/technology/resume.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/pie/technology/resume.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/pie/technology/resume.css
+    css/site/article.css:
+      checksum: 0067aa83b3d2faf19216292e6b8b6831db7a1afd210161be0cb0efc5ced1b68e
+      element_type: css
+      filename: article.css
+      id: 316
+      key: css/site/article.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/article.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/article.css
+    css/site/content.css:
+      checksum: 6b04750fe9b205ef9c077ad0a5bab54de7e829361a665ca035cdb40f0ff13cfd
+      element_type: css
+      filename: content.css
+      id: 317
+      key: css/site/content.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/content.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/content.css
+    css/site/display_table.css:
+      checksum: 83804909e5b3a615914bed217a56a4954779cf6bdd91aba3290b168a5e661991
+      element_type: css
+      filename: display_table.css
+      id: 318
+      key: css/site/display_table.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/display_table.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/display_table.css
+    css/site/header.css:
+      checksum: 4f8f5155b9aad37eb0bf423a8150eda1acd23e66c2d9a7565447957c133e6d19
+      element_type: css
+      filename: header.css
+      id: 319
+      key: css/site/header.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/header.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/header.css
+    css/site/main.css:
+      checksum: cb683eb92d281cbcc020ae24ab6c0773434af65364ab6576cb92c4b69f19ed9f
+      element_type: css
+      filename: main.css
+      id: 322
+      key: css/site/main.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/main.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/main.css
+    css/site/menu.css:
+      checksum: d8c967cfa9b4cfeb6d764c1527355148c59c9c5bd6cf528541ce606276a6ec2d
+      element_type: css
+      filename: menu.css
+      id: 320
+      key: css/site/menu.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/menu.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/menu.css
+    css/site/message_box.css:
+      checksum: 44f4d65a6091aa6f56d3d9f89183ca77e93ca754223197e2aa19fe3cd4627248
+      element_type: css
+      filename: message_box.css
+      id: 321
+      key: css/site/message_box.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/site/message_box.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/site/message_box.css
+    css/technology/artwork.css:
+      checksum: 54df1221b12c57bfff66b657cf7c1635e8b41af721731fd1888dc0888d8616dd
+      element_type: css
+      filename: artwork.css
+      id: 313
+      key: css/technology/artwork.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/artwork.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/technology/artwork.css
+    css/technology/projects.css:
+      checksum: 1239bc1c660f9776c18bd7ed8a8e43c9144a165e586a7067caf83b8f8653297f
+      element_type: css
+      filename: projects.css
+      id: 315
+      key: css/technology/projects.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/projects.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/technology/projects.css
+    css/technology/resume.css:
+      checksum: 2ceb50499c28512abcaecf4fbadadf12fbabb7f2bd00dd0da1bd53c1fe4b20db
+      element_type: css
+      filename: resume.css
+      id: 314
+      key: css/technology/resume.css
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/css/technology/resume.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/css/technology/resume.css
+  image:
+    images/addiction/addiction_services/addict.png:
+      checksum: e6973abb51256dce46fa9f78c840ab403cd08c9190c0d65ba1a8a55c2f361a8e
+      element_type: image
+      filename: addict.png
+      id: 148
+      key: images/addiction/addiction_services/addict.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/addict.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/addict.png
+    images/addiction/addiction_services/breaking_chains.png:
+      checksum: 4566b216738d23aa21c2a4d3dec738d64142dd6c19bbe4314862da18122596dc
+      element_type: image
+      filename: breaking_chains.png
+      id: 149
+      key: images/addiction/addiction_services/breaking_chains.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/breaking_chains.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/breaking_chains.png
+    images/addiction/addiction_services/broken_steps_drawing.png:
+      checksum: aecd380a205107706801229c9729ccd4101e35e2c4bea43528a8485e5cc28ca1
+      element_type: image
+      filename: broken_steps_drawing.png
+      id: 150
+      key: images/addiction/addiction_services/broken_steps_drawing.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/broken_steps_drawing.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/broken_steps_drawing.png
+    images/addiction/addiction_services/deceptive_claims.png:
+      checksum: a94492a2b5d2ed8d8ab4a19a5d92e78e414ca592d0a29e1f8dcff3678741b045
+      element_type: image
+      filename: deceptive_claims.png
+      id: 151
+      key: images/addiction/addiction_services/deceptive_claims.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/deceptive_claims.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/deceptive_claims.png
+    images/addiction/addiction_services/evidence_based_practice.png:
+      checksum: ab1f28cea9c10a5c98a291da33125454281c3c4dd91617b89b57c42b04b7908a
+      element_type: image
+      filename: evidence_based_practice.png
+      id: 152
+      key: images/addiction/addiction_services/evidence_based_practice.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/evidence_based_practice.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/evidence_based_practice.png
+    images/addiction/addiction_services/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 153
+      key: images/addiction/addiction_services/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/hypnotist.png
+    images/addiction/addiction_services/lightbulb.png:
+      checksum: 20519a2a77b97c791e8b4c8322adfcc1fb5af540b7b0fb090761bc2e69e4ccbd
+      element_type: image
+      filename: lightbulb.png
+      id: 154
+      key: images/addiction/addiction_services/lightbulb.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/lightbulb.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/lightbulb.png
+    images/addiction/addiction_services/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 156
+      key: images/addiction/addiction_services/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/male_hypnotist_web.png
+    images/addiction/addiction_services/revolving_door.png:
+      checksum: 61b9fd5e6c85855ba3907f7a5d7dc0a9e2856168cbe71826ca75adf922c05f71
+      element_type: image
+      filename: revolving_door.png
+      id: 155
+      key: images/addiction/addiction_services/revolving_door.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/addiction/addiction_services/revolving_door.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/addiction/addiction_services/revolving_door.png
+    images/articles/articles/article_icon.png:
+      checksum: fe48d81d6aa3332f9946be39e73bccbb2dcd4643233ff3bd81fe17e2c68ba5c2
+      element_type: image
+      filename: article_icon.png
+      id: 146
+      key: images/articles/articles/article_icon.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/articles/article_icon.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/articles/article_icon.png
+    images/articles/articles/hypnosis.png:
+      checksum: ee3f99847b970cdad49a777d0314e3527e2a9e74f08b3e3717ba6034f5cb8ba9
+      element_type: image
+      filename: hypnosis.png
+      id: 147
+      key: images/articles/articles/hypnosis.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/articles/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/articles/hypnosis.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/freedom_bird.png:
+      checksum: e04bcd7ea55647cfa5b5c6bc55215e2ed6ad5e06dc4e7301ff7c3356d443374e
+      element_type: image
+      filename: freedom_bird.png
+      id: 87
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/freedom_bird.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/freedom_bird.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/freedom_bird.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnosis_office.png:
+      checksum: 9b3bc6f4a55ee7bb74d8d223f218a201a49103fec7b44b681bd5f77024d7d72d
+      element_type: image
+      filename: hypnosis_office.png
+      id: 88
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnosis_office.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnosis_office.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnosis_office.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 89
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/hypnotist.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 92
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/male_hypnotist_web.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/ngh_logo.png:
+      checksum: db2432596a7a645c483521156ef61addcf5c97e2a42ebe00af8063f676f8e264
+      element_type: image
+      filename: ngh_logo.png
+      id: 90
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/ngh_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/ngh_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/ngh_logo.png
+    images/articles/hypnosis/10_things_choosing_a_hypnotist/question_mark.png:
+      checksum: 2250881c5c450ea1db826e108647a3ccd14ca7c7d311ecde37cbde3350dc801b
+      element_type: image
+      filename: question_mark.png
+      id: 91
+      key: images/articles/hypnosis/10_things_choosing_a_hypnotist/question_mark.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_choosing_a_hypnotist/question_mark.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_choosing_a_hypnotist/question_mark.png
+    images/articles/hypnosis/10_things_weight_loss/anti_will_power.png:
+      checksum: 77f504e2af84ab8daf8cae03d9a11d612c546d1fcd4c0469c861d809a597a296
+      element_type: image
+      filename: anti_will_power.png
+      id: 53
+      key: images/articles/hypnosis/10_things_weight_loss/anti_will_power.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/anti_will_power.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/anti_will_power.png
+    images/articles/hypnosis/10_things_weight_loss/clean_your_plate.png:
+      checksum: 34e4c84a32daaa829bbf8ac93b85beb37fc23a6e34f7a632780caa7c484b6bf2
+      element_type: image
+      filename: clean_your_plate.png
+      id: 54
+      key: images/articles/hypnosis/10_things_weight_loss/clean_your_plate.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/clean_your_plate.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/clean_your_plate.png
+    images/articles/hypnosis/10_things_weight_loss/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 55
+      key: images/articles/hypnosis/10_things_weight_loss/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/hypnotist.png
+    images/articles/hypnosis/10_things_weight_loss/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 52
+      key: images/articles/hypnosis/10_things_weight_loss/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/male_hypnotist_web.png
+    images/articles/hypnosis/10_things_weight_loss/running.png:
+      checksum: d6862d3932f957f2005c1d5d4e5995fa821638606497a84085c0cce553915f3a
+      element_type: image
+      filename: running.png
+      id: 56
+      key: images/articles/hypnosis/10_things_weight_loss/running.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/running.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/running.png
+    images/articles/hypnosis/10_things_weight_loss/victory.png:
+      checksum: a88e002e334dc07dab56db6a732446911972b6c92df4a06d1ccf852ac1f46184
+      element_type: image
+      filename: victory.png
+      id: 57
+      key: images/articles/hypnosis/10_things_weight_loss/victory.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/victory.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/victory.png
+    images/articles/hypnosis/10_things_weight_loss/weight_loss_tape_measure.png:
+      checksum: b2983f485591b6a3be55ccb40eda5635f498fc9421031dca8f453c9b589201df
+      element_type: image
+      filename: weight_loss_tape_measure.png
+      id: 58
+      key: images/articles/hypnosis/10_things_weight_loss/weight_loss_tape_measure.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/10_things_weight_loss/weight_loss_tape_measure.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/10_things_weight_loss/weight_loss_tape_measure.png
+    images/articles/hypnosis/attract_your_ideal_partner/finding_love.png:
+      checksum: 8bc5a9fc5f0e27352f99ab40a8838b92c061d95517120f3f30d9ce413296885a
+      element_type: image
+      filename: finding_love.png
+      id: 93
+      key: images/articles/hypnosis/attract_your_ideal_partner/finding_love.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/attract_your_ideal_partner/finding_love.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/attract_your_ideal_partner/finding_love.png
+    images/articles/hypnosis/attract_your_ideal_partner/love_connection.png:
+      checksum: b818e7a3926e310037810397cc4024846f941838b2435aae5d9f2e13f036909d
+      element_type: image
+      filename: love_connection.png
+      id: 94
+      key: images/articles/hypnosis/attract_your_ideal_partner/love_connection.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/attract_your_ideal_partner/love_connection.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/attract_your_ideal_partner/love_connection.png
+    images/articles/hypnosis/attract_your_ideal_partner/partners.png:
+      checksum: af8fbe9706a5efbc605a28e5c5c71364aa075f3df99b79ba6a1004b318833cd2
+      element_type: image
+      filename: partners.png
+      id: 95
+      key: images/articles/hypnosis/attract_your_ideal_partner/partners.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/attract_your_ideal_partner/partners.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/attract_your_ideal_partner/partners.png
+    images/articles/hypnosis/bhc/adam_fistler_transparent_web.png:
+      checksum: 5be4cf9565ba4017433d52b1b47f844801a073269ed8407d983f45ab95ebd485
+      element_type: image
+      filename: adam_fistler_transparent_web.png
+      id: 59
+      key: images/articles/hypnosis/bhc/adam_fistler_transparent_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/adam_fistler_transparent_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/adam_fistler_transparent_web.png
+    images/articles/hypnosis/bhc/bhc_logo.png:
+      checksum: 07bf3c47869f604f55249cb82b84ccd0fad56f9a8c1fbe412e8bb165af996ec4
+      element_type: image
+      filename: bhc_logo.png
+      id: 60
+      key: images/articles/hypnosis/bhc/bhc_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/bhc_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/bhc_logo.png
+    images/articles/hypnosis/bhc/gbp.png:
+      checksum: 51db40cf16e575d42c3747da1a0e058f1518d2eeee53767c25b63cb86c98b8a6
+      element_type: image
+      filename: gbp.png
+      id: 61
+      key: images/articles/hypnosis/bhc/gbp.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/gbp.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/gbp.png
+    images/articles/hypnosis/bhc/hypnosis_consultation.png:
+      checksum: cc58d7347e9026e1bc604be3b76a65b486f2508246b021638d71df75bd19ac6f
+      element_type: image
+      filename: hypnosis_consultation.png
+      id: 62
+      key: images/articles/hypnosis/bhc/hypnosis_consultation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/hypnosis_consultation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/hypnosis_consultation.png
+    images/articles/hypnosis/bhc/hypnosis_office.png:
+      checksum: 1f80fe6dc3c71ece38c2d38d9ef8e4ee941653e19c3633c50f8a648620be55b2
+      element_type: image
+      filename: hypnosis_office.png
+      id: 63
+      key: images/articles/hypnosis/bhc/hypnosis_office.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/hypnosis_office.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/hypnosis_office.png
+    images/articles/hypnosis/bhc/hypnosis_recliner.png:
+      checksum: d3c742eca119bb5e851e8f46f3e50b3a1e0afd6ba9f6942423c9b2936a88bf31
+      element_type: image
+      filename: hypnosis_recliner.png
+      id: 64
+      key: images/articles/hypnosis/bhc/hypnosis_recliner.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/hypnosis_recliner.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/hypnosis_recliner.png
+    images/articles/hypnosis/bhc/reception_area.png:
+      checksum: 0b421d4815d4f039dab33525efd5f9e3e336aff221305962decfb40375a24a71
+      element_type: image
+      filename: reception_area.png
+      id: 65
+      key: images/articles/hypnosis/bhc/reception_area.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/reception_area.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/reception_area.png
+    images/articles/hypnosis/bhc/waiting_area.png:
+      checksum: 0e5dcd4ef8a839afbfe678aacd571c31d7727507a1b3f7a7504d94f7a97fee70
+      element_type: image
+      filename: waiting_area.png
+      id: 66
+      key: images/articles/hypnosis/bhc/waiting_area.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/bhc/waiting_area.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/bhc/waiting_area.png
+    images/articles/hypnosis/chronic_pain/article.png:
+      checksum: aa883103cd3bcbb7dd47d126f555d494f517b592c90b06a4fc3960d39b14f366
+      element_type: image
+      filename: article.png
+      id: 96
+      key: images/articles/hypnosis/chronic_pain/article.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/article.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/article.png
+    images/articles/hypnosis/chronic_pain/backpain.png:
+      checksum: 0082d150bf9091aca970ea3ecad859bd07c339e64ddee3d921a7b914ede7443c
+      element_type: image
+      filename: backpain.png
+      id: 97
+      key: images/articles/hypnosis/chronic_pain/backpain.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/backpain.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/backpain.png
+    images/articles/hypnosis/chronic_pain/brain_pain_signals.png:
+      checksum: e2797c18b93e65f965c630509735960cff717ae7d2ed18d8c65c9e73808ca1bb
+      element_type: image
+      filename: brain_pain_signals.png
+      id: 98
+      key: images/articles/hypnosis/chronic_pain/brain_pain_signals.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/brain_pain_signals.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/brain_pain_signals.png
+    images/articles/hypnosis/chronic_pain/dissociate_from_pain.png:
+      checksum: 63a18e2f8ad9b538da76797229de4bcd5b07000e8ac22958ff1836f3d5163b4b
+      element_type: image
+      filename: dissociate_from_pain.png
+      id: 99
+      key: images/articles/hypnosis/chronic_pain/dissociate_from_pain.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/dissociate_from_pain.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/dissociate_from_pain.png
+    images/articles/hypnosis/chronic_pain/doubled_over_in_pain.png:
+      checksum: 757f6dcffb9ff0d01a405eab3c17bf0ce1b031ae92c0bc0e1ee85b3620de7f1e
+      element_type: image
+      filename: doubled_over_in_pain.png
+      id: 100
+      key: images/articles/hypnosis/chronic_pain/doubled_over_in_pain.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/doubled_over_in_pain.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/doubled_over_in_pain.png
+    images/articles/hypnosis/chronic_pain/golden_key.png:
+      checksum: e5f9e0ed257eb1c9276421fdf9daf20c3f7897b3d9026307af06dc843b701fc1
+      element_type: image
+      filename: golden_key.png
+      id: 101
+      key: images/articles/hypnosis/chronic_pain/golden_key.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/chronic_pain/golden_key.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/chronic_pain/golden_key.png
+    images/articles/hypnosis/eoc/hypnosis_session.png:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session.png
+      id: 43
+      key: images/articles/hypnosis/eoc/hypnosis_session.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/eoc/hypnosis_session.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/eoc/hypnosis_session.png
+    images/articles/hypnosis/eoc/journey.png:
+      checksum: a7ce527f02655b6e8b565675decdddddfe6b2785f1f436c3191c7ed1d13af99d
+      element_type: image
+      filename: journey.png
+      id: 44
+      key: images/articles/hypnosis/eoc/journey.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/eoc/journey.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/eoc/journey.png
+    images/articles/hypnosis/eoc/problem.png:
+      checksum: 0368ecce5341045a6872627b686b96f52f8eb3b76244f43cdad3ee2f95d7b28b
+      element_type: image
+      filename: problem.png
+      id: 45
+      key: images/articles/hypnosis/eoc/problem.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/eoc/problem.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/eoc/problem.png
+    images/articles/hypnosis/evolution_of_hypnosis/consulation.png:
+      checksum: b7d07f309bced8df6085e5184f42a0fdbf251d6ae5ed5645a9dd2a8aa3d472d1
+      element_type: image
+      filename: consulation.png
+      id: 102
+      key: images/articles/hypnosis/evolution_of_hypnosis/consulation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/consulation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/consulation.png
+    images/articles/hypnosis/evolution_of_hypnosis/dave_elman.png:
+      checksum: 7feaa8a8452f5fe3d51db2c1acc5b7249eef133ad0d65301638ee7f02ec6c462
+      element_type: image
+      filename: dave_elman.png
+      id: 103
+      key: images/articles/hypnosis/evolution_of_hypnosis/dave_elman.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dave_elman.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dave_elman.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_assen_alladin.png:
+      checksum: 8806e0343faf6c5d8b2c1f8853b0823bd691f7825aeb12329c866fd7dec729ee
+      element_type: image
+      filename: dr_assen_alladin.png
+      id: 104
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_assen_alladin.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_assen_alladin.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_assen_alladin.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_david_spiegel.png:
+      checksum: a9e8cc417cadc978103bb837d2c3672a6d0c99430c2e0d704b0026b9a4c8f566
+      element_type: image
+      filename: dr_david_spiegel.png
+      id: 105
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_david_spiegel.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_david_spiegel.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_david_spiegel.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_ernest_rossi.png:
+      checksum: c60322cb85d309264d50a22b21411f3869740294cafab1478049020ed51f0508
+      element_type: image
+      filename: dr_ernest_rossi.png
+      id: 106
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_ernest_rossi.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_ernest_rossi.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_ernest_rossi.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_jeffrey_zeig.png:
+      checksum: 9729697ad5ba3b545594ef88a71d52a44d3f58594f489051897e9c688edf8b50
+      element_type: image
+      filename: dr_jeffrey_zeig.png
+      id: 107
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_jeffrey_zeig.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_jeffrey_zeig.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_jeffrey_zeig.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_john_sarno.png:
+      checksum: 94b77c818c3cd606acf3379715c5a235a4f2a3ea8ade76f2e92881cf953a74a4
+      element_type: image
+      filename: dr_john_sarno.png
+      id: 108
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_john_sarno.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_john_sarno.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_john_sarno.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_marlene_hunter.png:
+      checksum: 1384d109c9466f2cd645e470eb6991b12f36ff22de7d693f341bd4f6d763fd0e
+      element_type: image
+      filename: dr_marlene_hunter.png
+      id: 109
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_marlene_hunter.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_marlene_hunter.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_marlene_hunter.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_michael_yapko.png:
+      checksum: 66eccf0037678e4a77ed13de961e467ef586283a11bbc84eec1a46617032164e
+      element_type: image
+      filename: dr_michael_yapko.png
+      id: 110
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_michael_yapko.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_michael_yapko.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_michael_yapko.png
+    images/articles/hypnosis/evolution_of_hypnosis/dr_stephen_lankton.png:
+      checksum: ae5a372c5e5a231dd9bea273c2489ecd20645ef6b1659dbe5a655c767ffc0e6e
+      element_type: image
+      filename: dr_stephen_lankton.png
+      id: 111
+      key: images/articles/hypnosis/evolution_of_hypnosis/dr_stephen_lankton.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/dr_stephen_lankton.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/dr_stephen_lankton.png
+    images/articles/hypnosis/evolution_of_hypnosis/franz_mesmer.png:
+      checksum: b1de56435dbc0bb42bf275bc7997df3e6c0cc6daf40a53fa7e57e11a54281528
+      element_type: image
+      filename: franz_mesmer.png
+      id: 112
+      key: images/articles/hypnosis/evolution_of_hypnosis/franz_mesmer.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/franz_mesmer.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/franz_mesmer.png
+    images/articles/hypnosis/evolution_of_hypnosis/freedom_bird.png:
+      checksum: e04bcd7ea55647cfa5b5c6bc55215e2ed6ad5e06dc4e7301ff7c3356d443374e
+      element_type: image
+      filename: freedom_bird.png
+      id: 113
+      key: images/articles/hypnosis/evolution_of_hypnosis/freedom_bird.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/freedom_bird.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/freedom_bird.png
+    images/articles/hypnosis/evolution_of_hypnosis/hippolyte_bernheim.png:
+      checksum: 93e5680fb3d0026440b360fa5722041a3cd94daa838a6463cee38edfb285ca72
+      element_type: image
+      filename: hippolyte_bernheim.png
+      id: 114
+      key: images/articles/hypnosis/evolution_of_hypnosis/hippolyte_bernheim.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/hippolyte_bernheim.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/hippolyte_bernheim.png
+    images/articles/hypnosis/evolution_of_hypnosis/hypnosis.png:
+      checksum: b7357b3c73727ba7172af4b8b77dd143fc541df06561ab5029b4117b2fc8013e
+      element_type: image
+      filename: hypnosis.png
+      id: 115
+      key: images/articles/hypnosis/evolution_of_hypnosis/hypnosis.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/hypnosis.png
+    images/articles/hypnosis/evolution_of_hypnosis/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 116
+      key: images/articles/hypnosis/evolution_of_hypnosis/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/hypnotist.png
+    images/articles/hypnosis/evolution_of_hypnosis/james_braid.png:
+      checksum: 03395eb6deec1354d67a2f3c47c2ffdb808fd015223bbc9184a4abf64df92d09
+      element_type: image
+      filename: james_braid.png
+      id: 117
+      key: images/articles/hypnosis/evolution_of_hypnosis/james_braid.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/james_braid.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/james_braid.png
+    images/articles/hypnosis/evolution_of_hypnosis/jean_martin_charcot.png:
+      checksum: e037af984f346f55c6d8867aa8ff40a2ab08fbc1500c1ef4f26d3e37779a9d2a
+      element_type: image
+      filename: jean_martin_charcot.png
+      id: 118
+      key: images/articles/hypnosis/evolution_of_hypnosis/jean_martin_charcot.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/jean_martin_charcot.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/jean_martin_charcot.png
+    images/articles/hypnosis/evolution_of_hypnosis/john_elliotson.png:
+      checksum: d4f898722a09052384b8505ce159c7beea98605241ec5001b21243c4c244622c
+      element_type: image
+      filename: john_elliotson.png
+      id: 119
+      key: images/articles/hypnosis/evolution_of_hypnosis/john_elliotson.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/john_elliotson.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/john_elliotson.png
+    images/articles/hypnosis/evolution_of_hypnosis/milton_erikson.png:
+      checksum: 972c84682e4198d6e5ee2d758fa2c638c5f41f59004c79de314493c682398cbb
+      element_type: image
+      filename: milton_erikson.png
+      id: 120
+      key: images/articles/hypnosis/evolution_of_hypnosis/milton_erikson.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/milton_erikson.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/milton_erikson.png
+    images/articles/hypnosis/evolution_of_hypnosis/ngh_logo.png:
+      checksum: db2432596a7a645c483521156ef61addcf5c97e2a42ebe00af8063f676f8e264
+      element_type: image
+      filename: ngh_logo.png
+      id: 121
+      key: images/articles/hypnosis/evolution_of_hypnosis/ngh_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/ngh_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/ngh_logo.png
+    images/articles/hypnosis/evolution_of_hypnosis/pocketwatch.png:
+      checksum: 81c132ed63ce9bae2dd8e6233501e99724d68a6208827d84dcf5678f98196c85
+      element_type: image
+      filename: pocketwatch.png
+      id: 122
+      key: images/articles/hypnosis/evolution_of_hypnosis/pocketwatch.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/pocketwatch.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/pocketwatch.png
+    images/articles/hypnosis/evolution_of_hypnosis/self_discovery.png:
+      checksum: 61d3d92b88bcc235ba7b7ef7a7c81aec213d69026bad22931433799129e496a6
+      element_type: image
+      filename: self_discovery.png
+      id: 123
+      key: images/articles/hypnosis/evolution_of_hypnosis/self_discovery.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/self_discovery.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/self_discovery.png
+    images/articles/hypnosis/evolution_of_hypnosis/sigmund_freud.png:
+      checksum: 27fbcc35975b3154043903e7bccc706476800c3ab25f2f94294878dbcb23058c
+      element_type: image
+      filename: sigmund_freud.png
+      id: 124
+      key: images/articles/hypnosis/evolution_of_hypnosis/sigmund_freud.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/sigmund_freud.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/sigmund_freud.png
+    images/articles/hypnosis/evolution_of_hypnosis/spider.png:
+      checksum: 00075756427978c719220cf523c564f6f39afdc7230d541f8414962549696976
+      element_type: image
+      filename: spider.png
+      id: 125
+      key: images/articles/hypnosis/evolution_of_hypnosis/spider.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/spider.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/spider.png
+    images/articles/hypnosis/evolution_of_hypnosis/success.png:
+      checksum: 1c99c21763463ccbf3950871b76fff03a0b8d4ca8f4f0d6e0001a9eef7375582
+      element_type: image
+      filename: success.png
+      id: 126
+      key: images/articles/hypnosis/evolution_of_hypnosis/success.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/evolution_of_hypnosis/success.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/evolution_of_hypnosis/success.png
+    images/articles/hypnosis/gratitude/clapping_people.png:
+      checksum: bb057f3f422c02b3b1f09a48837ea764aa931c6a87cbc7c62d4056322babd0ac
+      element_type: image
+      filename: clapping_people.png
+      id: 46
+      key: images/articles/hypnosis/gratitude/clapping_people.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/clapping_people.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/clapping_people.png
+    images/articles/hypnosis/gratitude/gratitude_friends.png:
+      checksum: 3431d3a53097b2c04e8dd700c19a2f3e1159218ebcaa50d33bd5461fa1dd79c5
+      element_type: image
+      filename: gratitude_friends.png
+      id: 47
+      key: images/articles/hypnosis/gratitude/gratitude_friends.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/gratitude_friends.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/gratitude_friends.png
+    images/articles/hypnosis/gratitude/gratitude_woman.png:
+      checksum: d62f9e9cd3cda23ea7576ea8c5dbeff27c2cfd6b4bf791618c0ed0437eca08f0
+      element_type: image
+      filename: gratitude_woman.png
+      id: 48
+      key: images/articles/hypnosis/gratitude/gratitude_woman.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/gratitude_woman.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/gratitude_woman.png
+    images/articles/hypnosis/gratitude/greatful_woman.png:
+      checksum: 7e9d1badaa5d894cce790395d6fce570a5a40c0a6f5a8f3209b3b2f6a0745107
+      element_type: image
+      filename: greatful_woman.png
+      id: 49
+      key: images/articles/hypnosis/gratitude/greatful_woman.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/greatful_woman.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/greatful_woman.png
+    images/articles/hypnosis/gratitude/heartfelt_gratitude.png:
+      checksum: 3e359d409fbd64a0d73c858e28d90eaded882b80753c9d67a9c86b2117decf4c
+      element_type: image
+      filename: heartfelt_gratitude.png
+      id: 50
+      key: images/articles/hypnosis/gratitude/heartfelt_gratitude.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/heartfelt_gratitude.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/heartfelt_gratitude.png
+    images/articles/hypnosis/gratitude/hug.png:
+      checksum: 399a3a06204b6dcbf82a4bfa7f803042e5f38473133d1175f74cabb56a8bd33d
+      element_type: image
+      filename: hug.png
+      id: 51
+      key: images/articles/hypnosis/gratitude/hug.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/gratitude/hug.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/gratitude/hug.png
+    images/articles/hypnosis/how_long_does_hypnosis_last/conversation.png:
+      checksum: 177ccd86050386ed818e0cdaeb51ae78c6aa2d7f9032d8199d5fce3e15efb85c
+      element_type: image
+      filename: conversation.png
+      id: 127
+      key: images/articles/hypnosis/how_long_does_hypnosis_last/conversation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/how_long_does_hypnosis_last/conversation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/how_long_does_hypnosis_last/conversation.png
+    images/articles/hypnosis/how_long_does_hypnosis_last/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 128
+      key: images/articles/hypnosis/how_long_does_hypnosis_last/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/how_long_does_hypnosis_last/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/how_long_does_hypnosis_last/hypnotist.png
+    images/articles/hypnosis/how_long_does_hypnosis_last/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 131
+      key: images/articles/hypnosis/how_long_does_hypnosis_last/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/how_long_does_hypnosis_last/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/how_long_does_hypnosis_last/male_hypnotist_web.png
+    images/articles/hypnosis/how_long_does_hypnosis_last/upset_doctor.png:
+      checksum: b29609df86d2ca3c1aae92bd22b94c325f0afd377f7021ce62dd914c12b0bd88
+      element_type: image
+      filename: upset_doctor.png
+      id: 129
+      key: images/articles/hypnosis/how_long_does_hypnosis_last/upset_doctor.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/how_long_does_hypnosis_last/upset_doctor.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/how_long_does_hypnosis_last/upset_doctor.png
+    images/articles/hypnosis/how_long_does_hypnosis_last/victory.png:
+      checksum: a88e002e334dc07dab56db6a732446911972b6c92df4a06d1ccf852ac1f46184
+      element_type: image
+      filename: victory.png
+      id: 130
+      key: images/articles/hypnosis/how_long_does_hypnosis_last/victory.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/how_long_does_hypnosis_last/victory.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/how_long_does_hypnosis_last/victory.png
+    images/articles/hypnosis/hrlrss/high_road_low_road.png:
+      checksum: 672a6aadaa1109dd3d88d089f19ba60a2146c40bed78910fab09ee632c5bd91f
+      element_type: image
+      filename: high_road_low_road.png
+      id: 68
+      key: images/articles/hypnosis/hrlrss/high_road_low_road.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrss/high_road_low_road.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrss/high_road_low_road.png
+    images/articles/hypnosis/hrlrss/hrlr_web.png:
+      checksum: 807f60922022c6ba0efb6c7c5c33beb5d86ff3ff82f87a4677aa66bd39363a69
+      element_type: image
+      filename: hrlr_web.png
+      id: 67
+      key: images/articles/hypnosis/hrlrss/hrlr_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrss/hrlr_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrss/hrlr_web.png
+    images/articles/hypnosis/hrlrss/old_habits_change.png:
+      checksum: be7b3a49faac8b39b877c1296a19fee6e71286306b810ddb8f4e4cdb319cb1c3
+      element_type: image
+      filename: old_habits_change.png
+      id: 69
+      key: images/articles/hypnosis/hrlrss/old_habits_change.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrss/old_habits_change.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrss/old_habits_change.png
+    images/articles/hypnosis/hrlrss/smushed_cigarette.png:
+      checksum: 7f43496ba39460ca12ccb3b1a892a5ba9a435f967b2a51f6b5a2d22ccb14732a
+      element_type: image
+      filename: smushed_cigarette.png
+      id: 70
+      key: images/articles/hypnosis/hrlrss/smushed_cigarette.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrss/smushed_cigarette.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrss/smushed_cigarette.png
+    images/articles/hypnosis/hrlrss/victory.png:
+      checksum: a88e002e334dc07dab56db6a732446911972b6c92df4a06d1ccf852ac1f46184
+      element_type: image
+      filename: victory.png
+      id: 71
+      key: images/articles/hypnosis/hrlrss/victory.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrss/victory.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrss/victory.png
+    images/articles/hypnosis/hrlrwl/bathroom_scale.png:
+      checksum: db10b54a61f8bc51e39e998ecd2332a170696c1b67c2e1c996e8264117d54973
+      element_type: image
+      filename: bathroom_scale.png
+      id: 132
+      key: images/articles/hypnosis/hrlrwl/bathroom_scale.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrwl/bathroom_scale.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrwl/bathroom_scale.png
+    images/articles/hypnosis/hrlrwl/high_road_low_road.png:
+      checksum: 672a6aadaa1109dd3d88d089f19ba60a2146c40bed78910fab09ee632c5bd91f
+      element_type: image
+      filename: high_road_low_road.png
+      id: 133
+      key: images/articles/hypnosis/hrlrwl/high_road_low_road.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrwl/high_road_low_road.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrwl/high_road_low_road.png
+    images/articles/hypnosis/hrlrwl/hrlr_web.png:
+      checksum: 807f60922022c6ba0efb6c7c5c33beb5d86ff3ff82f87a4677aa66bd39363a69
+      element_type: image
+      filename: hrlr_web.png
+      id: 136
+      key: images/articles/hypnosis/hrlrwl/hrlr_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrwl/hrlr_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrwl/hrlr_web.png
+    images/articles/hypnosis/hrlrwl/old_habits_change.png:
+      checksum: be7b3a49faac8b39b877c1296a19fee6e71286306b810ddb8f4e4cdb319cb1c3
+      element_type: image
+      filename: old_habits_change.png
+      id: 134
+      key: images/articles/hypnosis/hrlrwl/old_habits_change.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrwl/old_habits_change.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrwl/old_habits_change.png
+    images/articles/hypnosis/hrlrwl/victory.png:
+      checksum: a88e002e334dc07dab56db6a732446911972b6c92df4a06d1ccf852ac1f46184
+      element_type: image
+      filename: victory.png
+      id: 135
+      key: images/articles/hypnosis/hrlrwl/victory.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hrlrwl/victory.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hrlrwl/victory.png
+    images/articles/hypnosis/hypnosis_myths/hypnosis_session.png:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session.png
+      id: 72
+      key: images/articles/hypnosis/hypnosis_myths/hypnosis_session.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hypnosis_myths/hypnosis_session.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hypnosis_myths/hypnosis_session.png
+    images/articles/hypnosis/hypnosis_myths/mind_control.png:
+      checksum: fac25e07da9d900f97528962a6abbc45f0637f255f6fccf6a4ee4b6d53df233c
+      element_type: image
+      filename: mind_control.png
+      id: 73
+      key: images/articles/hypnosis/hypnosis_myths/mind_control.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hypnosis_myths/mind_control.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hypnosis_myths/mind_control.png
+    images/articles/hypnosis/hypnosis_myths/myths_vs_facts.png:
+      checksum: fa78a1b4a10b4b5bec2d0e8e11aa4507182ab93d294d5ffb868df0e3559b53af
+      element_type: image
+      filename: myths_vs_facts.png
+      id: 74
+      key: images/articles/hypnosis/hypnosis_myths/myths_vs_facts.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/hypnosis_myths/myths_vs_facts.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/hypnosis_myths/myths_vs_facts.png
+    images/articles/hypnosis/mental_health/jill_stressed_web.png:
+      checksum: 99a0b4b335d05f678f2bc6521e257a56a852488aceaf9658eef8f21326219fc0
+      element_type: image
+      filename: jill_stressed_web.png
+      id: 143
+      key: images/articles/hypnosis/mental_health/jill_stressed_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mental_health/jill_stressed_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mental_health/jill_stressed_web.png
+    images/articles/hypnosis/mental_health/mental_health.png:
+      checksum: a3b5465c86cf6ba9e2d6a3ed70224f255dc6b2dde7c75e9f191d9f520f4ca6f3
+      element_type: image
+      filename: mental_health.png
+      id: 142
+      key: images/articles/hypnosis/mental_health/mental_health.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mental_health/mental_health.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mental_health/mental_health.png
+    images/articles/hypnosis/mental_health/myths_vs_facts.png:
+      checksum: fa78a1b4a10b4b5bec2d0e8e11aa4507182ab93d294d5ffb868df0e3559b53af
+      element_type: image
+      filename: myths_vs_facts.png
+      id: 144
+      key: images/articles/hypnosis/mental_health/myths_vs_facts.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mental_health/myths_vs_facts.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mental_health/myths_vs_facts.png
+    images/articles/hypnosis/mental_health/triggers.png:
+      checksum: 052cef0a881d537c0f29cac48b041327b6e03220c99d610746f9cb97ba444fd0
+      element_type: image
+      filename: triggers.png
+      id: 145
+      key: images/articles/hypnosis/mental_health/triggers.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mental_health/triggers.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mental_health/triggers.png
+    images/articles/hypnosis/mind_body/meditation.png:
+      checksum: e679d66e36dd40d2e7530451d370438ff51c1624e8554eb42c79843698831ff7
+      element_type: image
+      filename: meditation.png
+      id: 137
+      key: images/articles/hypnosis/mind_body/meditation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mind_body/meditation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mind_body/meditation.png
+    images/articles/hypnosis/mind_body/mind_body_connection.png:
+      checksum: d7f81351332a43f95ebabf362e549c8ceb8caa3d9e6cebe0d7df6d3f5901b1d1
+      element_type: image
+      filename: mind_body_connection.png
+      id: 138
+      key: images/articles/hypnosis/mind_body/mind_body_connection.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/mind_body/mind_body_connection.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/mind_body/mind_body_connection.png
+    images/articles/hypnosis/nice_guy/happy_guy.png:
+      checksum: edf14c1bc8ed6e5082e0ab88bf0df69de0a959628ba19ec35a7291305e431c50
+      element_type: image
+      filename: happy_guy.png
+      id: 75
+      key: images/articles/hypnosis/nice_guy/happy_guy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/nice_guy/happy_guy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/nice_guy/happy_guy.png
+    images/articles/hypnosis/nice_guy/mask.png:
+      checksum: 1e445f0e5992f4e6a5365ac882773920f50d24269bcb090be31468312ee08a43
+      element_type: image
+      filename: mask.png
+      id: 76
+      key: images/articles/hypnosis/nice_guy/mask.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/nice_guy/mask.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/nice_guy/mask.png
+    images/articles/hypnosis/nice_guy/nice_guy.png:
+      checksum: 66a47ca33c1240d14bf398f06b78379b2b03c1e23c3ead320d8bcf3b8370a0c4
+      element_type: image
+      filename: nice_guy.png
+      id: 77
+      key: images/articles/hypnosis/nice_guy/nice_guy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/nice_guy/nice_guy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/nice_guy/nice_guy.png
+    images/articles/hypnosis/stress/calm.png:
+      checksum: 661117bedd040d0561e561f556f533cc2bedff3ec1d8d9d63c030c79a5742c23
+      element_type: image
+      filename: calm.png
+      id: 84
+      key: images/articles/hypnosis/stress/calm.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/stress/calm.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/stress/calm.png
+    images/articles/hypnosis/stress/jill_stressed_web.png:
+      checksum: 99a0b4b335d05f678f2bc6521e257a56a852488aceaf9658eef8f21326219fc0
+      element_type: image
+      filename: jill_stressed_web.png
+      id: 83
+      key: images/articles/hypnosis/stress/jill_stressed_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/stress/jill_stressed_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/stress/jill_stressed_web.png
+    images/articles/hypnosis/stress/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 82
+      key: images/articles/hypnosis/stress/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/stress/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/stress/male_hypnotist_web.png
+    images/articles/hypnosis/stress/meditation.png:
+      checksum: e679d66e36dd40d2e7530451d370438ff51c1624e8554eb42c79843698831ff7
+      element_type: image
+      filename: meditation.png
+      id: 85
+      key: images/articles/hypnosis/stress/meditation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/stress/meditation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/stress/meditation.png
+    images/articles/hypnosis/stress/myths_vs_facts.png:
+      checksum: fa78a1b4a10b4b5bec2d0e8e11aa4507182ab93d294d5ffb868df0e3559b53af
+      element_type: image
+      filename: myths_vs_facts.png
+      id: 86
+      key: images/articles/hypnosis/stress/myths_vs_facts.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/stress/myths_vs_facts.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/stress/myths_vs_facts.png
+    images/articles/hypnosis/subconcious/dreams.png:
+      checksum: 8d9418daf64ebaca5da8aaf7cf45a9865408639caefa7ed1efdaddfd6f937123
+      element_type: image
+      filename: dreams.png
+      id: 139
+      key: images/articles/hypnosis/subconcious/dreams.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/subconcious/dreams.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/subconcious/dreams.png
+    images/articles/hypnosis/subconcious/self_discovery.png:
+      checksum: f5656708031cef707654842a2bf982f58f3c6011be149e0b6e163ecb50c321de
+      element_type: image
+      filename: self_discovery.png
+      id: 140
+      key: images/articles/hypnosis/subconcious/self_discovery.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/subconcious/self_discovery.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/subconcious/self_discovery.png
+    images/articles/hypnosis/subconcious/subconcious_mind.png:
+      checksum: 6cf38f50f74d56a92ed3ea54540ab8343a75017fcbaa50a45056c1cead33c7ac
+      element_type: image
+      filename: subconcious_mind.png
+      id: 141
+      key: images/articles/hypnosis/subconcious/subconcious_mind.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/subconcious/subconcious_mind.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/subconcious/subconcious_mind.png
+    images/articles/hypnosis/winning_the_battle_within/anti_will_power.png:
+      checksum: 77f504e2af84ab8daf8cae03d9a11d612c546d1fcd4c0469c861d809a597a296
+      element_type: image
+      filename: anti_will_power.png
+      id: 78
+      key: images/articles/hypnosis/winning_the_battle_within/anti_will_power.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/winning_the_battle_within/anti_will_power.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/winning_the_battle_within/anti_will_power.png
+    images/articles/hypnosis/winning_the_battle_within/hypnosis_session.png:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session.png
+      id: 79
+      key: images/articles/hypnosis/winning_the_battle_within/hypnosis_session.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/winning_the_battle_within/hypnosis_session.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/winning_the_battle_within/hypnosis_session.png
+    images/articles/hypnosis/winning_the_battle_within/rewire_subconcious.png:
+      checksum: 826f47b8ffbf345a69b42fffe0b82b97afb6a516fa135728444b25a18f03107e
+      element_type: image
+      filename: rewire_subconcious.png
+      id: 80
+      key: images/articles/hypnosis/winning_the_battle_within/rewire_subconcious.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/winning_the_battle_within/rewire_subconcious.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/winning_the_battle_within/rewire_subconcious.png
+    images/articles/hypnosis/winning_the_battle_within/uphill_battle.png:
+      checksum: 43067bfbe91dad372c5ce7f59d95c69a43817a15e06857726d25f58c789b2b49
+      element_type: image
+      filename: uphill_battle.png
+      id: 81
+      key: images/articles/hypnosis/winning_the_battle_within/uphill_battle.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/articles/hypnosis/winning_the_battle_within/uphill_battle.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/articles/hypnosis/winning_the_battle_within/uphill_battle.png
+    images/astrology/astrology/aspects.png:
+      checksum: 8fd83ec9ac599f00382be9aef027048c48daf05c5bbe73201fd2f04322da2cba
+      element_type: image
+      filename: aspects.png
+      id: 242
+      key: images/astrology/astrology/aspects.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/aspects.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/aspects.png
+    images/astrology/astrology/birthchart.png:
+      checksum: d24b19abd8dec9df67087ddadd0a25a4528588e422e40e5a2b553fb8d7cd1254
+      element_type: image
+      filename: birthchart.png
+      id: 243
+      key: images/astrology/astrology/birthchart.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/birthchart.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/birthchart.png
+    images/astrology/astrology/cathy_green_web.png:
+      checksum: 73daddab474dd1c653cafe25b837afb93673b9fccdda98ab9c754af8388b070e
+      element_type: image
+      filename: cathy_green_web.png
+      id: 244
+      key: images/astrology/astrology/cathy_green_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/cathy_green_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/cathy_green_web.png
+    images/astrology/astrology/corporate_event.png:
+      checksum: 7ce204bd89fd016aa941d44220f43f3a2141c9b185d91bc0e347c67c05c3f8ce
+      element_type: image
+      filename: corporate_event.png
+      id: 245
+      key: images/astrology/astrology/corporate_event.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/corporate_event.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/corporate_event.png
+    images/astrology/astrology/sun.png:
+      checksum: 43ead812cfd6401445cf773d9248c64bf3e101acc3b876b9a863ab9daef60b4e
+      element_type: image
+      filename: sun.png
+      id: 246
+      key: images/astrology/astrology/sun.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/sun.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/sun.png
+    images/astrology/astrology/sun_sign_symbol.png:
+      checksum: cf37ff03c588c89755705485bf9afc6d2ad884c8ccae68747e1ebfd5d2a80512
+      element_type: image
+      filename: sun_sign_symbol.png
+      id: 247
+      key: images/astrology/astrology/sun_sign_symbol.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/sun_sign_symbol.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/sun_sign_symbol.png
+    images/astrology/astrology/zodiac.png:
+      checksum: 84892e74434f463da5080d372defae3aa41b20e55d2a64aae6b67712495a21e8
+      element_type: image
+      filename: zodiac.png
+      id: 248
+      key: images/astrology/astrology/zodiac.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/astrology/astrology/zodiac.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/astrology/astrology/zodiac.png
+    images/favicon.ico:
+      checksum: 4abfa69b73a1abd23005bc39691b8bbb358b8bff30fd7c7f9c00894878893fa8
+      element_type: image
+      filename: favicon.ico
+      id: 41
+      key: images/favicon.ico
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/favicon.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/favicon.ico
+    images/graphology/graphology/brainwriting.png:
+      checksum: 695c3ec4425016841b299be496d6d4fc9f21c289d91b529556ebe97471274a9b
+      element_type: image
+      filename: brainwriting.png
+      id: 249
+      key: images/graphology/graphology/brainwriting.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/graphology/graphology/brainwriting.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/graphology/graphology/brainwriting.png
+    images/graphology/graphology/cathy_green_web.png:
+      checksum: 73daddab474dd1c653cafe25b837afb93673b9fccdda98ab9c754af8388b070e
+      element_type: image
+      filename: cathy_green_web.png
+      id: 250
+      key: images/graphology/graphology/cathy_green_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/graphology/graphology/cathy_green_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/graphology/graphology/cathy_green_web.png
+    images/graphology/graphology/hand_and_quill.png:
+      checksum: ed989472301a331f7d72b97f3944be114c97e2d5ed88862507596e4ec3cb537f
+      element_type: image
+      filename: hand_and_quill.png
+      id: 251
+      key: images/graphology/graphology/hand_and_quill.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/graphology/graphology/hand_and_quill.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/graphology/graphology/hand_and_quill.png
+    images/graphology/graphology/journey.png:
+      checksum: a7ce527f02655b6e8b565675decdddddfe6b2785f1f436c3191c7ed1d13af99d
+      element_type: image
+      filename: journey.png
+      id: 252
+      key: images/graphology/graphology/journey.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/graphology/graphology/journey.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/graphology/graphology/journey.png
+    images/graphology/graphology/magic_pen.png:
+      checksum: 312679cfb3ff9fa36edee4f178005804e6afe346af33f318848bc33b3ef17b35
+      element_type: image
+      filename: magic_pen.png
+      id: 253
+      key: images/graphology/graphology/magic_pen.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/graphology/graphology/magic_pen.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/graphology/graphology/magic_pen.png
+    images/hypnosis/about_hypnosis/anti_will_power.png:
+      checksum: 77f504e2af84ab8daf8cae03d9a11d612c546d1fcd4c0469c861d809a597a296
+      element_type: image
+      filename: anti_will_power.png
+      id: 255
+      key: images/hypnosis/about_hypnosis/anti_will_power.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/anti_will_power.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/anti_will_power.png
+    images/hypnosis/about_hypnosis/cathy_hypnosis_web.png:
+      checksum: 8f6611174bac379c0bdd8f36bf88ac3ecec633ca04e98301e0be8a7bcef7fb98
+      element_type: image
+      filename: cathy_hypnosis_web.png
+      id: 265
+      key: images/hypnosis/about_hypnosis/cathy_hypnosis_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/cathy_hypnosis_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/cathy_hypnosis_web.png
+    images/hypnosis/about_hypnosis/hypnosis.png:
+      checksum: b7357b3c73727ba7172af4b8b77dd143fc541df06561ab5029b4117b2fc8013e
+      element_type: image
+      filename: hypnosis.png
+      id: 256
+      key: images/hypnosis/about_hypnosis/hypnosis.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/hypnosis.png
+    images/hypnosis/about_hypnosis/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 257
+      key: images/hypnosis/about_hypnosis/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/hypnotist.png
+    images/hypnosis/about_hypnosis/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 254
+      key: images/hypnosis/about_hypnosis/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/male_hypnotist_web.png
+    images/hypnosis/about_hypnosis/old_habits_change.png:
+      checksum: be7b3a49faac8b39b877c1296a19fee6e71286306b810ddb8f4e4cdb319cb1c3
+      element_type: image
+      filename: old_habits_change.png
+      id: 258
+      key: images/hypnosis/about_hypnosis/old_habits_change.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/old_habits_change.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/old_habits_change.png
+    images/hypnosis/about_hypnosis/pocketwatch.png:
+      checksum: 81c132ed63ce9bae2dd8e6233501e99724d68a6208827d84dcf5678f98196c85
+      element_type: image
+      filename: pocketwatch.png
+      id: 259
+      key: images/hypnosis/about_hypnosis/pocketwatch.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/pocketwatch.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/pocketwatch.png
+    images/hypnosis/about_hypnosis/question_mark.png:
+      checksum: 2250881c5c450ea1db826e108647a3ccd14ca7c7d311ecde37cbde3350dc801b
+      element_type: image
+      filename: question_mark.png
+      id: 260
+      key: images/hypnosis/about_hypnosis/question_mark.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/question_mark.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/question_mark.png
+    images/hypnosis/about_hypnosis/recliner.png:
+      checksum: ba42b245fbdb6bf8b803ad746f98755ea19050df8156432dbafa221bb4c6fba4
+      element_type: image
+      filename: recliner.png
+      id: 261
+      key: images/hypnosis/about_hypnosis/recliner.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/recliner.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/recliner.png
+    images/hypnosis/about_hypnosis/running.png:
+      checksum: d6862d3932f957f2005c1d5d4e5995fa821638606497a84085c0cce553915f3a
+      element_type: image
+      filename: running.png
+      id: 262
+      key: images/hypnosis/about_hypnosis/running.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/running.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/running.png
+    images/hypnosis/about_hypnosis/smushed_cigarette.png:
+      checksum: 7f43496ba39460ca12ccb3b1a892a5ba9a435f967b2a51f6b5a2d22ccb14732a
+      element_type: image
+      filename: smushed_cigarette.png
+      id: 263
+      key: images/hypnosis/about_hypnosis/smushed_cigarette.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/smushed_cigarette.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/smushed_cigarette.png
+    images/hypnosis/about_hypnosis/tv_with_static.png:
+      checksum: 3c9c1097fa049716c690d2c0eb3e7711d9de466ee0a909ff5501c1d3a1dc12d0
+      element_type: image
+      filename: tv_with_static.png
+      id: 264
+      key: images/hypnosis/about_hypnosis/tv_with_static.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/about_hypnosis/tv_with_static.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/about_hypnosis/tv_with_static.png
+    images/hypnosis/anger/calm.png:
+      checksum: 661117bedd040d0561e561f556f533cc2bedff3ec1d8d9d63c030c79a5742c23
+      element_type: image
+      filename: calm.png
+      id: 277
+      key: images/hypnosis/anger/calm.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/anger/calm.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/anger/calm.png
+    images/hypnosis/anger/snapped_pencil.png:
+      checksum: afff5e635343e10afbc61d4157b4a3f97be413ef7ce4de903082cbfe4d3ab171
+      element_type: image
+      filename: snapped_pencil.png
+      id: 278
+      key: images/hypnosis/anger/snapped_pencil.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/anger/snapped_pencil.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/anger/snapped_pencil.png
+    images/hypnosis/hypnosis_services/hypnosis.gif:
+      checksum: b7357b3c73727ba7172af4b8b77dd143fc541df06561ab5029b4117b2fc8013e
+      element_type: image
+      filename: hypnosis.gif
+      id: 326
+      key: images/hypnosis/hypnosis_services/hypnosis.gif
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis.gif
+    images/hypnosis/hypnosis_services/hypnosis.jpg:
+      checksum: b7357b3c73727ba7172af4b8b77dd143fc541df06561ab5029b4117b2fc8013e
+      element_type: image
+      filename: hypnosis.jpg
+      id: 327
+      key: images/hypnosis/hypnosis_services/hypnosis.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis.jpg
+    images/hypnosis/hypnosis_services/hypnosis.png:
+      checksum: b7357b3c73727ba7172af4b8b77dd143fc541df06561ab5029b4117b2fc8013e
+      element_type: image
+      filename: hypnosis.png
+      id: 266
+      key: images/hypnosis/hypnosis_services/hypnosis.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis.png
+    images/hypnosis/hypnosis_services/hypnosis_session.jpg:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session.jpg
+      id: 328
+      key: images/hypnosis/hypnosis_services/hypnosis_session.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis_session.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis_session.jpg
+    images/hypnosis/hypnosis_services/hypnosis_session.png:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session.png
+      id: 267
+      key: images/hypnosis/hypnosis_services/hypnosis_session.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis_session.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis_session.png
+    images/hypnosis/hypnosis_services/hypnosis_works.png:
+      checksum: 92f4170dc17b9f912319bfdb69f816a1a8c14110cbbb69b5b60240574616f8ff
+      element_type: image
+      filename: hypnosis_works.png
+      id: 268
+      key: images/hypnosis/hypnosis_services/hypnosis_works.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnosis_works.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnosis_works.png
+    images/hypnosis/hypnosis_services/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 269
+      key: images/hypnosis/hypnosis_services/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/hypnotist.png
+    images/hypnosis/hypnosis_services/question_mark.png:
+      checksum: 2250881c5c450ea1db826e108647a3ccd14ca7c7d311ecde37cbde3350dc801b
+      element_type: image
+      filename: question_mark.png
+      id: 270
+      key: images/hypnosis/hypnosis_services/question_mark.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/hypnosis_services/question_mark.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/hypnosis_services/question_mark.png
+    images/hypnosis/smoking_cessation/smushed_cigarette.png:
+      checksum: 7f43496ba39460ca12ccb3b1a892a5ba9a435f967b2a51f6b5a2d22ccb14732a
+      element_type: image
+      filename: smushed_cigarette.png
+      id: 279
+      key: images/hypnosis/smoking_cessation/smushed_cigarette.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation/smushed_cigarette.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation/smushed_cigarette.png
+    images/hypnosis/smoking_cessation/success.png:
+      checksum: 1c99c21763463ccbf3950871b76fff03a0b8d4ca8f4f0d6e0001a9eef7375582
+      element_type: image
+      filename: success.png
+      id: 280
+      key: images/hypnosis/smoking_cessation/success.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation/success.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation/success.png
+    images/hypnosis/smoking_cessation_approach/heavy_smoker.png:
+      checksum: fb832849b573055a812ebfc97351324adced24ec57fb8033703ada786ec9f95e
+      element_type: image
+      filename: heavy_smoker.png
+      id: 271
+      key: images/hypnosis/smoking_cessation_approach/heavy_smoker.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation_approach/heavy_smoker.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation_approach/heavy_smoker.png
+    images/hypnosis/smoking_cessation_approach/no_smoking.png:
+      checksum: 8c6d1b6d095a0c468bd92b883e83097f206560e564c50109697b586d6c186a4d
+      element_type: image
+      filename: no_smoking.png
+      id: 272
+      key: images/hypnosis/smoking_cessation_approach/no_smoking.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation_approach/no_smoking.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation_approach/no_smoking.png
+    images/hypnosis/smoking_cessation_approach/smoking_guy.png:
+      checksum: 412410555d3ff373d30e2129ebec982f99071d0f4a17c5893a9a50f5dd84b111
+      element_type: image
+      filename: smoking_guy.png
+      id: 273
+      key: images/hypnosis/smoking_cessation_approach/smoking_guy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation_approach/smoking_guy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation_approach/smoking_guy.png
+    images/hypnosis/smoking_cessation_approach/victory.png:
+      checksum: a88e002e334dc07dab56db6a732446911972b6c92df4a06d1ccf852ac1f46184
+      element_type: image
+      filename: victory.png
+      id: 274
+      key: images/hypnosis/smoking_cessation_approach/victory.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/smoking_cessation_approach/victory.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/smoking_cessation_approach/victory.png
+    images/hypnosis/testimonials/catherine_fenton.jpg:
+      checksum: f873a7750e545b466c83ba3e5828ee37d37b839068523506ccd9a9c6cf660fc0
+      element_type: image
+      filename: catherine_fenton.jpg
+      id: 281
+      key: images/hypnosis/testimonials/catherine_fenton.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/catherine_fenton.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/catherine_fenton.jpg
+    images/hypnosis/testimonials/chris_jackson.jpg:
+      checksum: f8e33ddda15e749d4b83acc85b607da262ccf1b53cd2af8fb66a6b7fdf145afc
+      element_type: image
+      filename: chris_jackson.jpg
+      id: 282
+      key: images/hypnosis/testimonials/chris_jackson.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/chris_jackson.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/chris_jackson.jpg
+    images/hypnosis/testimonials/denny_barnett_1.jpg:
+      checksum: 6d5a31f674975ca7347ba157d57c89ef907064f2dd9a578077d75403a1815834
+      element_type: image
+      filename: denny_barnett_1.jpg
+      id: 283
+      key: images/hypnosis/testimonials/denny_barnett_1.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/denny_barnett_1.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/denny_barnett_1.jpg
+    images/hypnosis/testimonials/denny_barnett_2.jpg:
+      checksum: 2552235323c9642e66503c8530d94346541c92c543ed8ac3951ed56f0f358e85
+      element_type: image
+      filename: denny_barnett_2.jpg
+      id: 284
+      key: images/hypnosis/testimonials/denny_barnett_2.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/denny_barnett_2.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/denny_barnett_2.jpg
+    images/hypnosis/testimonials/gene_fetezer.jpg:
+      checksum: f73c09dd15e38dc976bdb9d017284ef923bcef1801061e83015258061de576cb
+      element_type: image
+      filename: gene_fetezer.jpg
+      id: 285
+      key: images/hypnosis/testimonials/gene_fetezer.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/gene_fetezer.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/gene_fetezer.jpg
+    images/hypnosis/testimonials/gordon_lindsey.jpg:
+      checksum: f615cf25f9ee39f4b15f72f67191426527269d0f30d6955d0b49c1b9729032a8
+      element_type: image
+      filename: gordon_lindsey.jpg
+      id: 286
+      key: images/hypnosis/testimonials/gordon_lindsey.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/gordon_lindsey.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/gordon_lindsey.jpg
+    images/hypnosis/testimonials/jason_david.jpg:
+      checksum: c5ec15bbe995390e053a1a08f060504b176a24d998b09f1cf3b0d8bef43665ad
+      element_type: image
+      filename: jason_david.jpg
+      id: 287
+      key: images/hypnosis/testimonials/jason_david.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/jason_david.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/jason_david.jpg
+    images/hypnosis/testimonials/lewis_feldman.jpg:
+      checksum: 68bec90e9105c61aaa9ad9d8a538529e474fe5ac5e39fd5ebeac2210b40ac6a2
+      element_type: image
+      filename: lewis_feldman.jpg
+      id: 288
+      key: images/hypnosis/testimonials/lewis_feldman.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/lewis_feldman.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/lewis_feldman.jpg
+    images/hypnosis/testimonials/rebecca.jpg:
+      checksum: d35710da1955ccd3e6db7d350e82d99609d917c8f7b0aa9975cb846296d4e691
+      element_type: image
+      filename: rebecca.jpg
+      id: 289
+      key: images/hypnosis/testimonials/rebecca.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/rebecca.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/rebecca.jpg
+    images/hypnosis/testimonials/will_higgins.jpg:
+      checksum: 6677d847749b6e51c5605e54359ded679d4f7d463841b4952299ab0d911b7b1f
+      element_type: image
+      filename: will_higgins.jpg
+      id: 290
+      key: images/hypnosis/testimonials/will_higgins.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/will_higgins.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/will_higgins.jpg
+    images/hypnosis/testimonials/zachary_waterman.jpg:
+      checksum: 95800f850904623b5ecb75d02d4e5e8b00495d00a0761ef41ce556f6133d1d6c
+      element_type: image
+      filename: zachary_waterman.jpg
+      id: 291
+      key: images/hypnosis/testimonials/zachary_waterman.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/testimonials/zachary_waterman.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/testimonials/zachary_waterman.jpg
+    images/hypnosis/weight_loss/bathroom_scale.png:
+      checksum: db10b54a61f8bc51e39e998ecd2332a170696c1b67c2e1c996e8264117d54973
+      element_type: image
+      filename: bathroom_scale.png
+      id: 275
+      key: images/hypnosis/weight_loss/bathroom_scale.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss/bathroom_scale.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss/bathroom_scale.png
+    images/hypnosis/weight_loss/success.png:
+      checksum: 1c99c21763463ccbf3950871b76fff03a0b8d4ca8f4f0d6e0001a9eef7375582
+      element_type: image
+      filename: success.png
+      id: 276
+      key: images/hypnosis/weight_loss/success.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss/success.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss/success.png
+    images/hypnosis/weight_loss_approach/consulation.png:
+      checksum: b7d07f309bced8df6085e5184f42a0fdbf251d6ae5ed5645a9dd2a8aa3d472d1
+      element_type: image
+      filename: consulation.png
+      id: 292
+      key: images/hypnosis/weight_loss_approach/consulation.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss_approach/consulation.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss_approach/consulation.png
+    images/hypnosis/weight_loss_approach/freedom_bird.png:
+      checksum: e04bcd7ea55647cfa5b5c6bc55215e2ed6ad5e06dc4e7301ff7c3356d443374e
+      element_type: image
+      filename: freedom_bird.png
+      id: 293
+      key: images/hypnosis/weight_loss_approach/freedom_bird.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss_approach/freedom_bird.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss_approach/freedom_bird.png
+    images/hypnosis/weight_loss_approach/satisfaction.png:
+      checksum: f69510ac13f7bf8ea2860b3c3b1f97fc77a765c92a98b3bf078634c218e39505
+      element_type: image
+      filename: satisfaction.png
+      id: 294
+      key: images/hypnosis/weight_loss_approach/satisfaction.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss_approach/satisfaction.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss_approach/satisfaction.png
+    images/hypnosis/weight_loss_approach/stress_person.png:
+      checksum: 3c3b0ed50cd3b2fc12060b9162d636fab32204a7934404a6da7c9c4b20467b09
+      element_type: image
+      filename: stress_person.png
+      id: 295
+      key: images/hypnosis/weight_loss_approach/stress_person.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss_approach/stress_person.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss_approach/stress_person.png
+    images/hypnosis/weight_loss_approach/weight_loss_guy.png:
+      checksum: c8c9fa3ea6e0b324d286387a3d2c5c38df6913415c879063253e78f7cf7b20f8
+      element_type: image
+      filename: weight_loss_guy.png
+      id: 296
+      key: images/hypnosis/weight_loss_approach/weight_loss_guy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/hypnosis/weight_loss_approach/weight_loss_guy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/hypnosis/weight_loss_approach/weight_loss_guy.png
+    images/logo.png:
+      checksum: 67fa2754096a2de707ec46b8d1dfece2a66097f6fb24dccaee79699b8b4b7118
+      element_type: image
+      filename: logo.png
+      id: 42
+      key: images/logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/logo.png
+    images/main/go_fund_me/adam_fistler_transparent_web.png:
+      checksum: 5be4cf9565ba4017433d52b1b47f844801a073269ed8407d983f45ab95ebd485
+      element_type: image
+      filename: adam_fistler_transparent_web.png
+      id: 177
+      key: images/main/go_fund_me/adam_fistler_transparent_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/adam_fistler_transparent_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/adam_fistler_transparent_web.png
+    images/main/go_fund_me/addict.png:
+      checksum: e6973abb51256dce46fa9f78c840ab403cd08c9190c0d65ba1a8a55c2f361a8e
+      element_type: image
+      filename: addict.png
+      id: 178
+      key: images/main/go_fund_me/addict.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/addict.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/addict.png
+    images/main/go_fund_me/addiction.png:
+      checksum: 5eedfa5f0b434320fe8a1022661d7ec5b5811246163973e26a9a7aabc8265b28
+      element_type: image
+      filename: addiction.png
+      id: 179
+      key: images/main/go_fund_me/addiction.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/addiction.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/addiction.png
+    images/main/go_fund_me/broken_steps.png:
+      checksum: ed8e1f6f3e6ca30e8b6d61ad9e54c19012dc08ea6cd680c46bb7339c328df384
+      element_type: image
+      filename: broken_steps.png
+      id: 180
+      key: images/main/go_fund_me/broken_steps.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/broken_steps.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/broken_steps.png
+    images/main/go_fund_me/broken_steps_drawing.png:
+      checksum: aecd380a205107706801229c9729ccd4101e35e2c4bea43528a8485e5cc28ca1
+      element_type: image
+      filename: broken_steps_drawing.png
+      id: 181
+      key: images/main/go_fund_me/broken_steps_drawing.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/broken_steps_drawing.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/broken_steps_drawing.png
+    images/main/go_fund_me/fun_people.png:
+      checksum: b1d1d3fc17c8e682f96b0d1cb9a650a64101c26a887cf6a3bd8bf8f8bcce7dcc
+      element_type: image
+      filename: fun_people.png
+      id: 182
+      key: images/main/go_fund_me/fun_people.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/fun_people.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/fun_people.png
+    images/main/go_fund_me/hope.png:
+      checksum: d538882d620eeb30af2e631e4e17df4e1a559705f49047c87869accb318eb51d
+      element_type: image
+      filename: hope.png
+      id: 183
+      key: images/main/go_fund_me/hope.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/hope.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/hope.png
+    images/main/go_fund_me/hypnotist.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist.png
+      id: 184
+      key: images/main/go_fund_me/hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/hypnotist.png
+    images/main/go_fund_me/male_hypnotist_web.png:
+      checksum: c4baa24ee04896b2af664cc8282923e89055e98b1fa346f5d1a2e5b2e12ef89e
+      element_type: image
+      filename: male_hypnotist_web.png
+      id: 188
+      key: images/main/go_fund_me/male_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/male_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/male_hypnotist_web.png
+    images/main/go_fund_me/partnership.png:
+      checksum: a74bed00a9d7fcc07cb70acd37bbf38e04a3e31ada936dbb67951390c9a4d9ed
+      element_type: image
+      filename: partnership.png
+      id: 185
+      key: images/main/go_fund_me/partnership.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/partnership.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/partnership.png
+    images/main/go_fund_me/support.png:
+      checksum: f9403274e2b09f0b71b6679dd664bbce40a6fb97d3c996379ec209d5603987c5
+      element_type: image
+      filename: support.png
+      id: 186
+      key: images/main/go_fund_me/support.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/support.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/support.png
+    images/main/go_fund_me/technology_logos.png:
+      checksum: 40649672f427317c76889af714e39f17b605fecf5abc5f173badd92d55eee146
+      element_type: image
+      filename: technology_logos.png
+      id: 187
+      key: images/main/go_fund_me/technology_logos.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/go_fund_me/technology_logos.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/go_fund_me/technology_logos.png
+    images/main/home/.junk.swp:
+      checksum: 50d6a3795ca42956f9f5a3c176884a355e8c35cadbd5a7e7431c3f189335f75d
+      element_type: image
+      filename: .junk.swp
+      id: 325
+      key: images/main/home/.junk.swp
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/.junk.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/.junk.swp
+    images/main/home/5_path_charter_member.png:
+      checksum: feb9358e89916be76f4de794cc3b870be481c6190c831acde8de31cff0a677d2
+      element_type: image
+      filename: 5_path_charter_member.png
+      id: 159
+      key: images/main/home/5_path_charter_member.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/5_path_charter_member.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/5_path_charter_member.png
+    images/main/home/adam_fistler_transparent_web.png:
+      checksum: 5be4cf9565ba4017433d52b1b47f844801a073269ed8407d983f45ab95ebd485
+      element_type: image
+      filename: adam_fistler_transparent_web.png
+      id: 160
+      key: images/main/home/adam_fistler_transparent_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/adam_fistler_transparent_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/adam_fistler_transparent_web.png
+    images/main/home/addiction_ball.png:
+      checksum: eaae993b456d70420d0daa918eb4ed69b778acf3099f79d79720fe0f2fd21985
+      element_type: image
+      filename: addiction_ball.png
+      id: 161
+      key: images/main/home/addiction_ball.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/addiction_ball.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/addiction_ball.png
+    images/main/home/atari_800xl.png:
+      checksum: a347ca49ba63a44ad1887f203b805be426d873939e78ee3a1d27d6eb2d40cf57
+      element_type: image
+      filename: atari_800xl.png
+      id: 162
+      key: images/main/home/atari_800xl.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/atari_800xl.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/atari_800xl.png
+    images/main/home/cathy_hypnosis_left_web.png:
+      checksum: b1bd4ba5ab8b34f3c461e60f79c27ac59e45e66d19a1bd161ce213e900b0f135
+      element_type: image
+      filename: cathy_hypnosis_left_web.png
+      id: 157
+      key: images/main/home/cathy_hypnosis_left_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/cathy_hypnosis_left_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/cathy_hypnosis_left_web.png
+    images/main/home/cathy_hypnotist_web.png:
+      checksum: ec3f3c5821a00c7b4bf7087406ba5b98630d0589f33131096050626e3dbe3116
+      element_type: image
+      filename: cathy_hypnotist_web.png
+      id: 158
+      key: images/main/home/cathy_hypnotist_web.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/cathy_hypnotist_web.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/cathy_hypnotist_web.png
+    images/main/home/creditcards.gif:
+      checksum: 34ae2ba05823de8a73678c8823cdb5f0a73ab4b93c826aec0f3ad3b8141ece03
+      element_type: image
+      filename: creditcards.gif
+      id: 163
+      key: images/main/home/creditcards.gif
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/creditcards.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/creditcards.gif
+    images/main/home/cursive_sample.png:
+      checksum: 51fd7841b071a01f6af0e64c89ffbeabbd75ef98cdc9c724b27508ad36821db2
+      element_type: image
+      filename: cursive_sample.png
+      id: 164
+      key: images/main/home/cursive_sample.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/cursive_sample.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/cursive_sample.png
+    images/main/home/future_crew.png:
+      checksum: 6b0251accbfb50aebb7e228c1a77da34fb8b60f477c2cb08dec42e98f745abf8
+      element_type: image
+      filename: future_crew.png
+      id: 165
+      key: images/main/home/future_crew.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/future_crew.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/future_crew.png
+    images/main/home/html_code.png:
+      checksum: 0a2969e31e49f46f9a65deabcc7cab4340c265b53e40146f4d98bafb7497f284
+      element_type: image
+      filename: html_code.png
+      id: 166
+      key: images/main/home/html_code.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/html_code.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/html_code.png
+    images/main/home/html_css_javascript_logo.png:
+      checksum: c1a1fa24e159c1d23f2358a62067914b7ea62489b5aba3a035547507ca59a488
+      element_type: image
+      filename: html_css_javascript_logo.png
+      id: 167
+      key: images/main/home/html_css_javascript_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/html_css_javascript_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/html_css_javascript_logo.png
+    images/main/home/laughter.jpg:
+      checksum: bb945f0f6806f7822a4c900e4e272d7bb6ef37d4a625de63f8c1df6f53000267
+      element_type: image
+      filename: laughter.jpg
+      id: 324
+      key: images/main/home/laughter.jpg
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/laughter.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/laughter.jpg
+    images/main/home/laughter.png:
+      checksum: bb945f0f6806f7822a4c900e4e272d7bb6ef37d4a625de63f8c1df6f53000267
+      element_type: image
+      filename: laughter.png
+      id: 168
+      key: images/main/home/laughter.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/laughter.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/laughter.png
+    images/main/home/logo6_trans.gif:
+      checksum: a8d6a38fccc2cc965eebce9f98f08f6403736921cd2cb4269710d28a91108100
+      element_type: image
+      filename: logo6_trans.gif
+      id: 169
+      key: images/main/home/logo6_trans.gif
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/logo6_trans.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/logo6_trans.gif
+    images/main/home/magnifying_glass.png:
+      checksum: 5f84b96f54a574f88541589a074eb7c924a65e01e90061125b8e6c9fb9e37199
+      element_type: image
+      filename: magnifying_glass.png
+      id: 170
+      key: images/main/home/magnifying_glass.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/magnifying_glass.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/magnifying_glass.png
+    images/main/home/ngh_logo.png:
+      checksum: db2432596a7a645c483521156ef61addcf5c97e2a42ebe00af8063f676f8e264
+      element_type: image
+      filename: ngh_logo.png
+      id: 171
+      key: images/main/home/ngh_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/ngh_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/ngh_logo.png
+    images/main/home/smart_recovery_logo.png:
+      checksum: ccaea32b011e3bb8e2031f5a3d8981a25fe4c61d72eb95b0afff30904b9fc931
+      element_type: image
+      filename: smart_recovery_logo.png
+      id: 172
+      key: images/main/home/smart_recovery_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/smart_recovery_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/smart_recovery_logo.png
+    images/main/home/sr_logo.png:
+      checksum: ab0186215c2eef5906863fc9cf64da6a23ebe3627358ab1536fe7f6ac0627b8e
+      element_type: image
+      filename: sr_logo.png
+      id: 173
+      key: images/main/home/sr_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/sr_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/sr_logo.png
+    images/main/home/technology_logos.png:
+      checksum: 40649672f427317c76889af714e39f17b605fecf5abc5f173badd92d55eee146
+      element_type: image
+      filename: technology_logos.png
+      id: 174
+      key: images/main/home/technology_logos.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/technology_logos.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/technology_logos.png
+    images/main/home/the_c_programming_language.png:
+      checksum: b6b1cb1f9e65178b7028115adb544e2d1be8727dc092ed7cbebb9ad7a2a06946
+      element_type: image
+      filename: the_c_programming_language.png
+      id: 175
+      key: images/main/home/the_c_programming_language.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/the_c_programming_language.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/the_c_programming_language.png
+    images/main/home/zodiac.png:
+      checksum: 84892e74434f463da5080d372defae3aa41b20e55d2a64aae6b67712495a21e8
+      element_type: image
+      filename: zodiac.png
+      id: 176
+      key: images/main/home/zodiac.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/main/home/zodiac.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/main/home/zodiac.png
+    images/pie/logo.png:
+      checksum: a0c55e3639edae908db81c11e2847784ef17901dab0f8e55cdab3e0efe1a2001
+      element_type: image
+      filename: logo.png
+      id: 297
+      key: images/pie/logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/pie/logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/pie/logo.png
+    images/pie/main/home/1041_broadway.png:
+      checksum: 78682d9a8402ee275e9e22c13d438ce5e17e84fcc5396c86e38adf7218866c6e
+      element_type: image
+      filename: 1041_broadway.png
+      id: 298
+      key: images/pie/main/home/1041_broadway.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/pie/main/home/1041_broadway.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/pie/main/home/1041_broadway.png
+    images/pie/main/home/pie.png:
+      checksum: 516299cc1d5b0eaf0dea5cd436a3b4b1269ca46c8e18c7d044fd27de098feec9
+      element_type: image
+      filename: pie.png
+      id: 299
+      key: images/pie/main/home/pie.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/pie/main/home/pie.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/pie/main/home/pie.png
+    images/pie/main/home/pie_logo.png:
+      checksum: a0c55e3639edae908db81c11e2847784ef17901dab0f8e55cdab3e0efe1a2001
+      element_type: image
+      filename: pie_logo.png
+      id: 300
+      key: images/pie/main/home/pie_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/pie/main/home/pie_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/pie/main/home/pie_logo.png
+    images/pie/main/home/socks.png:
+      checksum: 5aec2a2b2dd4624020712625962fa5243a1e7f1f9773790168bafbf105c74f40
+      element_type: image
+      filename: socks.png
+      id: 301
+      key: images/pie/main/home/socks.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/pie/main/home/socks.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/pie/main/home/socks.png
+    images/technology/artwork/brain_pain_signals_finished.png:
+      checksum: e2797c18b93e65f965c630509735960cff717ae7d2ed18d8c65c9e73808ca1bb
+      element_type: image
+      filename: brain_pain_signals_finished.png
+      id: 201
+      key: images/technology/artwork/brain_pain_signals_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/brain_pain_signals_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/brain_pain_signals_finished.png
+    images/technology/artwork/brain_pain_signals_original.png:
+      checksum: fa073d03546b2a353439446e492916b42d971999ea3a1111c8484e46d8a95565
+      element_type: image
+      filename: brain_pain_signals_original.png
+      id: 202
+      key: images/technology/artwork/brain_pain_signals_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/brain_pain_signals_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/brain_pain_signals_original.png
+    images/technology/artwork/cathy_green.png:
+      checksum: f6ef92b4722c37ad49c16a5d853392b34c8bb7abb35faa8fc567def690db457b
+      element_type: image
+      filename: cathy_green.png
+      id: 203
+      key: images/technology/artwork/cathy_green.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/cathy_green.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/cathy_green.png
+    images/technology/artwork/cathy_hypnosis.png:
+      checksum: 65b3abec3fb1a166b62e17f896122ca2fe5ddf8f3258f6514d4f15daf6a0b227
+      element_type: image
+      filename: cathy_hypnosis.png
+      id: 240
+      key: images/technology/artwork/cathy_hypnosis.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/cathy_hypnosis.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/cathy_hypnosis.png
+    images/technology/artwork/cathy_hypnotist.png:
+      checksum: 3fa034a2b625d3ad7589cc08cf34a86285f47219eb8c853e4904424b620b26ed
+      element_type: image
+      filename: cathy_hypnotist.png
+      id: 236
+      key: images/technology/artwork/cathy_hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/cathy_hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/cathy_hypnotist.png
+    images/technology/artwork/cathy_transparent.png:
+      checksum: a80aaef6d5f9eb856c288355372906f31be4ce4db439bd486f529d69614c5a6b
+      element_type: image
+      filename: cathy_transparent.png
+      id: 204
+      key: images/technology/artwork/cathy_transparent.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/cathy_transparent.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/cathy_transparent.png
+    images/technology/artwork/dissociate_from_pain_finished.png:
+      checksum: 63a18e2f8ad9b538da76797229de4bcd5b07000e8ac22958ff1836f3d5163b4b
+      element_type: image
+      filename: dissociate_from_pain_finished.png
+      id: 205
+      key: images/technology/artwork/dissociate_from_pain_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/dissociate_from_pain_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/dissociate_from_pain_finished.png
+    images/technology/artwork/dissociate_from_pain_original.png:
+      checksum: 02d191be16162d99f8c245a657ae222b71fef24d5b3a5d8a454fa35b7d8a4c24
+      element_type: image
+      filename: dissociate_from_pain_original.png
+      id: 206
+      key: images/technology/artwork/dissociate_from_pain_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/dissociate_from_pain_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/dissociate_from_pain_original.png
+    images/technology/artwork/freehand_willy.png:
+      checksum: 9d7d58429150e784ed72eb482500999206164fbdc51836c3b1fe61acd1515bd6
+      element_type: image
+      filename: freehand_willy.png
+      id: 207
+      key: images/technology/artwork/freehand_willy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/freehand_willy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/freehand_willy.png
+    images/technology/artwork/guy.png:
+      checksum: 5ea46caeb0c43a5a9fd03552a942e22420a13a6aca4528777ce6c879bdb17f44
+      element_type: image
+      filename: guy.png
+      id: 208
+      key: images/technology/artwork/guy.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/guy.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/guy.png
+    images/technology/artwork/high_road_low_road_finished.png:
+      checksum: 672a6aadaa1109dd3d88d089f19ba60a2146c40bed78910fab09ee632c5bd91f
+      element_type: image
+      filename: high_road_low_road_finished.png
+      id: 209
+      key: images/technology/artwork/high_road_low_road_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/high_road_low_road_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/high_road_low_road_finished.png
+    images/technology/artwork/high_road_low_road_original.png:
+      checksum: 499f33d32d8c0efd9d6c67fd92d2f9c536740381e2bff03e528df5b24d448d03
+      element_type: image
+      filename: high_road_low_road_original.png
+      id: 210
+      key: images/technology/artwork/high_road_low_road_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/high_road_low_road_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/high_road_low_road_original.png
+    images/technology/artwork/hrlr.png:
+      checksum: a836d8c1cfaaea83439cf5c13f3cf0a1b652cef327a0e05ce9dc7ed8825b77ad
+      element_type: image
+      filename: hrlr.png
+      id: 237
+      key: images/technology/artwork/hrlr.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hrlr.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hrlr.png
+    images/technology/artwork/hypnosis_office_finished.png:
+      checksum: 9b3bc6f4a55ee7bb74d8d223f218a201a49103fec7b44b681bd5f77024d7d72d
+      element_type: image
+      filename: hypnosis_office_finished.png
+      id: 211
+      key: images/technology/artwork/hypnosis_office_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnosis_office_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnosis_office_finished.png
+    images/technology/artwork/hypnosis_office_original.png:
+      checksum: a2315cc1fc720a0c4f5b1014a2d99f66a3a16e34562df037fa7fb2be8ffdbce2
+      element_type: image
+      filename: hypnosis_office_original.png
+      id: 212
+      key: images/technology/artwork/hypnosis_office_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnosis_office_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnosis_office_original.png
+    images/technology/artwork/hypnosis_session_finished.png:
+      checksum: 7a5f203cdfbe773ccd2430ea3249567b74685a131019dc8da825c65dd47fc4ea
+      element_type: image
+      filename: hypnosis_session_finished.png
+      id: 213
+      key: images/technology/artwork/hypnosis_session_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnosis_session_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnosis_session_finished.png
+    images/technology/artwork/hypnosis_session_original.png:
+      checksum: 93aebea71bdcc28ac946186771cfbedcfca7561e4f8e1c399f09d8c934f6727d
+      element_type: image
+      filename: hypnosis_session_original.png
+      id: 214
+      key: images/technology/artwork/hypnosis_session_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnosis_session_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnosis_session_original.png
+    images/technology/artwork/hypnotist_finished.png:
+      checksum: 36ffd15cba42ec92f0bfb440ee9ebd22d76b59550453db3eac70ad91667df98f
+      element_type: image
+      filename: hypnotist_finished.png
+      id: 215
+      key: images/technology/artwork/hypnotist_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnotist_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnotist_finished.png
+    images/technology/artwork/hypnotist_original.png:
+      checksum: 935a35fc684a6ef467c25057b06563ead22d740250c7f217475e62cc691c19fe
+      element_type: image
+      filename: hypnotist_original.png
+      id: 216
+      key: images/technology/artwork/hypnotist_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/hypnotist_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/hypnotist_original.png
+    images/technology/artwork/jill.png:
+      checksum: 4543cd74312884aa0fb10cb03d691f23623a4d3b1734dad85a0b783df73161c9
+      element_type: image
+      filename: jill.png
+      id: 217
+      key: images/technology/artwork/jill.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/jill.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/jill.png
+    images/technology/artwork/jill_glasses.png:
+      checksum: d8a668e98c847633f76b6ee41d0a249d5981ed5bd1a59ce436a65077f39555ee
+      element_type: image
+      filename: jill_glasses.png
+      id: 218
+      key: images/technology/artwork/jill_glasses.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/jill_glasses.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/jill_glasses.png
+    images/technology/artwork/jill_stressed.png:
+      checksum: 4a511d916ae6c84e8c366f8cf3021da639767efa92146437c09077114d827911
+      element_type: image
+      filename: jill_stressed.png
+      id: 199
+      key: images/technology/artwork/jill_stressed.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/jill_stressed.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/jill_stressed.png
+    images/technology/artwork/journey_finished.png:
+      checksum: a7ce527f02655b6e8b565675decdddddfe6b2785f1f436c3191c7ed1d13af99d
+      element_type: image
+      filename: journey_finished.png
+      id: 219
+      key: images/technology/artwork/journey_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/journey_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/journey_finished.png
+    images/technology/artwork/journey_original.png:
+      checksum: 58aad14897d62a0538bcdd202a89e81fb225d1421549485b2f29b687b9201458
+      element_type: image
+      filename: journey_original.png
+      id: 220
+      key: images/technology/artwork/journey_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/journey_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/journey_original.png
+    images/technology/artwork/laura.png:
+      checksum: 0154d8df16d34819b8d642a10f6dca52a42b9ebd2f6bb595cdc46d46a708c67d
+      element_type: image
+      filename: laura.png
+      id: 197
+      key: images/technology/artwork/laura.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/laura.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/laura.png
+    images/technology/artwork/logo.png:
+      checksum: 17bf1eb1acd7825a36ac11bcf623915d8429c479054544f01537bca2d0a5b215
+      element_type: image
+      filename: logo.png
+      id: 221
+      key: images/technology/artwork/logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/logo.png
+    images/technology/artwork/logo_new.png:
+      checksum: 67fa2754096a2de707ec46b8d1dfece2a66097f6fb24dccaee79699b8b4b7118
+      element_type: image
+      filename: logo_new.png
+      id: 238
+      key: images/technology/artwork/logo_new.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/logo_new.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/logo_new.png
+    images/technology/artwork/magic_pen_finished.png:
+      checksum: 312679cfb3ff9fa36edee4f178005804e6afe346af33f318848bc33b3ef17b35
+      element_type: image
+      filename: magic_pen_finished.png
+      id: 222
+      key: images/technology/artwork/magic_pen_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/magic_pen_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/magic_pen_finished.png
+    images/technology/artwork/magic_pen_original.png:
+      checksum: 113e18b4915764654e9ded791aa656a454e9394aca6d5b2e2c74241748edac2c
+      element_type: image
+      filename: magic_pen_original.png
+      id: 223
+      key: images/technology/artwork/magic_pen_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/magic_pen_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/magic_pen_original.png
+    images/technology/artwork/male_hypnotist.png:
+      checksum: 8663697b56eeda4194e436663ebcac9dd13f287e737739fc985869dd79f0533b
+      element_type: image
+      filename: male_hypnotist.png
+      id: 200
+      key: images/technology/artwork/male_hypnotist.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/male_hypnotist.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/male_hypnotist.png
+    images/technology/artwork/pie_logo_finished.png:
+      checksum: a0c55e3639edae908db81c11e2847784ef17901dab0f8e55cdab3e0efe1a2001
+      element_type: image
+      filename: pie_logo_finished.png
+      id: 224
+      key: images/technology/artwork/pie_logo_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/pie_logo_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/pie_logo_finished.png
+    images/technology/artwork/pie_logo_original.png:
+      checksum: d1a37908cf7518be706ea2d0867acbb7b2a86f64c37220059c1381a1449cf4d3
+      element_type: image
+      filename: pie_logo_original.png
+      id: 225
+      key: images/technology/artwork/pie_logo_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/pie_logo_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/pie_logo_original.png
+    images/technology/artwork/raindrop.png:
+      checksum: 8cf78e640cc6b19f3a5ecc20e8ff2acbf61db493ec8add8f62e2271abee85184
+      element_type: image
+      filename: raindrop.png
+      id: 226
+      key: images/technology/artwork/raindrop.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/raindrop.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/raindrop.png
+    images/technology/artwork/recliner.png:
+      checksum: 9ec84272539499b226914fb4ff54de08a3922a55e67e21657b08164949e28003
+      element_type: image
+      filename: recliner.png
+      id: 239
+      key: images/technology/artwork/recliner.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/recliner.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/recliner.png
+    images/technology/artwork/rewire_subconcious_finished.png:
+      checksum: 826f47b8ffbf345a69b42fffe0b82b97afb6a516fa135728444b25a18f03107e
+      element_type: image
+      filename: rewire_subconcious_finished.png
+      id: 227
+      key: images/technology/artwork/rewire_subconcious_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/rewire_subconcious_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/rewire_subconcious_finished.png
+    images/technology/artwork/rewire_subconcious_original.png:
+      checksum: 922562da1fea6835f9364b68e7d86081bf0d95c4f94269292ebc169376b6b3ad
+      element_type: image
+      filename: rewire_subconcious_original.png
+      id: 228
+      key: images/technology/artwork/rewire_subconcious_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/rewire_subconcious_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/rewire_subconcious_original.png
+    images/technology/artwork/snapped_pencil_finished.png:
+      checksum: afff5e635343e10afbc61d4157b4a3f97be413ef7ce4de903082cbfe4d3ab171
+      element_type: image
+      filename: snapped_pencil_finished.png
+      id: 229
+      key: images/technology/artwork/snapped_pencil_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/snapped_pencil_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/snapped_pencil_finished.png
+    images/technology/artwork/snapped_pencil_original.png:
+      checksum: ef49625ff8a0d6a7a76cb1d088e1981da63a183966eaed1684c505f97a73baff
+      element_type: image
+      filename: snapped_pencil_original.png
+      id: 230
+      key: images/technology/artwork/snapped_pencil_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/snapped_pencil_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/snapped_pencil_original.png
+    images/technology/artwork/success_finished.png:
+      checksum: 1c99c21763463ccbf3950871b76fff03a0b8d4ca8f4f0d6e0001a9eef7375582
+      element_type: image
+      filename: success_finished.png
+      id: 231
+      key: images/technology/artwork/success_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/success_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/success_finished.png
+    images/technology/artwork/success_original.png:
+      checksum: 700de13c59f8a8717d88df6b68a9dff176fc2c86ce849dd63e3620087435c0cc
+      element_type: image
+      filename: success_original.png
+      id: 232
+      key: images/technology/artwork/success_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/success_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/success_original.png
+    images/technology/artwork/uphill_battle_finished.png:
+      checksum: 43067bfbe91dad372c5ce7f59d95c69a43817a15e06857726d25f58c789b2b49
+      element_type: image
+      filename: uphill_battle_finished.png
+      id: 198
+      key: images/technology/artwork/uphill_battle_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/uphill_battle_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/uphill_battle_finished.png
+    images/technology/artwork/uphill_battle_original.png:
+      checksum: d87b36e3362c112e575dbbfec0e64155429cca4dc08f5a30d0f72c7ed2d93918
+      element_type: image
+      filename: uphill_battle_original.png
+      id: 233
+      key: images/technology/artwork/uphill_battle_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/uphill_battle_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/uphill_battle_original.png
+    images/technology/artwork/victory_finished.png:
+      checksum: a93d40c689c994e7938c7a98b7e710cfed94e837dc5a14589e8bb717d224e2f7
+      element_type: image
+      filename: victory_finished.png
+      id: 234
+      key: images/technology/artwork/victory_finished.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/victory_finished.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/victory_finished.png
+    images/technology/artwork/victory_original.png:
+      checksum: f6b19c78f8e74ae76926cf911789341077befcac9bcd41e176162194ce142108
+      element_type: image
+      filename: victory_original.png
+      id: 235
+      key: images/technology/artwork/victory_original.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/artwork/victory_original.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/artwork/victory_original.png
+    images/technology/projects/af_homepage.png:
+      checksum: d2891e2751b02d927cf492b7eb13087ee963e3398b0e0fec2b18cc2b79f3e783
+      element_type: image
+      filename: af_homepage.png
+      id: 189
+      key: images/technology/projects/af_homepage.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/af_homepage.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/af_homepage.png
+    images/technology/projects/cinnamon_conifg.png:
+      checksum: 990bfb92f2a4e8d92846f582e8161ad09d9cd6a1afffe6fb3fd2a7b26c499904
+      element_type: image
+      filename: cinnamon_conifg.png
+      id: 190
+      key: images/technology/projects/cinnamon_conifg.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/cinnamon_conifg.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/cinnamon_conifg.png
+    images/technology/projects/cinnamon_parser.png:
+      checksum: b4aceb93ed56da09923e28afbc2e9a6f6b01738fa4f377d56eccdd34028717c6
+      element_type: image
+      filename: cinnamon_parser.png
+      id: 191
+      key: images/technology/projects/cinnamon_parser.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/cinnamon_parser.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/cinnamon_parser.png
+    images/technology/projects/github_logo.png:
+      checksum: 243c851c16f944452b807779ad3fbb51006386163ac26d06dd90218d32fc13d9
+      element_type: image
+      filename: github_logo.png
+      id: 192
+      key: images/technology/projects/github_logo.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/github_logo.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/github_logo.png
+    images/technology/projects/github_logo_100.png:
+      checksum: 9c9e70645f2014b2651f7e72bccb5943ccc6b3190e359902253b4deea0e3f782
+      element_type: image
+      filename: github_logo_100.png
+      id: 193
+      key: images/technology/projects/github_logo_100.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/github_logo_100.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/github_logo_100.png
+    images/technology/projects/github_logo_50.png:
+      checksum: f80aef5f7bec32e56477d1928ac27958d6ab4313a38e60a98dd0c65566f598e2
+      element_type: image
+      filename: github_logo_50.png
+      id: 194
+      key: images/technology/projects/github_logo_50.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/github_logo_50.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/github_logo_50.png
+    images/technology/projects/github_logo_75.png:
+      checksum: 6bff179840e28d6d2f0fca2f7b474075873ee63a3a17901f9483d33580ed5af2
+      element_type: image
+      filename: github_logo_75.png
+      id: 195
+      key: images/technology/projects/github_logo_75.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/github_logo_75.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/github_logo_75.png
+    images/technology/projects/paintdotnet.png:
+      checksum: f25112871fef6e3b41c0cf383ac82fe88758158937d36ac033cbf67c402ee51d
+      element_type: image
+      filename: paintdotnet.png
+      id: 196
+      key: images/technology/projects/paintdotnet.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/projects/paintdotnet.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/projects/paintdotnet.png
+    images/technology/resume/file.png:
+      checksum: b6469feb77de8606acde13d228621cc8f6b059cfa00048e215a38d2d580bfcd0
+      element_type: image
+      filename: file.png
+      id: 241
+      key: images/technology/resume/file.png
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/images/technology/resume/file.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/images/technology/resume/file.png
+  js:
+    js/main.js:
+      checksum: 4241bac5345278f5330fbb93d25ac23480526d20b9a63863c21c0bac6f27df5f
+      element_type: js
+      filename: main.js
+      id: 323
+      key: js/main.js
+      metadata_filename: /opt/cinnamon_dev/sites/afistler/metadata/js/main.yaml
+      modified: false
+      path: /opt/cinnamon_dev/sites/afistler/js/main.js
   page:
     pages/articles/articles.html:
       checksum: ae98097a6d224c2c29af7d8f8d23cdb8e17f625af5ee144750102cffabf9f1a9
