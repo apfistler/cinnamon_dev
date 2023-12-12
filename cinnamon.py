@@ -6,6 +6,7 @@ import argparse
 import ast  # You need to import the ast module for the parse_multiple_values function
 
 #from lib.logger import Logger
+from lib.logger import Logger
 from lib.config import Config
 from lib.site.site import Site
 
@@ -22,7 +23,7 @@ def parse_multiple_values(value):
 
 def parse_args():
     parser = argparse.ArgumentParser(description=f'{APPLICATION_NAME}: Static Web Site Generator')
-    parser.add_argument('--help_page', nargs='?', type=str, help='Display Help Page')
+    parser.add_argument('--help_page', nargs='*', help='Display Help Page')
     parser.add_argument('--site', nargs='+', type=parse_multiple_values, help='Site Name(s) e.g. --site mysite')
     parser.add_argument('--cinnamon_directory', type=str, help='Cinnamon directory')
     parser.add_argument('--base_site_directory', type=str, help='Base Site directory')
@@ -77,11 +78,6 @@ def set_custom_file_structure(globals):
 
     # Update the config with the modified file_structure
     config.set('file_structure', file_structure)
-
-def display_help_page():
-    print(APPLICATION_NAME)
-    print("")
-    print("This is the application help page... But you are the developer of this application.  If you don't know how to use it, then we are screwed...")
 
 def display_help_page():
     print(APPLICATION_NAME)

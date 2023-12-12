@@ -1,4 +1,3 @@
-import os
 import datetime
 import logging
 
@@ -9,7 +8,6 @@ class Logger:
     Debug = 3
     Critical = 4
 
-    # ANSI color escape codes
     COLORS = {
         'black': '\033[30m',
         'red': '\033[31m',
@@ -22,23 +20,22 @@ class Logger:
         'reset': '\033[0m',
     }
 
-    # Color mappings for log elements
     ELEMENT_COLORS = {
         'datetime': 'magenta',
         'level': {
-            Logger.Error: 'red',
-            Logger.Warn: 'yellow',
-            Logger.Info: 'green',
-            Logger.Debug: 'cyan',
-            Logger.Critical: 'red',  # Critical is set to red
+            Error: 'red',
+            Warn: 'yellow',
+            Info: 'green',
+            Debug: 'cyan',
+            Critical: 'red',  # Critical is set to red
         },
         'message': 'white',
     }
 
-    def __init__(self, file_name, verbose_level=Logger.Warn):
+    def __init__(self, file_name, verbose_level=Warn):
         self.file_name = file_name
         self.verbose_level = verbose_level
-        self.queue = []
+        self.log_queue = []
 
         self.configure_logging()
 
@@ -99,10 +96,10 @@ class Logger:
 
         return formatted_entry
 
-    def queue(self, level, message, exit_on_error=True):
-        self.queue.append({'level': level, 'message': message, 'exit_on_error': exit_on_error})
+    def queue_log(self, level, message):
+        self.log_queue.append({'level': level, 'message': message})
 
-    def write(self, level, message):
+    def write_log(self, level, message):
         logger = logging.getLogger()
         record = logging.LogRecord(
             name='root',
@@ -117,15 +114,15 @@ class Logger:
         logger.log(level, formatted_entry)
 
         if level >= Logger.Critical and self.verbose_level >= Logger.Critical:
-            exit(1)
+            raise Exception("Critical error encountered.")  # Raise an exception instead of exiting
 
-    def write_queue(self):
-        for entry in self.queue:
-            self.write(entry['level'], entry['message'], exit_on_error=False)
+    def write_log_queue(self):
+        for entry in self.log_queue:
+            self.write_log(entry['level'], entry['message'])
 
-        # Check if there are any critical errors in the queue before exiting
-        if any(entry['level'] >= Logger.Critical for entry in self.queue):
-            exit(1)
+        # Check if there are any critical errors in the queue before raising an exception
+        if any(entry['level'] >= Logger.Critical for entry in self.log_queue):
+            raise Exception("Critical error(s) encountered in log queue.")
 
     @staticmethod
     def generate_log_file_name(prefix, path=None, format_string=None):
@@ -138,7 +135,6 @@ class Logger:
             log_file_name = os.path.join(path, log_file_name)
 
         return log_file_name
-
 
 # Example Usage:
 # log_file_path = '/path/to/logs'
@@ -160,6 +156,9 @@ class Logger:
 # print(f"Current Verbose Level: {my_logger.get_verbose_level()}")
 
 # Queue some log entries
-# my_logger.queue(Logger.Warn, "This is a warning message.")
-# my_logger.queue(Logger.Info,
+# my_logger.queue_log(Logger.Warn, "This is a warning message.")
+# my_logger.queue_log(Logger.Info, "This is an info message.")
+
+# Write the log entries in the queue
+# my_logger.write_log_queue()
 
