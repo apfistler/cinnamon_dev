@@ -14,10 +14,10 @@ from lib.yaml_parser import YamlParser
 class Site(BaseContent):
     REQUIRED_FIELDS = ['name', 'url']
     
-    def __init__(self, config, file_location_type, key):
+    def __init__(self, config, file_structure_type, key):
         self.key = key 
         self.config = config
-        self.file_location_type = file_location_type
+        self.file_structure_type = file_structure_type
         self.element_type = 'site'
         self.element_type_path = '.'
 
@@ -29,8 +29,8 @@ class Site(BaseContent):
         self.create_lock_file()
 
         self.metadata = self.get_metadata()
-        self.check_file_location_type()
-        self.set_file_location_types()
+        self.check_file_structure_type()
+        self.set_file_structure_types()
 
         self.site_catalog = SiteCatalog(self)
         atexit.register(self.remove_lock_file)
@@ -47,20 +47,24 @@ class Site(BaseContent):
 
         return metadata.self
 
-    def check_file_location_type(self):
-        flt = self.config.get('file_location_types')
+    def check_file_structure_type(self):
+        fst = self.config.get('file_structure_types')
 
-        if self.file_location_type not in flt:
-            raise ValueError(f"File location type: {self.file_location_type} is unrecognized when invoking Site class.")
+        if self.file_structure_type not in fst:
+            raise ValueError(f"File location type: {self.file_structure_type} is unrecognized when invoking Site class.")
 
-    def set_file_location_types(self):
+    def set_file_structure_types(self):
         self.base_site_directory = {}
         self.site_directory = {} 
-        file_location_types = self.config.get('file_location_types')
+        file_structure_types = self.config.get('file_structure_types')
 
-        for flt in file_location_types:
-            self.base_site_directory[flt] = self.config.get(f'{flt}_site_directory')
-            self.site_directory[flt] = os.path.join(self.base_site_directory[flt], self.key)
+        for type, structure in file_structure_types.items:
+            self.cinnamon_directory[type] = structure[type]
+            self.base_site_directory[type] = structure[type]
+            self.site_directory[fst] = os.path.join(self.base_site_directory[fst], self.key)
+
+           # self.base_site_directory[fst] = self.config.get(f'{fst}_site_directory')
+           # self.site_directory[fst] = os.path.join(self.base_site_directory[fst], self.key)
 
     def get_site_structure(self):
         REQUIRED_ELEMENTS = ['metadata', 'data', 'template', 'page', 'widget']
@@ -78,11 +82,11 @@ class Site(BaseContent):
         return Common.clean_path(self.site_structure[element_type])
 
     def get_site_directory(self):
-        self.set_file_location_types()
-        return self.site_directory[self.file_location_type]
+        self.set_file_structure_types()
+        return self.site_directory[self.file_structure_type]
 
     def get_base_site_directory(self):
-        return self.base_site_directory[self.file_location_type]
+        return self.base_site_directory[self.file_structure_type]
 
     def check_required_fields(self):
         super().check_required_fields()  # Call the base class method

@@ -9,17 +9,17 @@ from lib.page.page import Page
 from lib.yaml_parser import YamlParser
 
 class SiteCatalog:
-    def __init__(self, site, file_location_type=None):
+    def __init__(self, site, file_structure_type=None):
         self.site = site
         self.site_key = site.get('key')
         self.config = site.get('config')
-        self.file_location_type = file_location_type or self.site.get('file_location_type')
+        self.file_structure_type = file_structure_type or self.site.get('file_structure_type')
         self.catalog = {}
 
-        self.build_catalog(self.file_location_type)
+        self.build_catalog(self.file_structure_type)
 
     def reset_attributes(self):
-        self.file_location_type = None
+        self.file_structure_type = None
         self.site_structure = None
         self.site_directory = None
         self.base_site_directory = None
@@ -27,23 +27,23 @@ class SiteCatalog:
 
     def get_attributes_as_dict(self):
         return {
-            'file_location_type': self.file_location_type,
+            'file_structure_type': self.file_structure_type,
             'site_structure': self.site.get_site_structure(),
             'site_directory': self.site_directory,
             'base_site_directory': self.base_site_directory,
             'catalog_filename': self.catalog_filename
         }
 
-    def set_attributes_by_file_location_type(self, file_location_type):
+    def set_attributes_by_file_structure_type(self, file_structure_type):
         self.reset_attributes()
 
         catalog_filename = 'catalog.yaml'
 
-        self.file_location_type = file_location_type
+        self.file_structure_type = file_structure_type
         self.site_structure = self.site.get_site_structure() 
 
-        self.site_directory = self.site.get('site_directory')[self.file_location_type]
-        self.base_site_directory = self.site.get('base_site_directory')[self.file_location_type]
+        self.site_directory = self.site.get('site_directory')[self.file_structure_type]
+        self.base_site_directory = self.site.get('base_site_directory')[self.file_structure_type]
 
         data_directory = os.path.join(self.site_directory, self.site_structure['data'])
         Common.mkdir(data_directory)
@@ -52,26 +52,26 @@ class SiteCatalog:
 
         return self.get_attributes_as_dict()
 
-    def read(self, file_location_type):
+    def read(self, file_structure_type):
          # Make sure attributes are set
-         self.set_attributes_by_file_location_type(file_location_type)
+         self.set_attributes_by_file_structure_type(file_structure_type)
 
          if not Common.file_exists(self.catalog_filename):
              return
 
          self.catalog = YamlParser.parse_yaml(self.catalog_filename)
-         self.update_catalog_integrity(file_location_type)
+         self.update_catalog_integrity(file_structure_type)
 
-    def write(self, file_location_type):
-        self.set_attributes_by_file_location_type(file_location_type)
-        self.update_catalog_integrity(file_location_type)
+    def write(self, file_structure_type):
+        self.set_attributes_by_file_structure_type(file_structure_type)
+        self.update_catalog_integrity(file_structure_type)
 
         with open(self.catalog_filename, 'w') as file:
             yaml.dump(self.catalog, file, default_flow_style=False)
 
 
-    def update_catalog_integrity(self, file_location_type):
-        catalog_items = self.catalog.get(file_location_type, {})
+    def update_catalog_integrity(self, file_structure_type):
+        catalog_items = self.catalog.get(file_structure_type, {})
 
         keys_to_purge = defaultdict(list)
 
@@ -83,11 +83,11 @@ class SiteCatalog:
 
         for element_type, keys in keys_to_purge.items():
             for key in keys:
-                self.remove_catalog_item(file_location_type, element_type, key)
+                self.remove_catalog_item(file_structure_type, element_type, key)
 
-    def get_catalog_item(self, file_location_type, element_type, key):
+    def get_catalog_item(self, file_structure_type, element_type, key):
         default_item = {
-            'id': self.get_next_catalog_id(file_location_type),
+            'id': self.get_next_catalog_id(file_structure_type),
             'key': None,
             'filename': None,
             'path': None,
@@ -97,35 +97,35 @@ class SiteCatalog:
             'modified': False
         }
 
-        return self.catalog.get(file_location_type, {}).get(element_type, {}).get(key, default_item)
+        return self.catalog.get(file_structure_type, {}).get(element_type, {}).get(key, default_item)
 
-    def set_catalog_item(self, file_location_type, element_type, key, value):
-        if file_location_type not in self.catalog:
-            self.catalog[file_location_type] = {}
+    def set_catalog_item(self, file_structure_type, element_type, key, value):
+        if file_structure_type not in self.catalog:
+            self.catalog[file_structure_type] = {}
 
-        if element_type not in self.catalog[file_location_type]:
-            self.catalog[file_location_type][element_type] = {}
+        if element_type not in self.catalog[file_structure_type]:
+            self.catalog[file_structure_type][element_type] = {}
 
-        self.catalog[file_location_type][element_type][key] = value
+        self.catalog[file_structure_type][element_type][key] = value
 
-    def remove_catalog_item(self, file_location_type, element_type, key):
+    def remove_catalog_item(self, file_structure_type, element_type, key):
         try:
-            del self.catalog[file_location_type][element_type][key]
+            del self.catalog[file_structure_type][element_type][key]
         except KeyError:
             pass
 
-    def get_next_catalog_id(self, file_location_type):
+    def get_next_catalog_id(self, file_structure_type):
         catalog_ids = []
 
-        for element_type, catalog_item in self.catalog.get(file_location_type, {}).items():
+        for element_type, catalog_item in self.catalog.get(file_structure_type, {}).items():
             for key, item in catalog_item.items():
                 if item.get('id') is not None:
                     catalog_ids.append(item.get('id'))
 
         return max(catalog_ids, default=0) + 1
 
-    def get_duplicate_elements(self, file_location_type):
-        catalog_items = self.catalog.get(file_location_type)
+    def get_duplicate_elements(self, file_structure_type):
+        catalog_items = self.catalog.get(file_structure_type)
 
         new_dict = {}
         filtered_dict = defaultdict(lambda: defaultdict(lambda: defaultdict(str)))
@@ -152,11 +152,11 @@ class SiteCatalog:
 
         return(filtered_dict)
 
-    def build_catalog(self, file_location_type):
+    def build_catalog(self, file_structure_type):
         NON_SITE_ELEMENTS = ['metadata', 'data']
 
-        self.read(file_location_type)
-        self.set_attributes_by_file_location_type(file_location_type)
+        self.read(file_structure_type)
+        self.set_attributes_by_file_structure_type(file_structure_type)
         metadata_directory = os.path.join(self.site_directory, self.site.get_element_directory('metadata'))
 
         for element_type, sub_directory in self.site_structure.items():
@@ -166,7 +166,7 @@ class SiteCatalog:
             if element_type in NON_SITE_ELEMENTS:
                 continue
 
-            element_directory = Element.get_element_path(self.site, file_location_type, element_type)
+            element_directory = Element.get_element_path(self.site, file_structure_type, element_type)
 
             # If Element Directory Does Not Exist that's OK
             if not os.path.exists(element_directory):
@@ -184,7 +184,7 @@ class SiteCatalog:
                 metadata_filename = element.get_metadata_path()
                 filename = element.get_filename()
 
-                item = self.get_catalog_item(file_location_type, element_type, key)
+                item = self.get_catalog_item(file_structure_type, element_type, key)
 
                 catalog_id = item['id']
                 catalog_checksum = item['checksum']
@@ -204,11 +204,11 @@ class SiteCatalog:
                 }
 
                 if Common.file_exists(full_path):
-                    self.set_catalog_item(file_location_type, element_type, key, item)
+                    self.set_catalog_item(file_structure_type, element_type, key, item)
                 else:
-                    self.remove_catalog_item(file_location_type, element_type, key)
+                    self.remove_catalog_item(file_structure_type, element_type, key)
 
-        matching_files = self.get_duplicate_elements(file_location_type)
+        matching_files = self.get_duplicate_elements(file_structure_type)
 
         if matching_files:
             print("Error: You may not have two elements with the same name but different extensions in the same directory.")

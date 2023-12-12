@@ -53,16 +53,26 @@ class YamlParser:
         return value
 
     @staticmethod
-    def get_nested_value(nested_key, data):
+    def get_nested_value(nested_key, data, visited_keys=None):
+        if visited_keys is None:
+            visited_keys = set()
+
         keys = nested_key.split('.')
         current_data = data
+
         for key in keys:
+            if key in visited_keys:
+                raise ValueError(f"Circular reference detected for key '{key}' in '{nested_key}'")
+
+            visited_keys.add(key)
+
             if isinstance(current_data, dict) and key in current_data:
                 current_data = current_data[key]
             elif isinstance(current_data, list) and key.isdigit() and 0 <= int(key) < len(current_data):
                 current_data = current_data[int(key)]
             else:
                 return f"Value for '{nested_key}' not found"
+
         return current_data
 
     @staticmethod

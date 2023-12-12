@@ -9,7 +9,7 @@ class Element(BaseContent):
     def __init__(self, site, element_type, full_path=None, key=None):
         self.element_type = element_type.lower() 
         self.site = site
-        self.file_location_type = site.get('file_location_type')
+        self.file_structure_type = site.get('file_structure_type')
 
         config = self.site.get('config')
         self.config = config
@@ -20,16 +20,16 @@ class Element(BaseContent):
         
         self.element_type_path = self.site_structure[element_type]
 
-        self.base_site_directory = site.get('base_site_directory')[self.file_location_type]
-        self.site_directory = site.get('site_directory')[self.file_location_type] 
+        self.base_site_directory = site.get('base_site_directory')[self.file_structure_type]
+        self.site_directory = site.get('site_directory')[self.file_structure_type] 
 
         if full_path:
-            # Determine the correct site directory based on file_location_type
-            target_site_directory = self.site.get('base_site_directory')[self.file_location_type]
+            # Determine the correct site directory based on file_structure_type
+            target_site_directory = self.site.get('base_site_directory')[self.file_structure_type]
 
             # Check if the relative path matches the target site directory
             if self.base_site_directory != target_site_directory:
-                raise ValueError(f"The provided full_path '{full_path}' does not belong to the specified file_location_type '{file_location_type}'.")
+                raise ValueError(f"The provided full_path '{full_path}' does not belong to the specified file_structure_type '{file_structure_type}'.")
         else:
             full_path = self.find_by_key(key)
 
@@ -62,16 +62,16 @@ class Element(BaseContent):
         return os.path.join(metadata_path, name)
 
     @staticmethod
-    def get_element_path(site, file_location_type, element_type):
+    def get_element_path(site, file_structure_type, element_type):
         config = site.get('config')
         site_structure = config.get('site_structure')
         sub_directory = Common.clean_path(site_structure[element_type])
 
-        site_directory = site.get('site_directory')[file_location_type]
+        site_directory = site.get('site_directory')[file_structure_type]
         return os.path.join(site_directory, sub_directory)
 
     def _get_element_path(self, element_type):
-        return Element.get_element_path(self.site, self.file_location_type, element_type)
+        return Element.get_element_path(self.site, self.file_structure_type, element_type)
 
     def get_element_type_by_extension(self, extension):
         """

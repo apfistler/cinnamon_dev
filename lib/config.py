@@ -7,7 +7,7 @@ import re
 from lib.yaml_parser import YamlParser
 
 class Config:
-    REQUIRED_FIELDS = ['system_cinnamon_directory', 'system_config_directory', 'system_site_directory', 'user_directory', 'user_config_directory', 'user_site_directory', 'input_directory', 'output_directory']
+    REQUIRED_FIELDS = []
 
     def __init__(self):
         self.data = {}
@@ -25,7 +25,7 @@ class Config:
             exit(1)
 
     def read_extensions_config(self):
-        extensions_config_path = os.path.join(self.get('system_config_directory'), 'extensions.yaml')
+        extensions_config_path = os.path.join(self.data.get('file_structure').get('system').get('config_directory'), 'extensions.yaml') 
         error_message = "Error: Extensions file not found."
         self.read_file(extensions_config_path, error_message)
         extensions_data = self.get('extensions')
@@ -37,7 +37,7 @@ class Config:
         self.read_file(system_config_path, error_message)
 
     def read_defaults(self):
-        defaults_path = os.path.join(self.data.get('system_config_directory', ''), 'defaults.yaml')
+        defaults_path = os.path.join(self.data.get('file_structure').get('system').get('config_directory'), 'defaults.yaml') 
         self.read_file(defaults_path, "Error: Defaults file not found.")
 
     def read_user_config(self):
